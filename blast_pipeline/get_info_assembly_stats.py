@@ -18,8 +18,8 @@ import subprocess
 from Bio import Entrez
 
 # Set your email address (required by NCBI)
-Entrez.email = 'kwh1@wi.mit.edu'
-Entrez.api_key= 'cdff286019be35e09238d98aef1067a7bd08'
+Entrez.email = 'UPDATE ME'
+Entrez.api_key= 'UPDATE ME'
 
 csv_file = '/lab/wengpj01/vertebrate_pipeline/toy_accessions.csv'  # Replace with your CSV file path
 output = '/lab/wengpj01/genomes/toy_accession_stats.csv'
