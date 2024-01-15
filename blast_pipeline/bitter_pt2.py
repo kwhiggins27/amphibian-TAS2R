@@ -205,11 +205,11 @@ for index, row in master_list.iterrows():
         last.append(b)
 
     else:
-        req_length=int(float(row["new start"]))-int(float(row["new stop"]))
+        req_length=int(float(row["new stop"]))-int(float(row["new start"]))
         trunc=(int(float(row["new stop"])))-(int(float(row["new start"])))-row["nt_length"]
-        trunc_left= abs(min(0, row["new start"])-1)
+        trunc_left= abs(min(0, row["new start"]-1))  #had new start here previously, start of Dec
         t_left.append(trunc_left)
-        trunc_right=max(req_length - row["nt_length"] +1 - trunc_left,0)
+        trunc_right=max(req_length - row["nt_length"] +7 - trunc_left,0)
         t_right.append(trunc_right)
         a = row["new stop"] - trunc_right - row["offset start"]+2
         b = a - (3*row["expanded length"]+3) +1
