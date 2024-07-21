@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=repeatM   # Job name
 #SBATCH --mail-type=NONE          # Mail events (NONE, BEGIN, END, FAIL, ALL)
-#SBATCH --mail-user=kwh1@wi.mit.edu     # Where to send mail
+#SBATCH --mail-user=youremailaddress@yourinstitute      # Where to send mail
 #SBATCH --mem=50gb                     # Job memory request, down from 200 and closer to the 64gb I think you're using per instance
 #SBATCH --nodes=1                      # ensure cores are on one node
 #SBATCH --ntasks=1                     # run a single task
@@ -98,53 +98,3 @@ RepeatMasker \
 -lib $library \
 -dir /lab/wengpj01/repeat/amphibian_near_TAS2R \
 $fasta_random
-
-# RepeatMasker \
-# -lib /lab/wengpj01/repeat/axolotl-families.fa \
-# -dir custom_library_near_TAS2R \
-# /lab/wengpj01/repeat/near_TAS2R/axolotl_tas2r.fasta
-
-# RepeatMasker \
-# -lib /lab/wengpj01/repeat/bullfrog-families.fa \
-# -dir custom_library_near_TAS2R \
-# /lab/wengpj01/repeat/near_TAS2R/bullfrog_tas2r.fasta
-
-# RepeatMasker \
-# -lib /lab/wengpj01/repeat/cane-families.fa \
-# -dir custom_library_near_TAS2R \
-# /lab/wengpj01/repeat/near_TAS2R/cane_tas2r.fasta
-#
-# RepeatMasker \
-# -lib /lab/wengpj01/repeat/xenopus-families.fa \
-# -dir custom_library_near_TAS2R \
-# /lab/wengpj01/repeat/near_TAS2R/xenopus_tas2r.fasta
-#
-# RepeatMasker \
-# -lib /lab/wengpj01/repeat/terribilis-families.fa \
-# -dir custom_library_near_TAS2R \
-# /lab/wengpj01/repeat/near_TAS2R/terribilis_tas2r.fasta
-
-# RepeatMasker \
-# -lib /lab/wengpj01/repeat/axolotl-families.fa \
-# -dir custom_library_sampled_control \
-# /lab/wengpj01/repeat/sampled_gtf/axolotl_sampled.fasta
-#
-# RepeatMasker \
-# -lib /lab/wengpj01/repeat/bullfrog-families.fa \
-# -dir custom_library_sampled_control \
-# /lab/wengpj01/repeat/sampled_gtf/bullfrog_sampled.fasta
-#
-# RepeatMasker \
-# -lib /lab/wengpj01/repeat/cane-families.fa \
-# -dir custom_library_sampled_control \
-# /lab/wengpj01/repeat/sampled_gtf/cane_sampled.fasta
-
-# RepeatMasker \
-# -lib /lab/wengpj01/repeat/xenopus-families.fa \
-# -dir custom_library_sampled_control \
-# /lab/wengpj01/repeat/sampled_gtf/xenopus_sampled.fasta
-
-
-#RepeatMasker -dir default_repeat_genome /lab/solexa_weng/playground/Kate_Higgins/other_vertebrates/terribilis/P.terribilis.gapclosed.fasta
-
-#RepeatMasker -dir default_repeat  /lab/wengpj01/repeat/xenopus_near_tas2r.fasta

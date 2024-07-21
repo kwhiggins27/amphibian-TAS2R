@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=pipe  # Job name
 #SBATCH --mail-type=NONE     # Mail events (NONE, BEGIN, END, FAIL, ALL)
-#SBATCH --mail-user=kwh1@wi.mit.edu   # Where to send mail
+#SBATCH --mail-user=youremailaddress@yourinstitute   # Where to send mail
 #SBATCH --mem=4gb          # Job memory request, down from 200 and closer to the 64gb I think you're using per instance
 #SBATCH --nodes=1           # ensure cores are on one node
 #SBATCH --ntasks=1          # run a single task
@@ -131,7 +131,7 @@ else
     echo "#!/bin/bash" > torunparallel.sh
     echo "#SBATCH --partition=20" >> torunparallel.sh
     echo "#SBATCH --mail-type=NONE" >> torunparallel.sh
-    echo "#SBATCH --mail-user=kwh1@wi.mit.edu" >> torunparallel.sh
+    echo "#SBATCH --mail-user=youremailaddress@yourinstitute" >> torunparallel.sh
     while read n || [[ -n $p ]]
     do
       echo "sbatch -p 20 $blast_big $directory $n $accession" >> torunparallel.sh
@@ -220,7 +220,7 @@ else
     echo "#!/bin/bash" > big_full_pull.sh
     echo "#SBATCH --partition=20" >> big_full_pull.sh
     echo "#SBATCH --mail-type=NONE" >> big_full_pull.sh
-    echo "#SBATCH --mail-user=kwh1@wi.mit.edu" >> big_full_pull.sh
+    echo "#SBATCH --mail-user=youremailaddress@yourinstitute" >> big_full_pull.sh
     while read n || [[ -n $p ]]
     do
       part_aa="pull/""$n""_full_pull.sh"

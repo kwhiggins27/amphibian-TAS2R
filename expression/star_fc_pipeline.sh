@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=x_combo   # Job name
 #SBATCH --mail-type=NONE          # Mail events (NONE, BEGIN, END, FAIL, ALL)
-#SBATCH --mail-user=kwh1@wi.mit.edu     # Where to send mail
+#SBATCH --mail-user=youremailaddress@yourinstitute     # Where to send mail
 #SBATCH --mem=100gb                     # Job memory request, down from 200 and closer to the 64gb I think you're using per instance
 #SBATCH --nodes=1                      # ensure cores are on one node
 #SBATCH --ntasks=1                     # run a single task
@@ -9,9 +9,6 @@
 #SBATCH --partition=20
 #SBATCH --output=logs/x_combo_%j.log   # Standard output and error log
 #SBATCH --error=logs/x_combo_%j.err
-
-###SBATCH --partition=corradin
-###SBATCH --account=corradin
 
 #"1" F_READS
 #2 R_READS
@@ -55,10 +52,6 @@ featureCounts \
 -a "$5" \
 -o "$6/""$8""_fc.tsv" \
 "$7"
-
-# "$GTF" -->7
-# "$path_in""$var""$ending"  -->output STAR (4) but with variable and ending
-# "$path_out""$var" -->8 featureoutput file
 
 
 sleep 90

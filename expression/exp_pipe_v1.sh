@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=exp_pipe  # Job name
 #SBATCH --mail-type=END,FAIL     # Mail events (NONE, BEGIN, END, FAIL, ALL)
-#SBATCH --mail-user=kwh1@wi.mit.edu   # Where to send mail
+#SBATCH --mail-user=youremailaddress@yourinstitute  # Where to send mail
 #SBATCH --mem=4gb          # Job memory request, down from 200 and closer to the 64gb I think you're using per instance
 #SBATCH --nodes=1           # ensure cores are on one node
 #SBATCH --ntasks=1          # run a single task
@@ -31,10 +31,12 @@ Bitter_TS="/lab/solexa_weng/playground/Kate_Higgins/other_vertebrates/bullfrog/2
 summary_table="/lab/wengpj01/expression_pipeline/results_20231004/bullfrog_old.csv"
 go_to=0 #0 starts from beginning (star index), 1 starts with star/fc, 2 starts with python script
 jobname="b_stfc"
-#
+
 STAR_index="/lab/wengpj01/star/bullfrog/bullfrog_star_index_20231004/"
 STAR_out="/lab/wengpj01/bullfrog/star_expression_20231004/"
 FC_out="/lab/wengpj01/bullfrog/feature_counts_20231004/"
+
+# # #
 
 # species="cane"
 # genome="/lab/wengpj01/cane/canetoad.v2.2.fasta"
@@ -47,7 +49,8 @@ FC_out="/lab/wengpj01/bullfrog/feature_counts_20231004/"
 # STAR_index="/lab/wengpj01/star/cane/cane_star_index_20231004/"
 # STAR_out="/lab/wengpj01/cane/star_expression_20231004/"
 # FC_out="/lab/wengpj01/cane/feature_counts_20231004/"
-
+#
+# # #
 #
 # species="terribilis"
 # genome="/lab/solexa_weng/playground/Kate_Higgins/other_vertebrates/terribilis/P.terribilis.gapclosed.fasta"
@@ -60,7 +63,9 @@ FC_out="/lab/wengpj01/bullfrog/feature_counts_20231004/"
 # STAR_index="/lab/wengpj01/star/terribilis/terribilis_star_index_20231004/"
 # STAR_out="/lab/wengpj01/terribilis/star_expression_20231004/"
 # FC_out="/lab/wengpj01/terribilis/feature_counts_20231004/"
-
+#
+# # #
+#
 # species="xenopus"
 # genome="/lab/wengpj01/xenopus/Xenopus_Tropicalis_2022.fasta"
 # GTF="/lab/wengpj01/expression_pipeline/results_20231004/xenopus_from_pipeline.gtf"
@@ -103,14 +108,9 @@ else
 fi
 
 #Run script that has STAR and featureCounts
-#This shouldn't continue until all jobs are complete (help from Chat GPT desinging this)
+#This shouldn't continue until all jobs are complete
 if [ "$species" = "axolotl" ]; then
   var=(511_S10_L004 512_S11_L004 513_S12_L004 514_S13_L004 515_S14_L004 516_S15_L004 517_S16_L004 518_S17_L004 519_S18_L004 520_S19_L004 521_S20_L004 522_S21_L004 523_S22_L004 524_S23_L004 525_S24_L004 526_S25_L004 527_S26_L004 528_S27_L004 529_S28_L004 530_S29_L004 531_S30_L004)
-  #corrodin
-  #var=(511_S10_L004 513_S12_L004 516_S15_L004 518_S17_L004 519_S18_L004 520_S19_L004)
-  #rerun us
-  #var=(521_S20_L004 522_S21_L004 523_S22_L004 524_S23_L004 525_S24_L004 526_S25_L004 527_S26_L004 528_S27_L004 529_S28_L004 530_S29_L004 531_S30_L004)
-
 elif [ "$species" = "terribilis" ]; then
   var=(409_S1_L001 410_S2_L001 411_S3_L001 412_S4_L001 413_S5_L001 414_S6_L001 415_S7_L001 416_S8_L001 417_S9_L001 418_S10_L001 419_S11_L001 420_S12_L001 421_S13_L001 422_S14_L001 423_S15_L001 424_S16_L001 425_S17_L001 426_S18_L001 427_S19_L001 428_S20_L001 429_S21_L001)
 elif [ "$species" = "cane" ]; then

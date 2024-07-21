@@ -127,10 +127,7 @@ B3_7="492_S84_L004"
 
 for var in "$A1_1" "$A1_2" "$A1_3" "$A1_4" "$A1_5" "$A1_6" "$A1_7" "$A2_1" "$A2_2" "$A2_3" "$A2_4" "$A2_5" "$A2_6" "$A2_7" "$A3_1" "$A3_2" "$A3_3" "$A3_4" "$A3_5" "$A3_6" "$A3_7"
 do
-#  echo $var
   bsub -n 5 -R "rusage[mem=100000]" ./axolotl_trimmomatic_pt2.bat "$var"
-  #bsub -n 18 -R "rusage[mem=100000]" ./trimmomatic_pt2.bat "$var"
-#  echo "$var"
 done
 
 ###
