@@ -100,4 +100,4 @@ Edit batch submitter (or write your own) that will run pipeline_v7.sh for each a
 
 
 ## Credits
-Code developed by K. Higgins with programming advice from Allen B. Davis (acknowledged) and experimental advice from J.-K. Weng, R. Márquez, and R. Anderson (authors) as well as Matthew Hill and George Bell (acknowledged).  ChatGPT v3 and 4 used to draft early versions of these scripts.
+Code developed by K. Higgins with programming advice from Allen B. Davis (acknowledged) and experimental advice from A. Itoigawa, J.-K. Weng, R. Márquez, and R. Anderson (authors) as well as Matthew Hill and George Bell (acknowledged).  ChatGPT v3 and 4 used to draft early versions of these scripts.

@@ -134,4 +134,4 @@ tabulate_percentages.py makes a nice table summarizing the repeat analysis resul
   Line 51: output file name.  Strongly encourage using something with the repeat element type.
 
 ## Credits
-Code developed by K. Higgins with experimental advice from R. Márquez, D.W. Bellott, and J.-K. Weng (authors).  Script GenePlot.pl written by Matthew Hill (acand included with permission.  ChatGPT v3 and 4 used to draft early versions of these scripts.
+Code developed by K. Higgins with experimental advice from R. Márquez, D.W. Bellott, A. Itoigawa, and J.-K. Weng (authors).  Script GenePlot.pl written by Matthew Hill (acand included with permission.  ChatGPT v3 and 4 used to draft early versions of these scripts.

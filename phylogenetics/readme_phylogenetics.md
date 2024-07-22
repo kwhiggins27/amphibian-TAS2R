@@ -101,4 +101,4 @@ plot_pairs.R creates nice color-coded plots for your comparisons
 
 
 ## Credits
-Code developed by K. Higgins (author) with programming advice from Allen B. Davis (acknowledged) and experimental advice from R. Márquez and D.W. Bellott (authors).  ChatGPT v3 and 4 used to draft early versions of this script.
+Code developed by K. Higgins (author) with experimental advice from R. Márquez, D.W. Bellott, and A. Itoigawa (authors) and programming advice from Allen B. Davis (acknowledged).  ChatGPT v3 and 4 used to draft early versions of this script.

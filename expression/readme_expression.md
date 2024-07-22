@@ -101,4 +101,4 @@ TreeTipLables_5amphibian.R is an R script designed to plot the phylogenetic tree
   Lines 173-216: this contains the code to make subtrees shown in Figure 5, as noted
 
 ## Credits
-Code developed by K. Higgins with experimental advice from R. Márquez (authors).  ChatGPT v3 and 4 used to draft early versions of this script.
+Code developed by K. Higgins with experimental advice from R. Márquez (author).  ChatGPT v3 and 4 used to draft early versions of this script.
