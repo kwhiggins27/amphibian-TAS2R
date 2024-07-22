@@ -11,12 +11,12 @@ Ensure that you have the appropriate versions of all packages (listed at the beg
 
 
 ## How to use  
-#### For all batched files:  
+### For all batched files:  
   Update email address (line 4) and desired notification settings (line 3)  
   Update location of output and error files (lines 10-11).  
   Don't change job name (line 2) without careful thought.  Many jobs reference each other using this identifier.  
 
-#### Expected file structure:  
+### Expected file structure:  
   You will need to create the following directories:  
     A folder containing all of the scripts and summary files (ex: /lab/wengpj01/vertebrate_pipeline/)  
     A folder for log and error files (ex: /lab/wengpj01/vertebrate_pipeline/logs/)  
@@ -25,7 +25,7 @@ Ensure that you have the appropriate versions of all packages (listed at the beg
     A folder for config files (ex: /lab/wengpj01/vertebrate_pipeline/configs/)  
 
 
-#### Create file tree and generate config files:  
+### Create file tree and generate config files:  
   I ran this in many steps.  I created a script called format_genome_batch.sh which submits one job of format_genome.sh for each accession.  An example version of format_genome_batch.sh is included to illustrate syntax, but you'll need to generate your own (based on your unique paths).  
   Edit format_genome.sh  
     Header changes as above  
@@ -41,57 +41,57 @@ Ensure that you have the appropriate versions of all packages (listed at the beg
   Run format_genome.sh for each genome however desired (i.e. through batch submitter like format_genome_batch.sh)  
   Confirm that necessary folders and config files have been created.  
 
-#### pipeline_v7.sh  
+### pipeline_v7.sh  
   Create text files for variables remaining, complete, attempted, and failed and update locations in lines 23-26  
   Edit email username in line 134 and 223.  
   Lines 99, 118, 119, 171, 172, 248, 264, 281: update location of scripts.  
 
-#### blastF.sh  
+### blastF.sh  
       Header changes as above  
       Line 27: update location of query fasta  
-#### bitter_pt1.py  
+### bitter_pt1.py  
       Header changes as above  
       Script includes several different ways of expanding margins around putative TAS2R.    
       Line 137: update location of header_file (creates header for unix pull job to get region surrounding putative TAS2Rs)  
-#### header_pull.txt  
+### header_pull.txt  
       Header changes as above  
-#### bitter_pt2.py  
+### bitter_pt2.py  
       Header changes as above  
       Lines 316, 329: update location of list_complete.txt  
       Line 463: here I create arbitrary temp names for genes and transcripts.  In a moment of vanity, I used my own initials.  Feel free to choose your own nomenclature.  
-#### blastR.sh  
+### blastR.sh  
       Header changes as above  
-#### bitter_pt3_TMbed.py  
+### bitter_pt3_TMbed.py  
       Header changes as above  
       Lines 387, 388, 397: update location of subdirectories  
       Line 390: update location of tmbed  
 
-#### Managing large genomes:  
+### Managing large genomes:  
   Of note, when this pipeline is first run, any large genomes will fail at the blastF.sh step (as of project development, tblastn can't handle large genomes)  
   For each of these, open the 3 config files and manually change the large genome flag to "yes"  
   Additional scripts to revise:  
-    split_try3_pipe.sh  
+#### split_try3_pipe.sh  
       Header changes as above  
-    blast_big_pipe.sh  
+#### blast_big_pipe.sh  
       Header changes as above  
       Line 35: update location of query fasta    
-    bitter_pt1_Big.py  
+#### bitter_pt1_Big.py  
       Header changes as above  
       Line 135: update location of header_big.txt  
-    header_big.txt  
+#### header_big.txt  
       Header changes as above  
 
-#### Edit batch submitter (or write your own) that will run pipeline_v7.sh for each accession number  
+### Edit batch submitter (or write your own) that will run pipeline_v7.sh for each accession number  
   all_accessions_remaining.txt contains all accession numbers that need to run but have not been submitted yet.  If a job fails I want to rerun it, I manually add the accession number back to this list.  
-##### automated_add_new_jobs.sh  
+#### automated_add_new_jobs.sh  
     When the number of jobs running with the username kwh1 and the job name pipe (set in line 22) falls below 25 (set in line 14), submit 5 new jobs using add_new_jobs.sh.  Check every 30 sec (set in line 52).  Also updates progress bar using script progress.py  
     Header changes as above  
     Line 13: update location of remaining text file  
-##### add_new_jobs.sh  
+#### add_new_jobs.sh  
     Called by automated_add_new_jobs.sh, calls pipeline_v7.sh  
     Header changes as above  
     Script must be located in same directory as script for pipeline_v7.sh.  If not, update line 13  
-##### progress.py  
+#### progress.py  
     Lines 7-10 and 92: update location of files  
     If different colors desired (ex: to make color-blind friendly) modify 63-66  
 
