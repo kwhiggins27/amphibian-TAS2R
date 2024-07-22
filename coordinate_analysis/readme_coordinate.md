@@ -19,29 +19,29 @@ For all batched files:
 ### Identifying clusters  
 batch_find_clusters_nearest_neighbor.sh runs cluster_pipeline_nearest_neighbor.sh which runs cluster_pipeline_nearest_neighbor.py for all accession numbers in accessions_to_keep.txt  
 #### batch_find_clusters_nearest_neighbor.sh:  
-    Header changes as above  
-    Line 15: update size of allowed window between genes (I used 100kb, 200kb, 500kb, 1mb, 2mb, or 5mb).  Note that this expects a number with no letter abbreviations (ex: 10000 rather than 10kb)  
-    Line 26: update path to list of accession numbers to analyze  
-    Both unix scripts need to be in the same directory.  If not, update line 21.  
-    Line 24: update location of desired list of failures  
+  Header changes as above  
+  Line 15: update size of allowed window between genes (I used 100kb, 200kb, 500kb, 1mb, 2mb, or 5mb).  Note that this expects a number with no letter abbreviations (ex: 10000 rather than 10kb)  
+  Line 26: update path to list of accession numbers to analyze  
+  Both unix scripts need to be in the same directory.  If not, update line 21.  
+  Line 24: update location of desired list of failures  
 #### cluster_pipeline_nearest_neighbor.sh  
-    Header changes as above  
-    Line 60: update desired location of summary output file 1 (which will be added to with every run)  
-    Line 65: update location of python script.  
+  Header changes as above  
+  Line 60: update desired location of summary output file 1 (which will be added to with every run)  
+  Line 65: update location of python script.  
 #### cluster_pipeline_nearest_neighbor.py  
-    Line 14: update location of pipeline subdirectories  
-    Line 158: update desired location of summary output file 2 (similar to in previous script but with more information)  
+  Line 14: update location of pipeline subdirectories  
+  Line 158: update desired location of summary output file 2 (similar to in previous script but with more information)  
 batch_find_clusters_median_method.sh runs find_clusters_median_method.py for all accession numbers in accessions_to_keep.txt  
 #### batch_find_clusters_median_method.sh  
-    Header changes as above  
-    Line 23: update path to list of accession numbers to analyze  
-    Both scripts need to be in the same directory.  If not, update line 18.  
-    Line 21: update location of desired list of failures  
+  Header changes as above  
+  Line 23: update path to list of accession numbers to analyze  
+  Both scripts need to be in the same directory.  If not, update line 18.  
+  Line 21: update location of desired list of failures  
 #### find_clusters_median_method.py  
-    Lines 12 and 15: update general location of pipeline output gtfs for each accession  
-    Line 47: making a sorted gtf in same directory as pipeline output.  Make location match.  
-    Line 289: set location of output file with full details on split clusters (not used often).  
-    Line 292: set location of key output file.  
+  Lines 12 and 15: update general location of pipeline output gtfs for each accession  
+  Line 47: making a sorted gtf in same directory as pipeline output.  Make location match.  
+  Line 289: set location of output file with full details on split clusters (not used often).  
+  Line 292: set location of key output file.  
 
 ### Summarizing cluster coordinates and gene coordinates  
 #### coordinates_of_singleton_cluster.py  
@@ -129,7 +129,7 @@ Identifies repeat elements in both regions surrounding TAS2Rs and in random regi
   Lines 23 and 25: update with generic location of each genome  
   Lines 29-60: reformatting bed file.  May not be necessary for your analysis.  
   Line 67: update with location of output from RepeatModeler2.sh  
-  Lines 69-75: update with coordinates of desired regions to search (i.e. singletons, clusters, random genomic regions).    
+  Lines 69-75: update with coordinates of desired regions to search (i.e. singletons, clusters, random genomic regions).  
   Lines 89, 94, and 99: update with desired output directory  
 
 #### tabulate_percentages.py
