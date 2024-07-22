@@ -25,4 +25,4 @@ Open DR_curve.R in an R environment such as RStudio
 
 ## Credits  
 Underlying bitter assay developed by Y. Toda and Y. Ishimaru and implemented by A. Itoigawa.  
-Code developed by K. Higgins (author) with experimental advice A. Itoigawa (author) and programming advice from Allen B. Davis (acknowledged).  ChatGPT v3 and 4 used to draft early versions of this script.  
+Code developed by K. Higgins and A. Itoigawa (authors) with programming advice from Allen B. Davis (acknowledged).  ChatGPT v3 and 4 used to draft early versions of this script.  
