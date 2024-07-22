@@ -32,7 +32,7 @@ Ensure that you have the appropriate versions of all packages (listed at the beg
     Expected arguments shown in commented lines 13-18    
     Line 21: edit to reflect parent folder containing all target genomes    
     Lines 31-54:    
-      Update this to reflect the references you'll use for the reverse blast step.  For each reference, you'll need a genome with matched coordinates of known TAS2Rs (as a csv).  As an example, we've included the gene list for humans (based off of hg38) in human_tas2r_reference.csv.  It's very important that this contain ALL TAS2Rs in this genome with the correct coordinates because genes will be omitted from followup if they don't match something on this list.    
+  Update this to reflect the references you'll use for the reverse blast step.  For each reference, you'll need a genome with matched coordinates of known TAS2Rs (as a csv).  As an example, we've included the gene list for humans (based off of hg38) in human_tas2r_reference.csv.  It's very important that this contain ALL TAS2Rs in this genome with the correct coordinates because genes will be omitted from followup if they don't match something on this list.    
     Line 66: update location where you want your config files to be sufficient_length_sorted    
     Line 69: update location where you want to create subdirectories for each accession.  Must end with subdirs/${shortname}    
     Lines 93 and 113: echo to match file location in 69    
@@ -47,39 +47,39 @@ Ensure that you have the appropriate versions of all packages (listed at the beg
   Lines 99, 118, 119, 171, 172, 248, 264, 281: update location of scripts.    
 
 ### blastF.sh    
-      Header changes as above    
-      Line 27: update location of query fasta    
+  Header changes as above    
+  Line 27: update location of query fasta    
 ### bitter_pt1.py    
-      Header changes as above    
-      Script includes several different ways of expanding margins around putative TAS2R.      
-      Line 137: update location of header_file (creates header for unix pull job to get region surrounding putative TAS2Rs)    
+  Header changes as above    
+  Script includes several different ways of expanding margins around putative TAS2R.  
+  Line 137: update location of header_file (creates header for unix pull job to get region surrounding putative TAS2Rs)    
 ### header_pull.txt    
-      Header changes as above    
+  Header changes as above    
 ### bitter_pt2.py    
-      Header changes as above    
-      Lines 316, 329: update location of list_complete.txt    
-      Line 463: here I create arbitrary temp names for genes and transcripts.  In a moment of vanity, I used my own initials.  Feel free to choose your own nomenclature.    
+  Header changes as above    
+  Lines 316, 329: update location of list_complete.txt    
+  Line 463: here I create arbitrary temp names for genes and transcripts.  In a moment of vanity, I used my own initials.  Feel free to choose your own nomenclature.    
 ### blastR.sh    
-      Header changes as above    
+  Header changes as above    
 ### bitter_pt3_TMbed.py    
-      Header changes as above    
-      Lines 387, 388, 397: update location of subdirectories    
-      Line 390: update location of tmbed    
+  Header changes as above    
+  Lines 387, 388, 397: update location of subdirectories    
+  Line 390: update location of tmbed    
 
 ### Managing large genomes:    
   Of note, when this pipeline is first run, any large genomes will fail at the blastF.sh step (as of project development, tblastn can't handle large genomes)    
   For each of these, open the 3 config files and manually change the large genome flag to "yes"    
   Additional scripts to revise:    
 #### split_try3_pipe.sh    
-      Header changes as above    
+  Header changes as above    
 #### blast_big_pipe.sh    
-      Header changes as above    
-      Line 35: update location of query fasta      
+  Header changes as above    
+  Line 35: update location of query fasta  
 #### bitter_pt1_Big.py    
-      Header changes as above    
-      Line 135: update location of header_big.txt    
+  Header changes as above    
+  Line 135: update location of header_big.txt    
 #### header_big.txt    
-      Header changes as above    
+  Header changes as above    
 
 ### Edit batch submitter (or write your own) that will run pipeline_v7.sh for each accession number    
   all_accessions_remaining.txt contains all accession numbers that need to run but have not been submitted yet.  If a job fails I want to rerun it, I manually add the accession number back to this list.    
