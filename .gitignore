@@ -1,0 +1,24 @@
+# Ignore hidden files created by macOS
+._*
+
+# Ignore .DS_Store files
+.DS_Store
+
+# Ignore AppleDouble resource fork files
+.AppleDouble
+
+# Ignore files that might appear on external disks
+.Spotlight-V100
+.Trashes
+
+# Ignore macOS folder attributes
+**/.DocumentRevisions-V100
+**/.fseventsd
+**/.Spotlight-V100
+**/.TemporaryItems
+**/.Trashes
+**/.VolumeIcon.icns
+**/.com.apple.timemachine.donotpresent
+**/.AppleDB
+**/.AppleDesktop
+**/.apdisk
