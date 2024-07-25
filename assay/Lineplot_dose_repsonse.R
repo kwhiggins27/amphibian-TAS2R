@@ -2,7 +2,7 @@
 library(tidyverse)
 library(scales)
 
-#Read dataset
+#Read dataset (csv format)
 data_dr <- readr::read_csv("data_DRcurve_ver240516.csv")
 
 name_convert <- c("Axo_1" = "axolotl_54", "Bul_1" = "bullfrog_51","Bul_4" = "bullfrog_61", 

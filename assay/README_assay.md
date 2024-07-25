@@ -2,7 +2,7 @@
 
 ## Description  
 Part 1 is a Jupyter notebook designed to create heatmap from raw assay data.  
-Part 2 is an R script designed to create lineplots for dose response relationships  
+Part 2 is an R script designed to create dose response curves  
 Part 3 is an R script designed to create barplots from raw assay data.
 
 ## How to install and run  

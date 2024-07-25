@@ -1,7 +1,7 @@
 #Activate libraries
 library(tidyverse)
 
-#Read dataset
+#Read dataset (csv format)
 data_sc <- readr::read_csv("data_BitterAssay_ver240513.csv")
 
 name_convert <- c("Axo_1" = "axolotl_54", "Axo_2" = "axolotl_10", "Axo_3" = "axolotl_42",
