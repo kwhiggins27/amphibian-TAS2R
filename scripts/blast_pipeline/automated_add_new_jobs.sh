@@ -7,10 +7,13 @@
 #SBATCH --ntasks=1          # run a single task
 #SBATCH --cpus-per-task=1       # number of cores/threads requested, up from 4 you're asking for now - see too that I changed --runThreadN below to match
 #SBATCH --partition=20
-#SBATCH --output=checksubmit.log # Standard output and error log
-#SBATCH --error=checksubmit.err
+#SBATCH --output=logs/checksubmit.log # Standard output and error log
+#SBATCH --error=logs/checksubmit.err
 
-remaining="/lab/wengpj01/vertebrate_pipeline/all_accessions_remaining.txt"
+#Update your username in line 25
+#Update minimum number of desired jobs to run in parallel in line 17
+
+remaining="../../progress/all_accessions_remaining.txt"
 less_than=25
 to_add=5
 
