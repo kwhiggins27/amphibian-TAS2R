@@ -22,3 +22,9 @@
 **/.AppleDB
 **/.AppleDesktop
 **/.apdisk
+
+# Ignore certain file suffixes
+*.gz
+*.bam
+*.bam.bai
+*.fa
