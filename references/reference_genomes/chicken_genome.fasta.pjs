@@ -1,0 +1,22 @@
+{
+  "version": "1.2",
+  "dbname": "chicken_genome.fasta",
+  "dbtype": "Protein",
+  "db-version": 5,
+  "description": "../../references/reference_genomes/chicken_genome.fasta",
+  "number-of-letters": 1053332251,
+  "number-of-sequences": 214,
+  "last-updated": "2024-07-27T17:47:00",
+  "number-of-volumes": 1,
+  "bytes-total": 1053418759,
+  "bytes-to-cache": 1053334330,
+  "files": [
+    "chicken_genome.fasta.pdb",
+    "chicken_genome.fasta.phr",
+    "chicken_genome.fasta.pin",
+    "chicken_genome.fasta.pot",
+    "chicken_genome.fasta.psq",
+    "chicken_genome.fasta.ptf",
+    "chicken_genome.fasta.pto"
+  ]
+}

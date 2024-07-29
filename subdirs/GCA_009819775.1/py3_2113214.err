@@ -1,0 +1,11 @@
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:11<00:00, 11.97s/it]100%|██████████| 1/1 [00:11<00:00, 11.97s/it]
+/var/spool/slurm/d/job2113214/slurm_script:86: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  reciprocal_list["direction"][i]="-"
+/var/spool/slurm/d/job2113214/slurm_script:101: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  reciprocal_list["assignment"][i]=coordinates["gene"]

@@ -1,0 +1,234 @@
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /lab/wengpj01/amphibian-TAS2R/scripts/blast_pipeline/tmbed/tmbed/tmbed.py:22 │
+│ 4 in predict                                                                 │
+│                                                                              │
+│   221 │   │   encoder = load_encoder(use_gpu)                                │
+│   222 │                                                                      │
+│   223 │   models = load_models()                                             │
+│ ❱ 224 │   proteins = read_fasta(fasta_file)                                  │
+│   225 │                                                                      │
+│   226 │   if embeddings_file:                                                │
+│   227 │   │   predictions, error = predict_from_file(models,                 │
+│                                                                              │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │         batch_size = 4000                                                │ │
+│ │             config = {                                                   │ │
+│ │                      │   'batch_size': 4000,                             │ │
+│ │                      │   'cpu_fallback': True,                           │ │
+│ │                      │   'with_probabilities': False                     │ │
+│ │                      }                                                   │ │
+│ │       cpu_fallback = True                                                │ │
+│ │    embeddings_file = None                                                │ │
+│ │            encoder = <tmbed.embed.T5Encoder object at 0x7fa7c1be8940>    │ │
+│ │         fasta_file = PosixPath('../../../../subdirs/GCA_009819775.1/for… │ │
+│ │             models = [                                                   │ │
+│ │                      │   Predictor(                                      │ │
+│ │                        (model): CNN(                                     │ │
+│ │                      │   (input): Conv(                                  │ │
+│ │                      │     (func): ReLU(inplace=True)                    │ │
+│ │                      │     (norm): SeqNorm()                             │ │
+│ │                      │     (conv): Conv2d(1024, 64, kernel_size=(1, 1),  │ │
+│ │                      stride=(1, 1), bias=False)                          │ │
+│ │                      │   )                                               │ │
+│ │                      │   (dwc1): Conv(                                   │ │
+│ │                      │     (func): ReLU(inplace=True)                    │ │
+│ │                      │     (norm): SeqNorm()                             │ │
+│ │                      │     (conv): Conv2d(64, 64, kernel_size=(9, 1),    │ │
+│ │                      stride=(1, 1), padding=(4, 0), groups=64,           │ │
+│ │                      bias=False)                                         │ │
+│ │                      │   )                                               │ │
+│ │                      │   (dwc2): Conv(                                   │ │
+│ │                      │     (func): ReLU(inplace=True)                    │ │
+│ │                      │     (norm): SeqNorm()                             │ │
+│ │                      │     (conv): Conv2d(64, 64, kernel_size=(21, 1),   │ │
+│ │                      stride=(1, 1), padding=(10, 0), groups=64,          │ │
+│ │                      bias=False)                                         │ │
+│ │                      │   )                                               │ │
+│ │                      │   (dropout): Dropout2d(p=0.5, inplace=True)       │ │
+│ │                      │   (output): Conv2d(192, 5, kernel_size=(1, 1),    │ │
+│ │                      stride=(1, 1))                                      │ │
+│ │                        )                                                 │ │
+│ │                      ),                                                  │ │
+│ │                      │   Predictor(                                      │ │
+│ │                        (model): CNN(                                     │ │
+│ │                      │   (input): Conv(                                  │ │
+│ │                      │     (func): ReLU(inplace=True)                    │ │
+│ │                      │     (norm): SeqNorm()                             │ │
+│ │                      │     (conv): Conv2d(1024, 64, kernel_size=(1, 1),  │ │
+│ │                      stride=(1, 1), bias=False)                          │ │
+│ │                      │   )                                               │ │
+│ │                      │   (dwc1): Conv(                                   │ │
+│ │                      │     (func): ReLU(inplace=True)                    │ │
+│ │                      │     (norm): SeqNorm()                             │ │
+│ │                      │     (conv): Conv2d(64, 64, kernel_size=(9, 1),    │ │
+│ │                      stride=(1, 1), padding=(4, 0), groups=64,           │ │
+│ │                      bias=False)                                         │ │
+│ │                      │   )                                               │ │
+│ │                      │   (dwc2): Conv(                                   │ │
+│ │                      │     (func): ReLU(inplace=True)                    │ │
+│ │                      │     (norm): SeqNorm()                             │ │
+│ │                      │     (conv): Conv2d(64, 64, kernel_size=(21, 1),   │ │
+│ │                      stride=(1, 1), padding=(10, 0), groups=64,          │ │
+│ │                      bias=False)                                         │ │
+│ │                      │   )                                               │ │
+│ │                      │   (dropout): Dropout2d(p=0.5, inplace=True)       │ │
+│ │                      │   (output): Conv2d(192, 5, kernel_size=(1, 1),    │ │
+│ │                      stride=(1, 1))                                      │ │
+│ │                        )                                                 │ │
+│ │                      ),                                                  │ │
+│ │                      │   Predictor(                                      │ │
+│ │                        (model): CNN(                                     │ │
+│ │                      │   (input): Conv(                                  │ │
+│ │                      │     (func): ReLU(inplace=True)                    │ │
+│ │                      │     (norm): SeqNorm()                             │ │
+│ │                      │     (conv): Conv2d(1024, 64, kernel_size=(1, 1),  │ │
+│ │                      stride=(1, 1), bias=False)                          │ │
+│ │                      │   )                                               │ │
+│ │                      │   (dwc1): Conv(                                   │ │
+│ │                      │     (func): ReLU(inplace=True)                    │ │
+│ │                      │     (norm): SeqNorm()                             │ │
+│ │                      │     (conv): Conv2d(64, 64, kernel_size=(9, 1),    │ │
+│ │                      stride=(1, 1), padding=(4, 0), groups=64,           │ │
+│ │                      bias=False)                                         │ │
+│ │                      │   )                                               │ │
+│ │                      │   (dwc2): Conv(                                   │ │
+│ │                      │     (func): ReLU(inplace=True)                    │ │
+│ │                      │     (norm): SeqNorm()                             │ │
+│ │                      │     (conv): Conv2d(64, 64, kernel_size=(21, 1),   │ │
+│ │                      stride=(1, 1), padding=(10, 0), groups=64,          │ │
+│ │                      bias=False)                                         │ │
+│ │                      │   )                                               │ │
+│ │                      │   (dropout): Dropout2d(p=0.5, inplace=True)       │ │
+│ │                      │   (output): Conv2d(192, 5, kernel_size=(1, 1),    │ │
+│ │                      stride=(1, 1))                                      │ │
+│ │                        )                                                 │ │
+│ │                      ),                                                  │ │
+│ │                      │   Predictor(                                      │ │
+│ │                        (model): CNN(                                     │ │
+│ │                      │   (input): Conv(                                  │ │
+│ │                      │     (func): ReLU(inplace=True)                    │ │
+│ │                      │     (norm): SeqNorm()                             │ │
+│ │                      │     (conv): Conv2d(1024, 64, kernel_size=(1, 1),  │ │
+│ │                      stride=(1, 1), bias=False)                          │ │
+│ │                      │   )                                               │ │
+│ │                      │   (dwc1): Conv(                                   │ │
+│ │                      │     (func): ReLU(inplace=True)                    │ │
+│ │                      │     (norm): SeqNorm()                             │ │
+│ │                      │     (conv): Conv2d(64, 64, kernel_size=(9, 1),    │ │
+│ │                      stride=(1, 1), padding=(4, 0), groups=64,           │ │
+│ │                      bias=False)                                         │ │
+│ │                      │   )                                               │ │
+│ │                      │   (dwc2): Conv(                                   │ │
+│ │                      │     (func): ReLU(inplace=True)                    │ │
+│ │                      │     (norm): SeqNorm()                             │ │
+│ │                      │     (conv): Conv2d(64, 64, kernel_size=(21, 1),   │ │
+│ │                      stride=(1, 1), padding=(10, 0), groups=64,          │ │
+│ │                      bias=False)                                         │ │
+│ │                      │   )                                               │ │
+│ │                      │   (dropout): Dropout2d(p=0.5, inplace=True)       │ │
+│ │                      │   (output): Conv2d(192, 5, kernel_size=(1, 1),    │ │
+│ │                      stride=(1, 1))                                      │ │
+│ │                        )                                                 │ │
+│ │                      ),                                                  │ │
+│ │                      │   Predictor(                                      │ │
+│ │                        (model): CNN(                                     │ │
+│ │                      │   (input): Conv(                                  │ │
+│ │                      │     (func): ReLU(inplace=True)                    │ │
+│ │                      │     (norm): SeqNorm()                             │ │
+│ │                      │     (conv): Conv2d(1024, 64, kernel_size=(1, 1),  │ │
+│ │                      stride=(1, 1), bias=False)                          │ │
+│ │                      │   )                                               │ │
+│ │                      │   (dwc1): Conv(                                   │ │
+│ │                      │     (func): ReLU(inplace=True)                    │ │
+│ │                      │     (norm): SeqNorm()                             │ │
+│ │                      │     (conv): Conv2d(64, 64, kernel_size=(9, 1),    │ │
+│ │                      stride=(1, 1), padding=(4, 0), groups=64,           │ │
+│ │                      bias=False)                                         │ │
+│ │                      │   )                                               │ │
+│ │                      │   (dwc2): Conv(                                   │ │
+│ │                      │     (func): ReLU(inplace=True)                    │ │
+│ │                      │     (norm): SeqNorm()                             │ │
+│ │                      │     (conv): Conv2d(64, 64, kernel_size=(21, 1),   │ │
+│ │                      stride=(1, 1), padding=(10, 0), groups=64,          │ │
+│ │                      bias=False)                                         │ │
+│ │                      │   )                                               │ │
+│ │                      │   (dropout): Dropout2d(p=0.5, inplace=True)       │ │
+│ │                      │   (output): Conv2d(192, 5, kernel_size=(1, 1),    │ │
+│ │                      stride=(1, 1))                                      │ │
+│ │                        )                                                 │ │
+│ │                      )                                                   │ │
+│ │                      ]                                                   │ │
+│ │         out_format = '0'                                                 │ │
+│ │        output_file = PosixPath('../../../../subdirs/GCA_009819775.1/TMb… │ │
+│ │            use_gpu = False                                               │ │
+│ │ with_probabilities = False                                               │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│                                                                              │
+│ /lab/wengpj01/amphibian-TAS2R/scripts/blast_pipeline/tmbed/tmbed/utils.py:10 │
+│ 6 in read_fasta                                                              │
+│                                                                              │
+│   103 def read_fasta(filename):                                              │
+│   104 │   proteins = []                                                      │
+│   105 │                                                                      │
+│ ❱ 106 │   with Path(filename).open('r') as f:                                │
+│   107 │   │   header = None                                                  │
+│   108 │   │   sequence = []                                                  │
+│   109                                                                        │
+│                                                                              │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │ filename = PosixPath('../../../../subdirs/GCA_009819775.1/for_TMHMM.fas… │ │
+│ │ proteins = []                                                            │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│                                                                              │
+│ /usr/lib/python3.8/pathlib.py:1222 in open                                   │
+│                                                                              │
+│   1219 │   │   """                                                           │
+│   1220 │   │   if self._closed:                                              │
+│   1221 │   │   │   self._raise_closed()                                      │
+│ ❱ 1222 │   │   return io.open(self, mode, buffering, encoding, errors, newli │
+│   1223 │   │   │   │   │      opener=self._opener)                           │
+│   1224 │                                                                     │
+│   1225 │   def read_bytes(self):                                             │
+│                                                                              │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │ buffering = -1                                                           │ │
+│ │  encoding = None                                                         │ │
+│ │    errors = None                                                         │ │
+│ │      mode = 'r'                                                          │ │
+│ │   newline = None                                                         │ │
+│ │      self = PosixPath('../../../../subdirs/GCA_009819775.1/for_TMHMM.fa… │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│                                                                              │
+│ /usr/lib/python3.8/pathlib.py:1078 in _opener                                │
+│                                                                              │
+│   1075 │                                                                     │
+│   1076 │   def _opener(self, name, flags, mode=0o666):                       │
+│   1077 │   │   # A stub for the opener argument to built-in open()           │
+│ ❱ 1078 │   │   return self._accessor.open(self, flags, mode)                 │
+│   1079 │                                                                     │
+│   1080 │   def _raw_open(self, flags, mode=0o777):                           │
+│   1081 │   │   """                                                           │
+│                                                                              │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │ flags = 524288                                                           │ │
+│ │  mode = 438                                                              │ │
+│ │  name = '../../../../subdirs/GCA_009819775.1/for_TMHMM.fasta'            │ │
+│ │  self = PosixPath('../../../../subdirs/GCA_009819775.1/for_TMHMM.fasta') │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+╰──────────────────────────────────────────────────────────────────────────────╯
+FileNotFoundError: [Errno 2] No such file or directory: 
+'../../../../subdirs/GCA_009819775.1/for_TMHMM.fasta'
+/var/spool/slurm/d/job2113145/slurm_script:86: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  reciprocal_list["direction"][i]="-"
+/var/spool/slurm/d/job2113145/slurm_script:101: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  reciprocal_list["assignment"][i]=coordinates["gene"]
+Traceback (most recent call last):
+  File "/var/spool/slurm/d/job2113145/slurm_script", line 260, in <module>
+    os.chdir(home_directory)
+FileNotFoundError: [Errno 2] No such file or directory: '../../../../subdirs/GCA_009819775.1'

@@ -1,0 +1,2 @@
+mkdir: cannot create directory '/../../results': Permission denied
+slurmstepd: error: *** JOB 2110118 ON c2b7 CANCELLED AT 2024-07-27T17:54:02 ***

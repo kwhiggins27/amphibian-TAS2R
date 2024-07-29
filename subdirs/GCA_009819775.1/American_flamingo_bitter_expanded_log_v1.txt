@@ -1,0 +1,5 @@
+reference species: chicken
+BLAST species: American_flamingo
+bitter
+v1
+time written: 20240729154017(909, 13)

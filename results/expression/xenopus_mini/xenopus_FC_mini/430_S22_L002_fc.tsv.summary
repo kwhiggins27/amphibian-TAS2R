@@ -1,0 +1,15 @@
+Status	../../results/expression/xenopus_mini/xenopus_star_mini/430_S22_L002Aligned.sortedByCoord.out.bam
+Assigned	2134
+Unassigned_Unmapped	11309262
+Unassigned_Read_Type	0
+Unassigned_Singleton	0
+Unassigned_MappingQuality	0
+Unassigned_Chimera	0
+Unassigned_FragmentLength	0
+Unassigned_Duplicate	0
+Unassigned_MultiMapping	20003783
+Unassigned_Secondary	0
+Unassigned_NonSplit	0
+Unassigned_NoFeatures	192392406
+Unassigned_Overlapping_Length	0
+Unassigned_Ambiguity	15

@@ -1,0 +1,14 @@
+../../subdirs/GCA_027887145.1/
+../../genomes/GCA_027887145.1_bAmmCau1.pri_genomic.fna
+
+
+Building a new DB, current time: 07/29/2024 13:45:07
+New DB name:   /lab/wengpj01/amphibian-TAS2R/genomes/GCA_027887145.1_bAmmCau1.pri_genomic.fna
+New DB title:  ../../genomes/GCA_027887145.1_bAmmCau1.pri_genomic.fna
+Sequence type: Nucleotide
+Deleted existing Nucleotide BLAST database named /lab/wengpj01/amphibian-TAS2R/genomes/GCA_027887145.1_bAmmCau1.pri_genomic.fna
+Keep MBits: T
+Maximum file size: 3000000000B
+Adding sequences from FASTA; added 282 sequences in 13.7201 seconds.
+
+

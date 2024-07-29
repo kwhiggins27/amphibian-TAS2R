@@ -1,0 +1,5 @@
+reference species: chicken
+BLAST species: birds
+bitter
+v1
+time written: 20240729145841(3749, 13)

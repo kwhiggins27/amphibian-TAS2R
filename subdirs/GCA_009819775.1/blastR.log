@@ -1,0 +1,12 @@
+
+
+Building a new DB, current time: 07/29/2024 15:42:08
+New DB name:   /lab/wengpj01/amphibian-TAS2R/references/reference_genomes/chicken_genome.fasta
+New DB title:  ../../references/reference_genomes/chicken_genome.fasta
+Sequence type: Nucleotide
+Deleted existing Nucleotide BLAST database named /lab/wengpj01/amphibian-TAS2R/references/reference_genomes/chicken_genome.fasta
+Keep MBits: T
+Maximum file size: 3000000000B
+Adding sequences from FASTA; added 214 sequences in 9.19246 seconds.
+
+

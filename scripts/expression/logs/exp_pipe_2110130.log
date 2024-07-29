@@ -1,0 +1,3 @@
+STAR index already made
+Submitted batch job 2110131
+xenopus_mini ../../results/expression/xenopus_mini/xenopus_FC_mini/ ../../results/expression/xenopus_mini/final_genes_7TM.csv ../../results/expression/xenopus_mini/xenopus_mini.csv ../../results/expression/xenopus_from_pipeline.gtf

@@ -1,0 +1,9 @@
+Jul 27 17:55:05 ..... started STAR run
+Jul 27 17:55:20 ..... loading genome
+Jul 27 17:55:40 ..... started mapping
+Jul 27 19:16:33 ..... finished mapping
+Jul 27 19:16:35 ..... started sorting BAM
+Jul 27 19:20:07 ..... finished successfully
+Done with STAR
+20240727192020
+../../results/expression/xenopus_mini/xenopus_FC_mini//430_S22_L002_fc.tsv

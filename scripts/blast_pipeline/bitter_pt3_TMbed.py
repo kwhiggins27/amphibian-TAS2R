@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 #SBATCH --job-name=py3  # Job name
-#SBATCH --mail-type=NONE    # Mail events (NONE, BEGIN, END, FAIL, ALL)
-#SBATCH --mail-user=youremailaddress@yourinstitute  # Where to send mail
 #SBATCH --mem=100gb          # Job memory request, down from 200 and closer to the 64gb I think you're using per instance
 #SBATCH --nodes=1           # ensure cores are on one node
 #SBATCH --ntasks=1          # run a single task
@@ -246,13 +244,20 @@ pickle_out.close()
 
 #Run TMbed
 
-sample_fasta="../../../subdirs" + accession + "/for_TMHMM.fasta"
-sample_pred="../../../"+accession+"/TMbed.pred"
+sample_fasta="../../../subdirs/" + accession + "/for_TMHMM.fasta"
+home_directory="../../../subdirs/" + accession
+sample_pred="../../../subdirs/"+accession+"/TMbed.pred"
 
-os.chdir("tmbed/tmbed/")
+# # Set PYTHONPATH to include the parent directory of the tmbed package
+# os.environ['PYTHONPATH'] = "../../scripts/blast_pipeline"
+# os.environ['PYTHONPATH'] = "../../scripts/blast_pipeline/tmbed/tmbed"
+
+os.chdir("../../scripts/blast_pipeline/tmbed/")
+# os.chdir("../../scripts/blast_pipeline/tmbed/tmbed/")
+
 os.system("python -m tmbed predict -f %s -p %s"%(sample_fasta, sample_pred))
 
-os.chdir(sys.argv[1])
+os.chdir(home_directory)
 
 file_path="TMbed.pred"
 with open(file_path, 'r') as file:

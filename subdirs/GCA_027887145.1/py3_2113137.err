@@ -1,0 +1,240 @@
+Downloading spiece.model:   0%|          | 0.00/238k [00:00<?, ?B/s]Downloading spiece.model: 100%|██████████| 238k/238k [00:00<00:00, 7.08MB/s]
+Downloading (…)cial_tokens_map.json:   0%|          | 0.00/1.79k [00:00<?, ?B/s]Downloading (…)cial_tokens_map.json: 100%|██████████| 1.79k/1.79k [00:00<00:00, 147kB/s]
+Downloading tokenizer_config.json:   0%|          | 0.00/25.0 [00:00<?, ?B/s]Downloading tokenizer_config.json: 100%|██████████| 25.0/25.0 [00:00<00:00, 10.9kB/s]
+Downloading config.json:   0%|          | 0.00/656 [00:00<?, ?B/s]Downloading config.json: 100%|██████████| 656/656 [00:00<00:00, 292kB/s]
+Downloading pytorch_model.bin:   0%|          | 0.00/2.42G [00:00<?, ?B/s]Downloading pytorch_model.bin:   0%|          | 10.5M/2.42G [00:00<00:38, 61.7MB/s]Downloading pytorch_model.bin:   1%|▏         | 31.5M/2.42G [00:00<00:18, 127MB/s] Downloading pytorch_model.bin:   3%|▎         | 62.9M/2.42G [00:00<00:12, 188MB/s]Downloading pytorch_model.bin:   4%|▍         | 94.4M/2.42G [00:00<00:10, 220MB/s]Downloading pytorch_model.bin:   5%|▌         | 126M/2.42G [00:00<00:09, 241MB/s] Downloading pytorch_model.bin:   7%|▋         | 157M/2.42G [00:00<00:09, 247MB/s]Downloading pytorch_model.bin:   8%|▊         | 189M/2.42G [00:00<00:08, 258MB/s]Downloading pytorch_model.bin:   9%|▉         | 220M/2.42G [00:00<00:08, 262MB/s]Downloading pytorch_model.bin:  10%|█         | 252M/2.42G [00:01<00:08, 267MB/s]Downloading pytorch_model.bin:  12%|█▏        | 283M/2.42G [00:01<00:08, 265MB/s]Downloading pytorch_model.bin:  13%|█▎        | 315M/2.42G [00:01<00:08, 259MB/s]Downloading pytorch_model.bin:  14%|█▍        | 346M/2.42G [00:01<00:07, 262MB/s]Downloading pytorch_model.bin:  16%|█▌        | 377M/2.42G [00:01<00:07, 265MB/s]Downloading pytorch_model.bin:  17%|█▋        | 409M/2.42G [00:01<00:07, 271MB/s]Downloading pytorch_model.bin:  18%|█▊        | 440M/2.42G [00:01<00:07, 269MB/s]Downloading pytorch_model.bin:  20%|█▉        | 472M/2.42G [00:01<00:07, 271MB/s]Downloading pytorch_model.bin:  21%|██        | 503M/2.42G [00:02<00:06, 273MB/s]Downloading pytorch_model.bin:  22%|██▏       | 535M/2.42G [00:02<00:06, 275MB/s]Downloading pytorch_model.bin:  23%|██▎       | 566M/2.42G [00:02<00:07, 263MB/s]Downloading pytorch_model.bin:  25%|██▍       | 598M/2.42G [00:02<00:06, 266MB/s]Downloading pytorch_model.bin:  26%|██▌       | 629M/2.42G [00:02<00:06, 270MB/s]Downloading pytorch_model.bin:  27%|██▋       | 661M/2.42G [00:02<00:06, 273MB/s]Downloading pytorch_model.bin:  29%|██▊       | 692M/2.42G [00:02<00:06, 275MB/s]Downloading pytorch_model.bin:  30%|██▉       | 724M/2.42G [00:02<00:06, 276MB/s]Downloading pytorch_model.bin:  31%|███       | 755M/2.42G [00:02<00:06, 275MB/s]Downloading pytorch_model.bin:  33%|███▎      | 786M/2.42G [00:03<00:05, 279MB/s]Downloading pytorch_model.bin:  34%|███▍      | 818M/2.42G [00:03<00:05, 278MB/s]Downloading pytorch_model.bin:  35%|███▌      | 849M/2.42G [00:03<00:05, 281MB/s]Downloading pytorch_model.bin:  36%|███▋      | 881M/2.42G [00:03<00:05, 284MB/s]Downloading pytorch_model.bin:  38%|███▊      | 912M/2.42G [00:03<00:05, 282MB/s]Downloading pytorch_model.bin:  39%|███▉      | 944M/2.42G [00:03<00:05, 281MB/s]Downloading pytorch_model.bin:  40%|████      | 975M/2.42G [00:03<00:08, 175MB/s]Downloading pytorch_model.bin:  42%|████▏     | 1.01G/2.42G [00:04<00:07, 197MB/s]Downloading pytorch_model.bin:  43%|████▎     | 1.04G/2.42G [00:04<00:06, 216MB/s]Downloading pytorch_model.bin:  44%|████▍     | 1.07G/2.42G [00:04<00:05, 234MB/s]Downloading pytorch_model.bin:  46%|████▌     | 1.10G/2.42G [00:04<00:05, 248MB/s]Downloading pytorch_model.bin:  47%|████▋     | 1.13G/2.42G [00:04<00:05, 254MB/s]Downloading pytorch_model.bin:  48%|████▊     | 1.16G/2.42G [00:04<00:04, 263MB/s]Downloading pytorch_model.bin:  49%|████▉     | 1.20G/2.42G [00:04<00:04, 267MB/s]Downloading pytorch_model.bin:  51%|█████     | 1.23G/2.42G [00:04<00:04, 274MB/s]Downloading pytorch_model.bin:  52%|█████▏    | 1.26G/2.42G [00:04<00:04, 249MB/s]Downloading pytorch_model.bin:  53%|█████▎    | 1.29G/2.42G [00:05<00:04, 258MB/s]Downloading pytorch_model.bin:  55%|█████▍    | 1.32G/2.42G [00:05<00:04, 266MB/s]Downloading pytorch_model.bin:  56%|█████▌    | 1.35G/2.42G [00:05<00:03, 273MB/s]Downloading pytorch_model.bin:  57%|█████▋    | 1.38G/2.42G [00:05<00:03, 277MB/s]Downloading pytorch_model.bin:  59%|█████▊    | 1.42G/2.42G [00:05<00:03, 281MB/s]Downloading pytorch_model.bin:  60%|█████▉    | 1.45G/2.42G [00:05<00:03, 282MB/s]Downloading pytorch_model.bin:  61%|██████    | 1.48G/2.42G [00:05<00:03, 284MB/s]Downloading pytorch_model.bin:  62%|██████▏   | 1.51G/2.42G [00:05<00:04, 225MB/s]Downloading pytorch_model.bin:  64%|██████▍   | 1.54G/2.42G [00:06<00:03, 228MB/s]Downloading pytorch_model.bin:  65%|██████▌   | 1.57G/2.42G [00:06<00:03, 244MB/s]Downloading pytorch_model.bin:  66%|██████▋   | 1.60G/2.42G [00:06<00:04, 196MB/s]Downloading pytorch_model.bin:  68%|██████▊   | 1.64G/2.42G [00:06<00:03, 196MB/s]Downloading pytorch_model.bin:  69%|██████▉   | 1.67G/2.42G [00:06<00:03, 213MB/s]Downloading pytorch_model.bin:  70%|███████   | 1.70G/2.42G [00:06<00:03, 229MB/s]Downloading pytorch_model.bin:  72%|███████▏  | 1.73G/2.42G [00:06<00:02, 244MB/s]Downloading pytorch_model.bin:  73%|███████▎  | 1.76G/2.42G [00:07<00:02, 255MB/s]Downloading pytorch_model.bin:  74%|███████▍  | 1.79G/2.42G [00:07<00:02, 235MB/s]Downloading pytorch_model.bin:  76%|███████▌  | 1.82G/2.42G [00:07<00:02, 247MB/s]Downloading pytorch_model.bin:  77%|███████▋  | 1.86G/2.42G [00:07<00:02, 255MB/s]Downloading pytorch_model.bin:  78%|███████▊  | 1.89G/2.42G [00:07<00:02, 262MB/s]Downloading pytorch_model.bin:  79%|███████▉  | 1.92G/2.42G [00:07<00:01, 266MB/s]Downloading pytorch_model.bin:  81%|████████  | 1.95G/2.42G [00:07<00:01, 271MB/s]Downloading pytorch_model.bin:  82%|████████▏ | 1.98G/2.42G [00:07<00:01, 274MB/s]Downloading pytorch_model.bin:  83%|████████▎ | 2.01G/2.42G [00:07<00:01, 277MB/s]Downloading pytorch_model.bin:  85%|████████▍ | 2.04G/2.42G [00:08<00:01, 277MB/s]Downloading pytorch_model.bin:  86%|████████▌ | 2.08G/2.42G [00:08<00:01, 279MB/s]Downloading pytorch_model.bin:  87%|████████▋ | 2.11G/2.42G [00:08<00:01, 281MB/s]Downloading pytorch_model.bin:  89%|████████▊ | 2.14G/2.42G [00:08<00:00, 281MB/s]Downloading pytorch_model.bin:  90%|████████▉ | 2.17G/2.42G [00:08<00:00, 273MB/s]Downloading pytorch_model.bin:  91%|█████████ | 2.20G/2.42G [00:08<00:00, 273MB/s]Downloading pytorch_model.bin:  92%|█████████▏| 2.23G/2.42G [00:08<00:00, 275MB/s]Downloading pytorch_model.bin:  94%|█████████▎| 2.26G/2.42G [00:08<00:00, 253MB/s]Downloading pytorch_model.bin:  95%|█████████▌| 2.30G/2.42G [00:09<00:00, 231MB/s]Downloading pytorch_model.bin:  96%|█████████▋| 2.33G/2.42G [00:09<00:00, 236MB/s]Downloading pytorch_model.bin:  98%|█████████▊| 2.36G/2.42G [00:09<00:00, 246MB/s]Downloading pytorch_model.bin:  99%|█████████▉| 2.39G/2.42G [00:09<00:00, 253MB/s]Downloading pytorch_model.bin: 100%|██████████| 2.42G/2.42G [00:09<00:00, 253MB/s]
+For stability purposes, it is recommended to have accelerate installed when using this model in torch.float16, please install it with `pip install accelerate`
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /lab/wengpj01/amphibian-TAS2R/scripts/blast_pipeline/tmbed/tmbed/tmbed.py:22 │
+│ 4 in predict                                                                 │
+│                                                                              │
+│   221 │   │   encoder = load_encoder(use_gpu)                                │
+│   222 │                                                                      │
+│   223 │   models = load_models()                                             │
+│ ❱ 224 │   proteins = read_fasta(fasta_file)                                  │
+│   225 │                                                                      │
+│   226 │   if embeddings_file:                                                │
+│   227 │   │   predictions, error = predict_from_file(models,                 │
+│                                                                              │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │         batch_size = 4000                                                │ │
+│ │             config = {                                                   │ │
+│ │                      │   'batch_size': 4000,                             │ │
+│ │                      │   'cpu_fallback': True,                           │ │
+│ │                      │   'with_probabilities': False                     │ │
+│ │                      }                                                   │ │
+│ │       cpu_fallback = True                                                │ │
+│ │    embeddings_file = None                                                │ │
+│ │            encoder = <tmbed.embed.T5Encoder object at 0x7f100e57d9a0>    │ │
+│ │         fasta_file = PosixPath('../../../../subdirs/GCA_027887145.1/for… │ │
+│ │             models = [                                                   │ │
+│ │                      │   Predictor(                                      │ │
+│ │                        (model): CNN(                                     │ │
+│ │                      │   (input): Conv(                                  │ │
+│ │                      │     (func): ReLU(inplace=True)                    │ │
+│ │                      │     (norm): SeqNorm()                             │ │
+│ │                      │     (conv): Conv2d(1024, 64, kernel_size=(1, 1),  │ │
+│ │                      stride=(1, 1), bias=False)                          │ │
+│ │                      │   )                                               │ │
+│ │                      │   (dwc1): Conv(                                   │ │
+│ │                      │     (func): ReLU(inplace=True)                    │ │
+│ │                      │     (norm): SeqNorm()                             │ │
+│ │                      │     (conv): Conv2d(64, 64, kernel_size=(9, 1),    │ │
+│ │                      stride=(1, 1), padding=(4, 0), groups=64,           │ │
+│ │                      bias=False)                                         │ │
+│ │                      │   )                                               │ │
+│ │                      │   (dwc2): Conv(                                   │ │
+│ │                      │     (func): ReLU(inplace=True)                    │ │
+│ │                      │     (norm): SeqNorm()                             │ │
+│ │                      │     (conv): Conv2d(64, 64, kernel_size=(21, 1),   │ │
+│ │                      stride=(1, 1), padding=(10, 0), groups=64,          │ │
+│ │                      bias=False)                                         │ │
+│ │                      │   )                                               │ │
+│ │                      │   (dropout): Dropout2d(p=0.5, inplace=True)       │ │
+│ │                      │   (output): Conv2d(192, 5, kernel_size=(1, 1),    │ │
+│ │                      stride=(1, 1))                                      │ │
+│ │                        )                                                 │ │
+│ │                      ),                                                  │ │
+│ │                      │   Predictor(                                      │ │
+│ │                        (model): CNN(                                     │ │
+│ │                      │   (input): Conv(                                  │ │
+│ │                      │     (func): ReLU(inplace=True)                    │ │
+│ │                      │     (norm): SeqNorm()                             │ │
+│ │                      │     (conv): Conv2d(1024, 64, kernel_size=(1, 1),  │ │
+│ │                      stride=(1, 1), bias=False)                          │ │
+│ │                      │   )                                               │ │
+│ │                      │   (dwc1): Conv(                                   │ │
+│ │                      │     (func): ReLU(inplace=True)                    │ │
+│ │                      │     (norm): SeqNorm()                             │ │
+│ │                      │     (conv): Conv2d(64, 64, kernel_size=(9, 1),    │ │
+│ │                      stride=(1, 1), padding=(4, 0), groups=64,           │ │
+│ │                      bias=False)                                         │ │
+│ │                      │   )                                               │ │
+│ │                      │   (dwc2): Conv(                                   │ │
+│ │                      │     (func): ReLU(inplace=True)                    │ │
+│ │                      │     (norm): SeqNorm()                             │ │
+│ │                      │     (conv): Conv2d(64, 64, kernel_size=(21, 1),   │ │
+│ │                      stride=(1, 1), padding=(10, 0), groups=64,          │ │
+│ │                      bias=False)                                         │ │
+│ │                      │   )                                               │ │
+│ │                      │   (dropout): Dropout2d(p=0.5, inplace=True)       │ │
+│ │                      │   (output): Conv2d(192, 5, kernel_size=(1, 1),    │ │
+│ │                      stride=(1, 1))                                      │ │
+│ │                        )                                                 │ │
+│ │                      ),                                                  │ │
+│ │                      │   Predictor(                                      │ │
+│ │                        (model): CNN(                                     │ │
+│ │                      │   (input): Conv(                                  │ │
+│ │                      │     (func): ReLU(inplace=True)                    │ │
+│ │                      │     (norm): SeqNorm()                             │ │
+│ │                      │     (conv): Conv2d(1024, 64, kernel_size=(1, 1),  │ │
+│ │                      stride=(1, 1), bias=False)                          │ │
+│ │                      │   )                                               │ │
+│ │                      │   (dwc1): Conv(                                   │ │
+│ │                      │     (func): ReLU(inplace=True)                    │ │
+│ │                      │     (norm): SeqNorm()                             │ │
+│ │                      │     (conv): Conv2d(64, 64, kernel_size=(9, 1),    │ │
+│ │                      stride=(1, 1), padding=(4, 0), groups=64,           │ │
+│ │                      bias=False)                                         │ │
+│ │                      │   )                                               │ │
+│ │                      │   (dwc2): Conv(                                   │ │
+│ │                      │     (func): ReLU(inplace=True)                    │ │
+│ │                      │     (norm): SeqNorm()                             │ │
+│ │                      │     (conv): Conv2d(64, 64, kernel_size=(21, 1),   │ │
+│ │                      stride=(1, 1), padding=(10, 0), groups=64,          │ │
+│ │                      bias=False)                                         │ │
+│ │                      │   )                                               │ │
+│ │                      │   (dropout): Dropout2d(p=0.5, inplace=True)       │ │
+│ │                      │   (output): Conv2d(192, 5, kernel_size=(1, 1),    │ │
+│ │                      stride=(1, 1))                                      │ │
+│ │                        )                                                 │ │
+│ │                      ),                                                  │ │
+│ │                      │   Predictor(                                      │ │
+│ │                        (model): CNN(                                     │ │
+│ │                      │   (input): Conv(                                  │ │
+│ │                      │     (func): ReLU(inplace=True)                    │ │
+│ │                      │     (norm): SeqNorm()                             │ │
+│ │                      │     (conv): Conv2d(1024, 64, kernel_size=(1, 1),  │ │
+│ │                      stride=(1, 1), bias=False)                          │ │
+│ │                      │   )                                               │ │
+│ │                      │   (dwc1): Conv(                                   │ │
+│ │                      │     (func): ReLU(inplace=True)                    │ │
+│ │                      │     (norm): SeqNorm()                             │ │
+│ │                      │     (conv): Conv2d(64, 64, kernel_size=(9, 1),    │ │
+│ │                      stride=(1, 1), padding=(4, 0), groups=64,           │ │
+│ │                      bias=False)                                         │ │
+│ │                      │   )                                               │ │
+│ │                      │   (dwc2): Conv(                                   │ │
+│ │                      │     (func): ReLU(inplace=True)                    │ │
+│ │                      │     (norm): SeqNorm()                             │ │
+│ │                      │     (conv): Conv2d(64, 64, kernel_size=(21, 1),   │ │
+│ │                      stride=(1, 1), padding=(10, 0), groups=64,          │ │
+│ │                      bias=False)                                         │ │
+│ │                      │   )                                               │ │
+│ │                      │   (dropout): Dropout2d(p=0.5, inplace=True)       │ │
+│ │                      │   (output): Conv2d(192, 5, kernel_size=(1, 1),    │ │
+│ │                      stride=(1, 1))                                      │ │
+│ │                        )                                                 │ │
+│ │                      ),                                                  │ │
+│ │                      │   Predictor(                                      │ │
+│ │                        (model): CNN(                                     │ │
+│ │                      │   (input): Conv(                                  │ │
+│ │                      │     (func): ReLU(inplace=True)                    │ │
+│ │                      │     (norm): SeqNorm()                             │ │
+│ │                      │     (conv): Conv2d(1024, 64, kernel_size=(1, 1),  │ │
+│ │                      stride=(1, 1), bias=False)                          │ │
+│ │                      │   )                                               │ │
+│ │                      │   (dwc1): Conv(                                   │ │
+│ │                      │     (func): ReLU(inplace=True)                    │ │
+│ │                      │     (norm): SeqNorm()                             │ │
+│ │                      │     (conv): Conv2d(64, 64, kernel_size=(9, 1),    │ │
+│ │                      stride=(1, 1), padding=(4, 0), groups=64,           │ │
+│ │                      bias=False)                                         │ │
+│ │                      │   )                                               │ │
+│ │                      │   (dwc2): Conv(                                   │ │
+│ │                      │     (func): ReLU(inplace=True)                    │ │
+│ │                      │     (norm): SeqNorm()                             │ │
+│ │                      │     (conv): Conv2d(64, 64, kernel_size=(21, 1),   │ │
+│ │                      stride=(1, 1), padding=(10, 0), groups=64,          │ │
+│ │                      bias=False)                                         │ │
+│ │                      │   )                                               │ │
+│ │                      │   (dropout): Dropout2d(p=0.5, inplace=True)       │ │
+│ │                      │   (output): Conv2d(192, 5, kernel_size=(1, 1),    │ │
+│ │                      stride=(1, 1))                                      │ │
+│ │                        )                                                 │ │
+│ │                      )                                                   │ │
+│ │                      ]                                                   │ │
+│ │         out_format = '0'                                                 │ │
+│ │        output_file = PosixPath('../../../../subdirs/GCA_027887145.1/TMb… │ │
+│ │            use_gpu = False                                               │ │
+│ │ with_probabilities = False                                               │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│                                                                              │
+│ /lab/wengpj01/amphibian-TAS2R/scripts/blast_pipeline/tmbed/tmbed/utils.py:10 │
+│ 6 in read_fasta                                                              │
+│                                                                              │
+│   103 def read_fasta(filename):                                              │
+│   104 │   proteins = []                                                      │
+│   105 │                                                                      │
+│ ❱ 106 │   with Path(filename).open('r') as f:                                │
+│   107 │   │   header = None                                                  │
+│   108 │   │   sequence = []                                                  │
+│   109                                                                        │
+│                                                                              │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │ filename = PosixPath('../../../../subdirs/GCA_027887145.1/for_TMHMM.fas… │ │
+│ │ proteins = []                                                            │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│                                                                              │
+│ /usr/lib/python3.8/pathlib.py:1222 in open                                   │
+│                                                                              │
+│   1219 │   │   """                                                           │
+│   1220 │   │   if self._closed:                                              │
+│   1221 │   │   │   self._raise_closed()                                      │
+│ ❱ 1222 │   │   return io.open(self, mode, buffering, encoding, errors, newli │
+│   1223 │   │   │   │   │      opener=self._opener)                           │
+│   1224 │                                                                     │
+│   1225 │   def read_bytes(self):                                             │
+│                                                                              │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │ buffering = -1                                                           │ │
+│ │  encoding = None                                                         │ │
+│ │    errors = None                                                         │ │
+│ │      mode = 'r'                                                          │ │
+│ │   newline = None                                                         │ │
+│ │      self = PosixPath('../../../../subdirs/GCA_027887145.1/for_TMHMM.fa… │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│                                                                              │
+│ /usr/lib/python3.8/pathlib.py:1078 in _opener                                │
+│                                                                              │
+│   1075 │                                                                     │
+│   1076 │   def _opener(self, name, flags, mode=0o666):                       │
+│   1077 │   │   # A stub for the opener argument to built-in open()           │
+│ ❱ 1078 │   │   return self._accessor.open(self, flags, mode)                 │
+│   1079 │                                                                     │
+│   1080 │   def _raw_open(self, flags, mode=0o777):                           │
+│   1081 │   │   """                                                           │
+│                                                                              │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │ flags = 524288                                                           │ │
+│ │  mode = 438                                                              │ │
+│ │  name = '../../../../subdirs/GCA_027887145.1/for_TMHMM.fasta'            │ │
+│ │  self = PosixPath('../../../../subdirs/GCA_027887145.1/for_TMHMM.fasta') │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+╰──────────────────────────────────────────────────────────────────────────────╯
+FileNotFoundError: [Errno 2] No such file or directory: 
+'../../../../subdirs/GCA_027887145.1/for_TMHMM.fasta'
+/var/spool/slurm/d/job2113137/slurm_script:86: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  reciprocal_list["direction"][i]="-"
+/var/spool/slurm/d/job2113137/slurm_script:101: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  reciprocal_list["assignment"][i]=coordinates["gene"]
+Traceback (most recent call last):
+  File "/var/spool/slurm/d/job2113137/slurm_script", line 260, in <module>
+    os.chdir(home_directory)
+FileNotFoundError: [Errno 2] No such file or directory: '../../../../subdirs/GCA_027887145.1'

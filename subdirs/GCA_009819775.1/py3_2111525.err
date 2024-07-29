@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/lab/wengpj01/amphibian-TAS2R/scripts/blast_pipeline/tmbed/tmbed/tmbed.py", line 24, in <module>
+    from .model import Predictor
+ImportError: attempted relative import with no known parent package
+/var/spool/slurm/d/job2111525/slurm_script:86: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  reciprocal_list["direction"][i]="-"
+/var/spool/slurm/d/job2111525/slurm_script:101: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  reciprocal_list["assignment"][i]=coordinates["gene"]
+Traceback (most recent call last):
+  File "/var/spool/slurm/d/job2111525/slurm_script", line 261, in <module>
+    with open(file_path, 'r') as file:
+FileNotFoundError: [Errno 2] No such file or directory: 'TMbed.pred'

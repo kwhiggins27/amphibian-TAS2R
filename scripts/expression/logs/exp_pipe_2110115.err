@@ -1,0 +1,2 @@
+mkdir: cannot create directory '/../../results': Permission denied
+sbatch: error: Unable to open file tabulate_expression2.py

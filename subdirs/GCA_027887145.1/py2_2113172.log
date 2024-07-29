@@ -1,0 +1,77 @@
+================================================================
+Program: CD-HIT, V4.5.4, Oct 16 2012, 12:44:24
+Command: cd-hit-est -i
+         birds_bitter_expanded_nucleotide_v1.fasta -o
+         birds_bitter_expanded_nucleotide_v11.0.fasta -c 1.0
+
+Started: Mon Jul 29 15:00:22 2024
+================================================================
+                            Output                              
+----------------------------------------------------------------
+total seq: 1579
+longest and shortest : 963 and 714
+Total letters: 1495296
+Sequences have been sorted
+
+Approximated minimal memory consumption:
+Sequence        : 1M
+Buffer          : 1 X 12M = 12M
+Table           : 1 X 16M = 16M
+Miscellaneous   : 4M
+Total           : 34M
+
+Table limit with the given memory limit:
+Max number of representatives: 4194304
+Max number of word counting entries: 95628018
+
+comparing sequences from          0  to       1579
+.
+     1579  finished         27  clusters
+
+Apprixmated maximum memory consumption: 35M
+writing new database
+writing clustering information
+program completed !
+
+Total CPU time 0
+================================================================
+Program: CD-HIT, V4.5.4, Oct 16 2012, 12:44:24
+Command: cd-hit -i birds_bitter_expanded_protein_v1.fasta -o
+         for_blastR.fasta -c 1.0
+
+Started: Mon Jul 29 15:00:22 2024
+================================================================
+                            Output                              
+----------------------------------------------------------------
+total seq: 1579
+longest and shortest : 321 and 238
+Total letters: 498432
+Sequences have been sorted
+
+Approximated minimal memory consumption:
+Sequence        : 0M
+Buffer          : 1 X 10M = 10M
+Table           : 1 X 65M = 65M
+Miscellaneous   : 0M
+Total           : 76M
+
+Table limit with the given memory limit:
+Max number of representatives: 4194304
+Max number of word counting entries: 90416998
+
+comparing sequences from          0  to       1579
+.
+     1579  finished         14  clusters
+
+Apprixmated maximum memory consumption: 76M
+writing new database
+writing clustering information
+program completed !
+
+Total CPU time 0
+(3749, 13) is shape of master_list from pickle
+3749 is length of expanded
+1500
+The file exists.
+Success
+3266

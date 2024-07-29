@@ -20,10 +20,10 @@ config_unix="../../configs/config_unix_$accession.txt"
 config_unix2="../../configs/config_unix_${accession}_2.txt"
 for_py="../../configs/for_py2_$accession.py"
 
-remaining="../../progress/all_accessions_remaining_rerun.txt"
-complete="../../progress/list_complete_rerun.txt"
-attempted="../../progress/list_attempted_rerun.txt"
-failed="../../progress/list_failed_rerun.txt"
+remaining="../../progress/all_accessions_remaining.txt"
+complete="../../progress/list_complete.txt"
+attempted="../../progress/list_attempted.txt"
+failed="../../progress/list_failed.txt"
 
 now2=$(date +%Y%m%d%H%M%S)
 
@@ -115,8 +115,8 @@ fi
 
 #run forward blast in unix, write to log.  If big genome, use alternate version
 echo "Starting blast" > $big_log
-blastF="blastF.sh"
-blast_big="blast_big_pipe.sh"
+blastF="../../scripts/blast_pipeline/blastF.sh"
+blast_big="../../scripts/blast_pipeline/blast_big_pipe.sh"
 
 if [ $go_to -gt 0 ]
 then
@@ -130,8 +130,6 @@ else
 
     echo "#!/bin/bash" > torunparallel.sh
     echo "#SBATCH --partition=20" >> torunparallel.sh
-    echo "#SBATCH --mail-type=NONE" >> torunparallel.sh
-    echo "#SBATCH --mail-user=youremailaddress@yourinstitute" >> torunparallel.sh
     while read n || [[ -n $p ]]
     do
       echo "sbatch -p 20 $blast_big $directory $n $accession" >> torunparallel.sh
@@ -148,7 +146,7 @@ else
 
 
   else
-    sbatch -W  $blastF $directory || fail_condition
+    sbatch -W $blastF $directory || fail_condition
     echo "Forward blast complete" >> $big_log
   fi
 fi
@@ -168,8 +166,8 @@ then
   fi
 else
   echo "need to run py1"
-  py1="bitter_pt1.py"
-  py1_big="bitter_pt1_Big.py"
+  py1="../../scripts/blast_pipeline/bitter_pt1.py"
+  py1_big="../../scripts/blast_pipeline/bitter_pt1_Big.py"
   if [ "$big_genome" == "yes" ]
   then
     if [ $go_to -gt 0 ]
@@ -219,8 +217,6 @@ else
 
     echo "#!/bin/bash" > big_full_pull.sh
     echo "#SBATCH --partition=20" >> big_full_pull.sh
-    echo "#SBATCH --mail-type=NONE" >> big_full_pull.sh
-    echo "#SBATCH --mail-user=youremailaddress@yourinstitute" >> big_full_pull.sh
     while read n || [[ -n $p ]]
     do
       part_aa="pull/""$n""_full_pull.sh"
@@ -245,7 +241,7 @@ if [ $go_to -gt 3 ]
 then
   echo "already have py2" >> $big_log
 else
-  py2="bitter_pt2.py"
+  py2="../../scripts/blast_pipeline/bitter_pt2.py"
   if [ $go_to -gt 0 ]
   then
     sbatch -W  $py2 $existing_directory || fail_condition
@@ -261,7 +257,7 @@ if [ $go_to -gt 4 ]
 then
   echo "already have blastR" >> $big_log
 else
-  blastR="blastR.sh"
+  blastR="../../scripts/blast_pipeline/blastR.sh"
   if [ $go_to -gt 0 ]
   then
     sbatch -W  $blastR $existing_directory || fail_condition
@@ -278,7 +274,7 @@ fi
 ##identify ORFs that may be artifically long (in frame M before true start M) and shorten to region of blast hit
 ##use tmhmm to validate that these hits have 7 TM regions
 ##create final fasta of confirmed genes and gtf to use for expression analysis
-py3="bitter_pt3_TMbed.py"
+py3="../../scripts/blast_pipeline/bitter_pt3_TMbed.py"
 if [ $go_to -gt 0 ]
 then
   while true; do

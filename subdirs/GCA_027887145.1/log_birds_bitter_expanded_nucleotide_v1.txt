@@ -1,0 +1,7 @@
+reference species: chicken
+BLAST species: birds
+bitter
+v1
+time written: 20240729150022(3749, 28)
+expanded_file.fasta
+(1579, 28)

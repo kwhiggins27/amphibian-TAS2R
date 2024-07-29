@@ -1,0 +1,16 @@
+### STAR   --runMode genomeGenerate   --runThreadN 6   --genomeDir ../../results/expression/xenopus_mini/xenopus_star_index/   --genomeFastaFiles ../../references/reference_genomes/Xenopus_tropicalis_frog.fna      --genomeChrBinNbits 12   --genomeSAsparseD 2   --limitGenomeGenerateRAM 200000000000   --sjdbGTFfile ../../results/expression/xenopus_from_pipeline.gtf   --sjdbOverhang 99
+### GstrandBit 32
+versionGenome	2.7.1a
+genomeFastaFiles	../../references/reference_genomes/Xenopus_tropicalis_frog.fna 
+genomeSAindexNbases	14
+genomeChrBinNbits	12
+genomeSAsparseD	2
+sjdbOverhang	99
+sjdbFileChrStartEnd	- 
+sjdbGTFfile	../../results/expression/xenopus_from_pipeline.gtf
+sjdbGTFchrPrefix	-
+sjdbGTFfeatureExon	exon
+sjdbGTFtagExonParentTranscript	transcript_id
+sjdbGTFtagExonParentGene	gene_id
+sjdbInsertSave	Basic
+genomeFileSizes	1451675648 5974905663
