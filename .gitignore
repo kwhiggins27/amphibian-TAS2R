@@ -28,3 +28,10 @@
 *.bam
 *.bam.bai
 *.fa
+*.fna
+*.fasta
+*.nsq
+SA
+SAindex
+*.psq
+pytorch_model.bin
