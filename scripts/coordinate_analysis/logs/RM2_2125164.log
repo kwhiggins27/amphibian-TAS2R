@@ -1,0 +1,15 @@
+RepeatModeler Version open-1.0.11
+================================
+Search Engine = ncbi
+Random Number Seed: 1722362170
+Database = ../../results/coordinate_analysis/repeat/references/saltmarsh .
+  - Sequences = 282
+  - Bases = 1241209685
+Using output directory = /lab/wengpj01/amphibian-TAS2R/scripts/coordinate_analysis/RM_2468426.TueJul301356112024
+
+
+RepeatModeler Round # 1
+========================
+Searching for Repeats
+ -- Sampling from the database...
+   - Gathering up to 40000000 bp

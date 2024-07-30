@@ -1,0 +1,15 @@
+RepeatModeler Version open-1.0.11
+================================
+Search Engine = ncbi
+Random Number Seed: 1722362350
+Database = ../../results/coordinate_analysis/repeat/references/flamingo .
+  - Sequences = 90
+  - Bases = 1246226932
+Using output directory = /lab/wengpj01/amphibian-TAS2R/scripts/coordinate_analysis/RM_2470213.TueJul301359112024
+
+
+RepeatModeler Round # 1
+========================
+Searching for Repeats
+ -- Sampling from the database...
+   - Gathering up to 40000000 bp

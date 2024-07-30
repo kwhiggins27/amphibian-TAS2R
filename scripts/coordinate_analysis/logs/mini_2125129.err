@@ -1,0 +1,4 @@
+BLAST Database error: No alias or index file found for nucleotide database [./../results/coordinate_analysis/repeat/references/saltmarsh] in search path [/lab/wengpj01/amphibian-TAS2R/scripts/coordinate_analysis:/nfs/seq/Data:]
+Database ./../results/coordinate_analysis/repeat/references/saltmarsh does not contain any sequences!
+BLAST Database error: No alias or index file found for nucleotide database [references/Boesemans_rainbowfish] in search path [/lab/wengpj01/amphibian-TAS2R/scripts/coordinate_analysis:/nfs/seq/Data:]
+Database references/Boesemans_rainbowfish does not contain any sequences!

@@ -17,7 +17,7 @@ while IFS= read -r accession; do
   echo "Processing accession: $accession"
   if ./find_clusters_median_method.py "$accession"; then
     echo "Successfully processed accession: $accession"
-  else
-    echo $accession >> ../../results/coordinate_analysis/cluster_fail_median.txt
+  # else
+  #   echo $accession >> ../../results/coordinate_analysis/cluster_fail_median_mini.txt
   fi
-done < "../../results/all_accessions_used.txt"
+done < "../../results/accessions_mini_run.txt"

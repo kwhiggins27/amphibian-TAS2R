@@ -18,6 +18,11 @@ For all batched files:
   Don't change job name (line 2) without careful thought.  Many jobs reference each other using this identifier.  
 ### Identifying clusters  
 batch_find_clusters_nearest_neighbor.sh runs cluster_pipeline_nearest_neighbor.sh which runs cluster_pipeline_nearest_neighbor.py for all accession numbers in accessions_to_keep.txt  
+
+#### batch_find_clusters_window.sh
+
+#### find_clusters_window.py
+
 #### batch_find_clusters_nearest_neighbor.sh:  
   Header changes as above  
   Line 15: update size of allowed window between genes (I used 100kb, 200kb, 500kb, 1mb, 2mb, or 5mb).  Note that this expects a number with no letter abbreviations (ex: 10000 rather than 10kb)  

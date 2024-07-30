@@ -8,14 +8,19 @@
 #SBATCH --output=logs/RM_%j.log   # Standard output and error log
 #SBATCH --error=logs/RM_%j.err
 
+##For small demo
+# BuildDatabase -name ../../results/coordinate_analysis/repeat/references/flamingo ../../genomes/GCA_009819775.1_bPhoRub2.pri_genomic.fna
+BuildDatabase -name ../../results/coordinate_analysis/repeat/references/saltmarsh ../../genomes/GCA_027887145.1_bAmmCau1.pri_genomic.fna
 
+##For five amphibian genomes
 # BuildDatabase -name references/axolotl /lab/wengpj01/axolotl/axolotl_mygenome.fasta
-
-#BuildDatabase -name references/bullfrog /lab/wengpj01/bullfrog/Lithobates_catesbeianus_bullfrog_2022.fasta
-#
+# BuildDatabase -name references/bullfrog /lab/wengpj01/bullfrog/Lithobates_catesbeianus_bullfrog_2022.fasta
 # BuildDatabase -name references/cane /lab/wengpj01/cane/canetoad.v2.2.fasta
+# BuildDatabase -name references/terribilis /lab/solexa_weng/playground/Kate_Higgins/other_vertebrates/terribilis/P.terribilis.gapclosed.fasta
+# BuildDatabase -name references/xenopus /lab/wengpj01/xenopus/Xenopus_Tropicalis_2022.fasta
 
-#BuildDatabase -name references/tropical_clawed_frog	../../genomes/GCA_000004195.4_UCB_Xtro_10.0_genomic.fna
+##Pipeline amphibians
+# BuildDatabase -name references/tropical_clawed_frog	../../genomes/GCA_000004195.4_UCB_Xtro_10.0_genomic.fna
 # BuildDatabase -name references/African_clawed_frog	../../genomes/GCA_001663975.1_Xenopus_laevis_v2_genomic.fna
 # BuildDatabase -name references/frogs_and_toads	../../genomes/GCA_004786255.1_Pads_1.0_genomic.fna
 # BuildDatabase -name references/Leishan_spiny_toad	../../genomes/GCA_009667805.1_ASM966780v1_genomic.fna
@@ -33,7 +38,6 @@
 ## BuildDatabase -name references/eastern_narrow-mouthed_toad	../../genomes/GCA_027917415.1_aGasCar1.hap2_genomic.fna
 ## BuildDatabase -name references/wood_frog	../../genomes/GCA_028564925.1_aRanSyl1.merge_genomic.fna
 ## BuildDatabase -name references/Sardinian_treefrog	../../genomes/GCA_029499605.1_aHylSar1.hap1_genomic.fna
-
 # BuildDatabase -name references/plateau_brown_frog	../../genomes/GCA_029574335.1_ASM2957433v1_genomic.fna
 # BuildDatabase -name references/two-lined_caecilian	../../genomes/GCA_901001135.2_aRhiBiv1.2_genomic.fna
 # BuildDatabase -name references/caecilians	../../genomes/GCA_901765095.2_aMicUni1.2_genomic.fna
@@ -42,13 +46,14 @@
 # BuildDatabase -name references/common_frog	../../genomes/GCA_905171775.1_aRanTem1.1_genomic.fna
 
 
-# #flag because big genome
+##flag because big genome
 # BuildDatabase -name references/axolotl	../../genomes/GCA_002915635.3_KH.fasta
 # BuildDatabase -name references/Iberian_ribbed_newt	../../genomes/GCA_026652325.1_KH.fasta
 # BuildDatabase -name references/fire-bellied_toad	../../genomes/GCA_027579735.1_KH.fasta
 # BuildDatabase -name references/corroboree_frog	../../genomes/GCA_028390025.1_KH.fasta
 # BuildDatabase -name references/mountain_yellow-legged_frog	../../genomes/GCA_029206835.1_KH.fasta
 
+## Pipeline non-amphibian
 # BuildDatabase -name references/diamondback_terrapin ../../genomes/GCA_027887155.1_rMalTer1.hap1_genomic.fna
 # BuildDatabase -name references/Aeolian_wall_lizard ../../genomes/GCA_027172205.1_rPodRaf1.pri_genomic.fna
 # BuildDatabase -name references/Far_Eastern_brook_lamprey ../../genomes/GCA_015708825.1_ASM1570882v1_genomic.fna
@@ -75,9 +80,3 @@
 # BuildDatabase -name references/greater_Indian_rhinoceros ../../genomes/GCA_028646465.1_Rhinoceros_unicornis_HiC_genomic.fna
 # BuildDatabase -name references/Boesemans_rainbowfish ../../genomes/GCA_017639745.1_fMelBoe1.pri_genomic.fna
 # BuildDatabase -name references/rock_pigeon ../../genomes/GCA_001887795.1_colLiv2_genomic.fna
-
-
-#
-#BuildDatabase -name references/terribilis /lab/solexa_weng/playground/Kate_Higgins/other_vertebrates/terribilis/P.terribilis.gapclosed.fasta
-#
-#BuildDatabase -name references/xenopus /lab/wengpj01/xenopus/Xenopus_Tropicalis_2022.fasta

@@ -53,10 +53,11 @@ if [ ! -f distmat_2.dist ]; then
   }'  distmat_1.dist > distmat_2.dist
 fi
 
-gtf=*.gtf
+gtf=*sorted.gtf
 
-clusters=clusters_found_1005_$max_skip.csv
-
+clusters=clusters_found_$max_skip.csv
+touch $clusters
+# echo "cluster_number,start_cl,stop_cl,chromosome,num_cl,size,spacing" > $clusters
 touch ../../results/coordinate_analysis/summary_clusters_withnearest_$max_skip.csv
 
 # # Read in the distance matrices as pandas DataFrames

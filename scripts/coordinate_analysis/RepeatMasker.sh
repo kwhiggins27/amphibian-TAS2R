@@ -64,13 +64,13 @@ random_regions=random_windows2.bed
 
 library="../../results/coordinate_analysis/repeat/references/${common}-families.fa"
 
-fasta_singleton="../../results/coordinate_analysis/repeat/amphibian_near_TAS2R/${common}_singleton.fasta"
-fasta_cluster="../../results/coordinate_analysis/repeat/amphibian_near_TAS2R/${common}_cluster.fasta"
-fasta_random="../../results/coordinate_analysis/repeat/amphibian_near_TAS2R/${common}_random.fasta"
+fasta_singleton="../../results/coordinate_analysis/repeat/mini_run/${common}_singleton.fasta"
+fasta_cluster="../../results/coordinate_analysis/repeat/mini_run/${common}_cluster.fasta"
+fasta_random="../../results/coordinate_analysis/repeat/mini_run/${common}_random.fasta"
 
-repeat_singleton="../../results/coordinate_analysis/repeat/amphibian_near_TAS2R/${common}_singleton_repeat.fasta"
-repeat_cluster="../../results/coordinate_analysis/repeat/amphibian_near_TAS2R/${common}_cluster_repeat.fasta"
-repeat_cluster="../../results/coordinate_analysis/repeat/amphibian_near_TAS2R/${common}_random_repeat.fasta"
+repeat_singleton="../../results/coordinate_analysis/repeat/mini_run/${common}_singleton_repeat.fasta"
+repeat_cluster="../../results/coordinate_analysis/repeat/mini_run/${common}_cluster_repeat.fasta"
+repeat_cluster="../../results/coordinate_analysis/repeat/mini_run/${common}_random_repeat.fasta"
 
 bedtools getfasta -fo $fasta_singleton -fi $genome_location -bed $singleton
 bedtools getfasta -fo $fasta_cluster -fi $genome_location -bed $clusters
@@ -84,15 +84,15 @@ rm -f "$repeat_random"
 
 RepeatMasker \
 -lib $library \
--dir ../../results/coordinate_analysis/repeat/amphibian_near_TAS2R \
+-dir ../../results/coordinate_analysis/repeat/mini_run \
 $fasta_singleton
 
 RepeatMasker \
 -lib $library \
--dir ../../results/coordinate_analysis/repeat/amphibian_near_TAS2R \
+-dir ../../results/coordinate_analysis/repeat/mini_run \
 $fasta_cluster
 
 RepeatMasker \
 -lib $library \
--dir ../../results/coordinate_analysis/repeat/amphibian_near_TAS2R \
+-dir ../../results/coordinate_analysis/repeat/mini_run \
 $fasta_random

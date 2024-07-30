@@ -100,7 +100,7 @@ for gtf_file in gtf_files:
 #                 row2_start=gtf_in.iloc[i]['start']
                 # Get the 'seqname' of the first entry in the cluster for the 'chromosome' column
                 chromosome = gtf_in.iloc[i]['seqname']
-                clusters_found = clusters_found.append({'cluster_number': cluster_num, 'start_cl': start_cl, 'stop_cl': stop_cl, 'num_cl': num_cl, 'chromosome': chromosome}, ignore_index=True)
+                clusters_found = pd.concat([clusters_found, pd.DataFrame([{'cluster_number': cluster_num, 'start_cl': start_cl, 'stop_cl': stop_cl, 'num_cl': num_cl, 'chromosome': chromosome}])], ignore_index=True)
 #                 gtf_in['gap'][i] = abs(row1_start - row2_start)
 
             elif is_same_cluster(row, gtf_in.iloc[i + 1]):
@@ -165,7 +165,7 @@ total_len = clusters_found['size'].sum()
 total_num = clusters_found['num_cl'].sum()
 
 # Calculate total_space (total_len divided by total_num)
-total_space = round(total_len / total_num, 2)
+total_space = round(total_len / total_num, 2) if total_num != 0 else 'NA'
 
 # Iterate through the rows of gtf_in
 for i, row in gtf_in.iterrows():
@@ -282,14 +282,14 @@ total_num_v2 = clusters_split['num_cl'].sum()
 fr_cl = total_num_v2 / total_genes
 
 # Calculate total_space (total_len divided by total_num)
-total_space_v2 = round(total_len_v2 / total_num_v2, 2)
+total_space_v2 = round(total_len_v2 / total_num_v2, 2) if total_num_v2 != 0 else 'NA'
 
 # Save the clusters_found DataFrame to a CSV file
 # clusters_found.to_csv('/lab/wengpj01/vertebrate_pipeline/subdirs/GCA_028390025.1/clusters_found.csv', index=False)
-clusters_split.to_csv(f'../../subdirs/{accession}/clusters_found_split_2012.csv', index=False)
+clusters_split.to_csv(f'../../subdirs/{accession}/clusters_found_split_median.csv', index=False)
 
 # Open the CSV file for writing
-csv_filename = '../../results/coordinate_analysis/summary_clusters_median_1012.csv'  # Change the filename as needed
+csv_filename = '../../results/coordinate_analysis/summary_clusters_median.csv'  # Change the filename as needed
 with open(csv_filename, 'a', newline='') as csv_file:
     writer = csv.writer(csv_file)
 

@@ -1,14 +1,23 @@
 #!/bin/bash
-#SBATCH --job-name=nonA   # Job name
+#SBATCH --job-name=RM2   # Job name
 #SBATCH --mem=200gb                     # Job memory request, down from 200 and closer to the 64gb I think you're using per instance
 #SBATCH --nodes=1                      # ensure cores are on one node
 #SBATCH --ntasks=1                     # run a single task
-#SBATCH --cpus-per-task=20              # number of cores/threads requested, up from 4 you're asking for now - see too that I changed --runThreadN below to match
+#SBATCH --cpus-per-task=10              # number of cores/threads requested, up from 4 you're asking for now - see too that I changed --runThreadN below to match
 #SBATCH --partition=20
-#SBATCH --output=logs/nonA_%j.log   # Standard output and error log
-#SBATCH --error=logs/nonA_%j.err
+#SBATCH --output=logs/RM2_%j.log   # Standard output and error log
+#SBATCH --error=logs/RM2_%j.err
+
+cd ../../results/coordinate_analysis/repeat/mini_run
+
+## For mini example
+# nohup RepeatModeler -database ../../../../results/coordinate_analysis/repeat/references/saltmarsh
+#     -threads 10 -LTRStruct >& saltmarsh_run.out &
+nohup RepeatModeler -database ../../../../results/coordinate_analysis/repeat/references/flamingo
+    -threads 10 -LTRStruct >& flamingo_run.out &
 
 
+## For manuscript: amphibians
 # nohup RepeatModeler -database references/tropical_clawed_frog
 #    -threads 10 -LTRStruct >& run.out &
 # nohup RepeatModeler -database references/African_clawed_frog
@@ -68,80 +77,57 @@
 # nohup RepeatModeler -database references/painted_frog
 #    -threads 10 -LTRStruct >& run.out &
 
+
+## For manuscript: non-amphibians
 # nohup RepeatModeler -database references/diamondback_terrapin
 #  -threads 10 -LTRStruct >& run.out &
-
 # nohup RepeatModeler -database references/Aeolian_wall_lizard
 #  -threads 10 -LTRStruct >& run.out &
-# #
 # nohup RepeatModeler -database references/Far_Eastern_brook_lamprey
 #  -threads 10 -LTRStruct >& run.out &
-#
 # nohup RepeatModeler -database references/bony_fishes2
 #  -threads 10 -LTRStruct >& run.out &
-#
 # nohup RepeatModeler -database references/whale_shark
 #  -threads 10 -LTRStruct >& run.out &
-#
 # nohup RepeatModeler -database references/Pacific_lamprey
 #  -threads 10 -LTRStruct >& run.out &
-#
 # nohup RepeatModeler -database references/blackcap
 #  -threads 10 -LTRStruct >& run.out &
-#
 # nohup RepeatModeler -database references/Shaws_sea_snake
 #  -threads 10 -LTRStruct >& run.out &
-#
 # nohup RepeatModeler -database references/bony_fishes2
 #  -threads 10 -LTRStruct >& run.out &
-#
 # nohup RepeatModeler -database references/Common_starling
 #  -threads 10 -LTRStruct >& run.out &
-#
 # nohup RepeatModeler -database references/gray_bichir
 #  -threads 10 -LTRStruct >& run.out &
-#
 # nohup RepeatModeler -database references/prairie_rattlesnake
 #  -threads 10 -LTRStruct >& run.out &
-#
 # nohup RepeatModeler -database references/reedfish
 #  -threads 10 -LTRStruct >& run.out &
-#
 # nohup RepeatModeler -database references/Patagonian_moray_cod
 #  -threads 10 -LTRStruct >& run.out &
-#
 # nohup RepeatModeler -database references/smaller_spotted_catshark
 #  -threads 10 -LTRStruct >& run.out &
-#
 # nohup RepeatModeler -database references/thorny_skate
 # -threads 10 -LTRStruct >& run.out &
-#
 # nohup RepeatModeler -database references/lion
 # -threads 10 -LTRStruct >& run.out &
-#
 # nohup RepeatModeler -database references/yellow-throated_sandgrouse
 # -threads 10 -LTRStruct >& run.out &
-#
 # nohup RepeatModeler -database references/whitespotted_bambooshark
 # -threads 10 -LTRStruct >& run.out &
-#
 # nohup RepeatModeler -database references/North_American_porcupine
 # -threads 10 -LTRStruct >& run.out &
-#
 # nohup RepeatModeler -database references/sea_lamprey
 # -threads 10 -LTRStruct >& run.out &
-#
 # nohup RepeatModeler -database references/epaulette_shark
 # -threads 10 -LTRStruct >& run.out &
-#
 # nohup RepeatModeler -database references/West_African_lungfish
 # -threads 10 -LTRStruct >& run.out &
-#
 # nohup RepeatModeler -database references/Malagasy_flying_fox
 # -threads 10 -LTRStruct >& run.out &
-#
 # nohup RepeatModeler -database references/greater_Indian_rhinoceros
 # -threads 10 -LTRStruct >& run.out &
-#
-nohup RepeatModeler -database references/Boesemans_rainbowfish
--threads 10 -LTRStruct >& run.out &
+# nohup RepeatModeler -database references/Boesemans_rainbowfish
+# -threads 10 -LTRStruct >& run.out &
