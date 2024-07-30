@@ -36,3 +36,6 @@ SAindex
 *.psq
 pytorch_model.bin
 Genome
+
+# Exclude certain directories
+**/results/coordinate_analysis/repeat/mini_run/*
