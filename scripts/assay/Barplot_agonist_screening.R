@@ -2,7 +2,7 @@
 library(tidyverse)
 
 #Read dataset (csv format)
-data_sc <- readr::read_csv("data_BitterAssay_ver240513.csv")
+data_sc <- read_csv("../../results/assay/data_BitterAssay_ver240513.csv")
 
 name_convert <- c("Axo_1" = "axolotl_54", "Axo_2" = "axolotl_10", "Axo_3" = "axolotl_42",
                   "Bul_1" = "bullfrog_51", "Bul_2" = "bullfrog_12", "Bul_3" = "bullfrog_17",
@@ -10,7 +10,7 @@ name_convert <- c("Axo_1" = "axolotl_54", "Axo_2" = "axolotl_10", "Axo_3" = "axo
                   "Can_3" = "cane_56", "Can_4" = "cane_54", "Ter_1" = "dart_18",
                   "Ter_3" = "dart_15", "Xen_1" = "clawed_31", "Xen_2" = "clawed_20",
                   "Xen_3" = "clawed_02", "Xen_5" = "clawed_18", "Xen_6" = "clawed_23")
-data_sc$gene <-  stringr::str_replace_all(data_sc$gene, name_convert)
+data_sc$gene <-  str_replace_all(data_sc$gene, name_convert)
 
 #lists of ligands and genes
 ligand_list <- unique(data_sc$compound)
