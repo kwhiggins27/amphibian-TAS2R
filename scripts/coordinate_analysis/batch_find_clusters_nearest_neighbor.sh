@@ -1,7 +1,5 @@
 #!/bin/bash
 #SBATCH --job-name=100K_KH  # Job name
-#SBATCH --mail-type=NONE     # Mail events (NONE, BEGIN, END, FAIL, ALL)
-#SBATCH --mail-user=youremailaddress@yourinstitute    # Where to send mail
 #SBATCH --mem=50gb          # Job memory request, down from 200 and closer to the 64gb I think you're using per instance
 #SBATCH --nodes=1           # ensure cores are on one node
 #SBATCH --ntasks=1          # run a single task
@@ -20,7 +18,5 @@ while IFS= read -r accession; do
   echo "Processing accession: $accession"
   if ./cluster_pipeline_nearest_neighbor.sh "$accession" $max_skip; then
     echo "Successfully processed accession: $accession"
-  # else
-  #   echo $accession >> ../../results/coordinate_analysis/cluster_fail_100K_mini.txt
   fi
 done < "../../results/accessions_mini_run.txt"

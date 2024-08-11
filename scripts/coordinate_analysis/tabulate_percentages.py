@@ -3,7 +3,7 @@ import os
 import csv
 
 # Define the directory path
-directory_path = '../../results/coordinate_analysis/repeat/amphibian_near_TAS2R'
+directory_path = '../../results/coordinate_analysis/repeat/mini_run'
 
 # Initialize dictionaries to store percentages for each category
 percentages_singleton = {}
@@ -41,7 +41,7 @@ for filename in os.listdir(directory_path):
                 elif category == 'random':
                     percentages_random[common_name] = percentage
 # Define the CSV file name
-csv_file = 'amphibians_LTR.csv'
+csv_file = '../../results/coordinate_analysis/repeat/mini_run/rmini_LTR.csv'
 
 # Write the table to a CSV file
 with open(csv_file, 'w', newline='') as csvfile:

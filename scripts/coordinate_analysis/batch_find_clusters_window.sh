@@ -1,7 +1,5 @@
 #!/bin/bash
 #SBATCH --job-name=5M_KH  # Job name
-#SBATCH --mail-type=NONE     # Mail events (NONE, BEGIN, END, FAIL, ALL)
-#SBATCH --mail-user=kwh1@wi.mit.edu   # Where to send mail
 #SBATCH --mem=50gb          # Job memory request, down from 200 and closer to the 64gb I think you're using per instance
 #SBATCH --nodes=1           # ensure cores are on one node
 #SBATCH --ntasks=1          # run a single task

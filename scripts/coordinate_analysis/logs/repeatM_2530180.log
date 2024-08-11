@@ -1,0 +1,23 @@
+birds
+
+RepeatMasker version open-4.0.7
+Search Engine: NCBI/RMBLAST [ 2.10.0+ ]
+Master RepeatMasker Database: /usr/local/include/RepeatMasker/Libraries/RepeatMaskerLib.embl ( Complete Database: dc20170127-rb20170127 )
+Custom Repeat Library: ../../results/coordinate_analysis/repeat/references/birds-families.fa
+
+
+cannot read file ../../results/coordinate_analysis/repeat/mini_run/birds_singleton.fasta in /lab/wengpj01/amphibian-TAS2R/subdirs/GCA_027887145.1
+RepeatMasker version open-4.0.7
+Search Engine: NCBI/RMBLAST [ 2.10.0+ ]
+Master RepeatMasker Database: /usr/local/include/RepeatMasker/Libraries/RepeatMaskerLib.embl ( Complete Database: dc20170127-rb20170127 )
+Custom Repeat Library: ../../results/coordinate_analysis/repeat/references/birds-families.fa
+
+
+cannot read file ../../results/coordinate_analysis/repeat/mini_run/birds_cluster.fasta in /lab/wengpj01/amphibian-TAS2R/subdirs/GCA_027887145.1
+RepeatMasker version open-4.0.7
+Search Engine: NCBI/RMBLAST [ 2.10.0+ ]
+Master RepeatMasker Database: /usr/local/include/RepeatMasker/Libraries/RepeatMaskerLib.embl ( Complete Database: dc20170127-rb20170127 )
+Custom Repeat Library: ../../results/coordinate_analysis/repeat/references/birds-families.fa
+
+
+cannot read file ../../results/coordinate_analysis/repeat/mini_run/birds_random.fasta in /lab/wengpj01/amphibian-TAS2R/subdirs/GCA_027887145.1

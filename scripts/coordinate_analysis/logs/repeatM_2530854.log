@@ -1,0 +1,150 @@
+American_flamingo
+no
+../../genomes/GCA_009819775.1_bPhoRub2.pri_genomic.fna
+/lab/wengpj01/amphibian-TAS2R/subdirs/GCA_009819775.1
+RepeatMasker version open-4.0.7
+Search Engine: NCBI/RMBLAST [ 2.10.0+ ]
+Master RepeatMasker Database: /usr/local/include/RepeatMasker/Libraries/RepeatMaskerLib.embl ( Complete Database: dc20170127-rb20170127 )
+Custom Repeat Library: ../../results/coordinate_analysis/repeat/references/American_flamingo-families.fa
+
+
+
+analyzing file ../../results/coordinate_analysis/repeat/mini_run/American_flamingo_singleton.fasta
+
+Checking for E. coli insertion elements
+identifying Simple Repeats in batch 1 of 4
+identifying matches to American_flamingo-families.fa sequences in batch 1 of 4
+identifying Simple Repeats in batch 1 of 4
+
+Checking for E. coli insertion elements
+identifying Simple Repeats in batch 2 of 4
+identifying matches to American_flamingo-families.fa sequences in batch 2 of 4
+identifying Simple Repeats in batch 2 of 4
+
+Checking for E. coli insertion elements
+identifying Simple Repeats in batch 3 of 4
+identifying matches to American_flamingo-families.fa sequences in batch 3 of 4
+identifying Simple Repeats in batch 3 of 4
+
+Checking for E. coli insertion elements
+identifying Simple Repeats in batch 4 of 4
+identifying matches to American_flamingo-families.fa sequences in batch 4 of 4
+identifying Simple Repeats in batch 4 of 4
+processing output: 
+cycle 1 
+cycle 2 
+cycle 3 
+cycle 4 
+cycle 5 
+cycle 6 
+cycle 7 
+cycle 8 
+cycle 9 
+cycle 10 
+Generating output... 
+masking
+done
+RepeatMasker version open-4.0.7
+Search Engine: NCBI/RMBLAST [ 2.10.0+ ]
+Master RepeatMasker Database: /usr/local/include/RepeatMasker/Libraries/RepeatMaskerLib.embl ( Complete Database: dc20170127-rb20170127 )
+Custom Repeat Library: ../../results/coordinate_analysis/repeat/references/American_flamingo-families.fa
+
+
+File ../../results/coordinate_analysis/repeat/mini_run/American_flamingo_cluster.fasta appears to be empty.
+RepeatMasker version open-4.0.7
+Search Engine: NCBI/RMBLAST [ 2.10.0+ ]
+Master RepeatMasker Database: /usr/local/include/RepeatMasker/Libraries/RepeatMaskerLib.embl ( Complete Database: dc20170127-rb20170127 )
+Custom Repeat Library: ../../results/coordinate_analysis/repeat/references/American_flamingo-families.fa
+
+
+
+analyzing file ../../results/coordinate_analysis/repeat/mini_run/American_flamingo_random.fasta
+
+Checking for E. coli insertion elements
+identifying Simple Repeats in batch 1 of 15
+identifying matches to American_flamingo-families.fa sequences in batch 1 of 15
+identifying Simple Repeats in batch 1 of 15
+
+Checking for E. coli insertion elements
+identifying Simple Repeats in batch 2 of 15
+identifying matches to American_flamingo-families.fa sequences in batch 2 of 15
+identifying Simple Repeats in batch 2 of 15
+
+Checking for E. coli insertion elements
+identifying Simple Repeats in batch 3 of 15
+identifying matches to American_flamingo-families.fa sequences in batch 3 of 15
+identifying Simple Repeats in batch 3 of 15
+
+Checking for E. coli insertion elements
+identifying Simple Repeats in batch 4 of 15
+identifying matches to American_flamingo-families.fa sequences in batch 4 of 15
+identifying Simple Repeats in batch 4 of 15
+
+Checking for E. coli insertion elements
+identifying Simple Repeats in batch 5 of 15
+identifying matches to American_flamingo-families.fa sequences in batch 5 of 15
+identifying Simple Repeats in batch 5 of 15
+
+Checking for E. coli insertion elements
+identifying Simple Repeats in batch 6 of 15
+identifying matches to American_flamingo-families.fa sequences in batch 6 of 15
+identifying Simple Repeats in batch 6 of 15
+
+Checking for E. coli insertion elements
+identifying Simple Repeats in batch 7 of 15
+identifying matches to American_flamingo-families.fa sequences in batch 7 of 15
+identifying Simple Repeats in batch 7 of 15
+
+Checking for E. coli insertion elements
+identifying Simple Repeats in batch 8 of 15
+identifying matches to American_flamingo-families.fa sequences in batch 8 of 15
+identifying Simple Repeats in batch 8 of 15
+
+Checking for E. coli insertion elements
+identifying Simple Repeats in batch 9 of 15
+identifying matches to American_flamingo-families.fa sequences in batch 9 of 15
+identifying Simple Repeats in batch 9 of 15
+
+Checking for E. coli insertion elements
+identifying Simple Repeats in batch 10 of 15
+identifying matches to American_flamingo-families.fa sequences in batch 10 of 15
+identifying Simple Repeats in batch 10 of 15
+
+Checking for E. coli insertion elements
+identifying Simple Repeats in batch 11 of 15
+identifying matches to American_flamingo-families.fa sequences in batch 11 of 15
+identifying Simple Repeats in batch 11 of 15
+
+Checking for E. coli insertion elements
+identifying Simple Repeats in batch 12 of 15
+identifying matches to American_flamingo-families.fa sequences in batch 12 of 15
+identifying Simple Repeats in batch 12 of 15
+
+Checking for E. coli insertion elements
+identifying Simple Repeats in batch 13 of 15
+identifying matches to American_flamingo-families.fa sequences in batch 13 of 15
+identifying Simple Repeats in batch 13 of 15
+
+Checking for E. coli insertion elements
+identifying Simple Repeats in batch 14 of 15
+identifying matches to American_flamingo-families.fa sequences in batch 14 of 15
+identifying Simple Repeats in batch 14 of 15
+
+Checking for E. coli insertion elements
+identifying Simple Repeats in batch 15 of 15
+identifying matches to American_flamingo-families.fa sequences in batch 15 of 15
+identifying Simple Repeats in batch 15 of 15
+processing output: 
+cycle 1 
+cycle 2 
+cycle 3 
+cycle 4 
+cycle 5 
+cycle 6 
+cycle 7 
+cycle 8 
+cycle 9 
+cycle 10 
+Generating output... 
+masking
+done

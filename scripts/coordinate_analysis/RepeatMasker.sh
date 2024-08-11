@@ -17,10 +17,11 @@ cd ../../subdirs/$accession
 common=$(cat "for_py2.py" | grep -o 'common="[^"]*' | cut -d'"' -f2)
 echo $common
 big_genome=$(grep -o 'big_genome="[^"]*' "config_unix_species.sh" | cut -d'"' -f2)
+echo $big_genome
 if [ "$big_genome" = "yes" ]; then
     genome_location="../../genomes/${accession}_KH.fasta"
 else
-    genome_location=$(grep -o 'genome_location="/[^"]*' "for_py2.py" | cut -d'"' -f2)
+    genome_location=$(grep -o 'genome_location="[^"]*' "for_py2.py" | cut -d'"' -f2)
 fi
 echo $genome_location
 
@@ -58,9 +59,10 @@ awk 'BEGIN{OFS="\t"} {
 }' shortname=$common random_windows.bed | sed 's/\.0//g' > random_windows2.bed
 
 # awk 'BEGIN{OFS="\t"} {n=split($1, a, "_"); if (length(a[n]) > 5) sub(/.*_/, "", $1); print}' singletons_margins.bed > singletons_margins2.bed
-singleton=singletons_margins2.bed
-clusters=clusters_margins2.bed
-random_regions=random_windows2.bed
+
+singleton="singletons_margins2.bed"
+clusters="clusters_margins2.bed"
+random_regions="random_windows2.bed"
 
 library="../../results/coordinate_analysis/repeat/references/${common}-families.fa"
 
@@ -75,8 +77,6 @@ repeat_cluster="../../results/coordinate_analysis/repeat/mini_run/${common}_rand
 bedtools getfasta -fo $fasta_singleton -fi $genome_location -bed $singleton
 bedtools getfasta -fo $fasta_cluster -fi $genome_location -bed $clusters
 bedtools getfasta -fo $fasta_random -fi $genome_location -bed $random_regions
-
-cd /lab/wengpj01/repeat
 
 rm -f "$repeat_singleton"
 rm -f "$repeat_cluster"

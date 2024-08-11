@@ -11,7 +11,7 @@ def process_accession(accession):
         os.chdir(data_directory)
 
         # Define the file paths
-        clusters_file_path = "clusters_found_1005_1000000.csv"
+        clusters_file_path = "clusters_found_1000000.csv"
         gtf_files = glob.glob(f"*_from_pipeline.gtf")
 
         # Read clusters data into a pandas DataFrame
@@ -62,7 +62,7 @@ def process_accession(accession):
         print(f"Error processing accession {accession}: {str(e)}")
         pass
 # Read accession numbers from a file
-with open("../../results/all_accessions_used.txt", "r") as accession_file:
+with open("../../results/accessions_mini_run.txt", "r") as accession_file:
     for line in accession_file:
         accession = line.strip()
         process_accession(accession)

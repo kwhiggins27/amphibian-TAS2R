@@ -1,7 +1,5 @@
 #!/bin/bash
 #SBATCH --job-name=gen_size  # Job name
-#SBATCH --mail-type=FAIL,END     # Mail events (NONE, BEGIN, END, FAIL, ALL)
-#SBATCH --mail-user=youremailaddress@yourinstitute   # Where to send mail
 #SBATCH --mem=5gb          # Job memory request, down from 200 and closer to the 64gb I think you're using per instance
 #SBATCH --nodes=1           # ensure cores are on one node
 #SBATCH --ntasks=1          # run a single task
@@ -27,4 +25,4 @@ while IFS= read -r accession; do
       echo "Genome file not found for accession: $accession"
     fi
   done
-done < "../../results/all_accessions_used.txt"
+done < "../../results/accessions_mini_run.txt"

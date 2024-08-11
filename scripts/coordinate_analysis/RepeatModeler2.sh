@@ -11,10 +11,10 @@
 cd ../../results/coordinate_analysis/repeat/mini_run
 
 ## For mini example
-# nohup RepeatModeler -database ../../../../results/coordinate_analysis/repeat/references/saltmarsh
-#     -threads 10 -LTRStruct >& saltmarsh_run.out &
-nohup RepeatModeler -database ../../../../results/coordinate_analysis/repeat/references/flamingo
-    -threads 10 -LTRStruct >& flamingo_run.out &
+# nohup RepeatModeler -database ../../../../results/coordinate_analysis/repeat/references/birds
+#     -threads 10 -LTRStruct >& birds_run.out &
+nohup RepeatModeler -database ../../../../results/coordinate_analysis/repeat/references/American_flamingo
+    -threads 10 -LTRStruct >& American_flamingo_run.out &
 
 
 ## For manuscript: amphibians

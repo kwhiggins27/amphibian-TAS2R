@@ -12,72 +12,42 @@ Download all of these scripts and place in a single directory.
 These scripts assume that the gene identification pipeline has already been run for a list of accession numbers, generating a particular file tree structure containing output files of a certain format  
 
 ## How to use  
-For all batched files:  
-  Update email address (line 4) and desired notification settings (line 3)  
-  Update location of output and error files (lines 10-11).  
-  Don't change job name (line 2) without careful thought.  Many jobs reference each other using this identifier.  
 ### Identifying clusters  
-batch_find_clusters_nearest_neighbor.sh runs cluster_pipeline_nearest_neighbor.sh which runs cluster_pipeline_nearest_neighbor.py for all accession numbers in accessions_to_keep.txt  
+Run scripts in the order listed below.
+Be sure to enable conda environment specified in scripts/phylogenetics/requirements.txt.
 
-#### batch_find_clusters_window.sh
+#### batch_find_clusters_window.sh runs find_clusters_window.py
+  Line 13: update size of allowed window between genes (I used 100kb, 200kb, 500kb, 1mb, 2mb, or 5mb).  Note that this expects a number with no letter abbreviations (ex: 10000 rather than 10kb)  
+  Line 21: update path to list of accession numbers to analyze  
 
-#### find_clusters_window.py
+#### batch_find_clusters_nearest_neighbor.sh runs cluster_pipeline_nearest_neighbor.sh which runs cluster_pipeline_nearest_neighbor.py   
+  Line 13: update size of allowed window between genes (I used 100kb, 200kb, 500kb, 1mb, 2mb, or 5mb).  Note that this expects a number with no letter abbreviations (ex: 10000 rather than 10kb)  
+  Line 22: update path to list of accession numbers to analyze
 
-#### batch_find_clusters_nearest_neighbor.sh:  
-  Header changes as above  
-  Line 15: update size of allowed window between genes (I used 100kb, 200kb, 500kb, 1mb, 2mb, or 5mb).  Note that this expects a number with no letter abbreviations (ex: 10000 rather than 10kb)  
-  Line 26: update path to list of accession numbers to analyze  
-  Both unix scripts need to be in the same directory.  If not, update line 21.  
-  Line 24: update location of desired list of failures  
-#### cluster_pipeline_nearest_neighbor.sh  
-  Header changes as above  
-  Line 60: update desired location of summary output file 1 (which will be added to with every run)  
-  Line 65: update location of python script.  
-#### cluster_pipeline_nearest_neighbor.py  
-  Line 14: update location of pipeline subdirectories  
-  Line 158: update desired location of summary output file 2 (similar to in previous script but with more information)  
-batch_find_clusters_median_method.sh runs find_clusters_median_method.py for all accession numbers in accessions_to_keep.txt  
-#### batch_find_clusters_median_method.sh  
-  Header changes as above  
-  Line 23: update path to list of accession numbers to analyze  
-  Both scripts need to be in the same directory.  If not, update line 18.  
-  Line 21: update location of desired list of failures  
-#### find_clusters_median_method.py  
-  Lines 12 and 15: update general location of pipeline output gtfs for each accession  
-  Line 47: making a sorted gtf in same directory as pipeline output.  Make location match.  
-  Line 289: set location of output file with full details on split clusters (not used often).  
-  Line 292: set location of key output file.  
+#### batch_find_clusters_median_method.sh runs find_clusters_median_method.py
+  Line 13: update size of allowed window between genes (I used 100kb, 200kb, 500kb, 1mb, 2mb, or 5mb).  Note that this expects a number with no letter abbreviations (ex: 10000 rather than 10kb)  
+  Line 22: update path to list of accession numbers to analyze
 
 ### Summarizing cluster coordinates and gene coordinates  
 #### coordinates_of_singleton_cluster.py  
   Creates singletons.bed and clusters.bed in the original pipeline subdirectories  
-  Line 10: update location of pipeline subdirectories  
   Line 14: update the name of your output file from your preferred cluster identification run (I used fixed window 100kb)  
-  Line 15: if you changed the default name of your pipeline's gtf file, change here to match  
   Line 65: update to reflect list of accessions to analyze  
 
 #### expand_coordinates.py  
   Adds a window around each singleton or cluster.  Used for repeat element analysis (see below).  
-  Line 6: update to reflect list of accessions to analyze  
-  Line 13 and 54: update to reflect location of output singletons and clusters files, respectively, from coordinates_of_singleton_cluster.py  
-  Lines 48 and 84: update for location of desired output files.  
+  Line 6: update to reflect list of accessions to analyze   
   Lines 34, 43, 70, 79: update with desired window (here 100kb)  
 
 #### chr_length_v2_simple.sh
-Finds the length of each chromosome in each genome file.  This takes a while to run but it can process big genomes (just make sure you point to the original genome, not the one that has been split).  Output is a file called chromsizes.csv in each pipeline directory.  
-  Line 15: point towards generic location of gene identification pipeline directory  
-  Line 21: point towards generic location of genome  
-  Line 22: alternate used for big genomes  
-  Line 36: point towards list of accessions to use  
-  Line 37: alternate used for big genomes  
+Finds the length of each chromosome in each genome file.  This takes a while to run but it can process big genomes (just make sure you point to the original genome, not the one that has been split).  Output is a file called chromsizes.csv in each pipeline directory.    
+  Line 28: point towards list of accessions to use  
 
 #### check_where_genes_v4.py  
   Header changes as above  
-  Line 18: set threshold below which a chromosome will be labeled as "short" and not included in the main analysis.  
-  Line 19: currently set to 0.1.  This means that if the gene falls within the first 10% or last 10% of the length of the chromosome, it will be called a "near ends" gene  
-  Lines 21-22: set output file locations  
-  Line 25: list of accessions to include  
-  Line 30: point towards the generic folder output from your gene identification pipeline  
+  Line 16: set threshold below which a chromosome will be labeled as "short" and not included in the main analysis.  
+  Line 17: currently set to 0.1.  This means that if the gene falls within the first 10% or last 10% of the length of the chromosome, it will be called a "near ends" gene   
+  Line 23: list of accessions to include  
 
 #### is_gene_near_end.R creates plots Fig. 2E  
   Line 7: set working directory where files will be saved  
@@ -107,35 +77,28 @@ Creates plots Fig. 1A, 2B, 2C, and 2D
   Dedicated readme in directory  
   Used to generate Fig. 2A  
 
-
-### Repeat element analysis  
+### Repeat element analysis
+Assumes you have already run coordinates_of_singleton_cluster.py and expand_coordinates.py, as above.
 #### prep_nonamph_genomes.py
 Generates a semi-random list of comparator species as described in paper  
-  Line 10: update with location of spreadsheet containing each accession and associated class.  
-  Line 32: update with location of pipeline subdirectories  
-  Lines 26 and 67: update with desired location of output failures  
+  Line 10: update with location of spreadsheet containing each accession and associated class.    
+  Lines 26 and 67: update with desired location of output failures.  These are not used again,
   Line 72: may wish to update number of threads with which RepeatModeler will run (I used 10)  
 
 #### RepeatModeler.sh  
   Part 1 of repeat library generation
-  Header changes as above  
   Text generated by prep_nonamph_genomes.py and copied into file with appropriate header  
-  Recommend running this in chunks in parallel, each containing perhaps 5-10 commands  
+  Recommend running this in chunks in parallel, each containing perhaps 5-10 commands.
+  Highly recommend using filenames matching common name for each genome, as per for_py2.py config file for each species.
 #### RepeatModeler2.sh  
   Part 2 of repeat library generation
-  Header changes as above  
   Text generated by prep_nonamph_genomes.py and copied into file with appropriate header  
   Note that this analysis uses common names.  Check to make sure each unique.  
   Recommend running this in chunks in parallel, each containing perhaps 5 commands  
+  Highly recommend using filenames matching common name for each genome, as per for_py2.py config file for each species.
 
 #### RepeatMasker.sh
-Identifies repeat elements in both regions surrounding TAS2Rs and in random regions of the genome  
-  Line 19: update with generic location for for_py2.py script (python config file from pipeline)  
-  Lines 23 and 25: update with generic location of each genome  
-  Lines 29-60: reformatting bed file.  May not be necessary for your analysis.  
-  Line 67: update with location of output from RepeatModeler2.sh  
-  Lines 69-75: update with coordinates of desired regions to search (i.e. singletons, clusters, random genomic regions).  
-  Lines 89, 94, and 99: update with desired output directory  
+Identifies repeat elements in both regions surrounding TAS2Rs and in random regions of the genome.
 
 #### tabulate_percentages.py
 Makes a nice table summarizing the repeat analysis results for a given type (shown for "LTR elements").  I recommend running this for each type of repeat element of interest.  

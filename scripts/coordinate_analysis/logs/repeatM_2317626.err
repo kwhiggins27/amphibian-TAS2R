@@ -1,0 +1,87 @@
+awk: fatal: cannot open file `clusters_margins.bed' for reading (No such file or directory)
+awk: fatal: cannot open file `singletons_margins.bed' for reading (No such file or directory)
+awk: fatal: cannot open file `random_windows.bed' for reading (No such file or directory)
+*****ERROR: Unrecognized parameter: singletons_margins2.bed *****
+
+
+Tool:    bedtools getfasta (aka fastaFromBed)
+Version: v2.29.2
+Summary: Extract DNA sequences from a fasta file based on feature coordinates.
+
+Usage:   bedtools getfasta [OPTIONS] -fi <fasta> -bed <bed/gff/vcf>
+
+Options: 
+	-fi		Input FASTA file
+	-fo		Output file (opt., default is STDOUT
+	-bed		BED/GFF/VCF file of ranges to extract from -fi
+	-name		Use the name field and coordinates for the FASTA header
+	-name+		(deprecated) Use the name field and coordinates for the FASTA header
+	-nameOnly	Use the name field for the FASTA header
+	-split		Given BED12 fmt., extract and concatenate the sequences
+			from the BED "blocks" (e.g., exons)
+	-tab		Write output in TAB delimited format.
+			- Default is FASTA format.
+	-s		Force strandedness. If the feature occupies the antisense,
+			strand, the sequence will be reverse complemented.
+			- By default, strand information is ignored.
+	-fullHeader	Use full fasta header.
+			- By default, only the word before the first space or tab 
+			is used.
+
+*****ERROR: Unrecognized parameter: clusters_margins2.bed *****
+
+
+Tool:    bedtools getfasta (aka fastaFromBed)
+Version: v2.29.2
+Summary: Extract DNA sequences from a fasta file based on feature coordinates.
+
+Usage:   bedtools getfasta [OPTIONS] -fi <fasta> -bed <bed/gff/vcf>
+
+Options: 
+	-fi		Input FASTA file
+	-fo		Output file (opt., default is STDOUT
+	-bed		BED/GFF/VCF file of ranges to extract from -fi
+	-name		Use the name field and coordinates for the FASTA header
+	-name+		(deprecated) Use the name field and coordinates for the FASTA header
+	-nameOnly	Use the name field for the FASTA header
+	-split		Given BED12 fmt., extract and concatenate the sequences
+			from the BED "blocks" (e.g., exons)
+	-tab		Write output in TAB delimited format.
+			- Default is FASTA format.
+	-s		Force strandedness. If the feature occupies the antisense,
+			strand, the sequence will be reverse complemented.
+			- By default, strand information is ignored.
+	-fullHeader	Use full fasta header.
+			- By default, only the word before the first space or tab 
+			is used.
+
+*****ERROR: Unrecognized parameter: random_windows2.bed *****
+
+
+Tool:    bedtools getfasta (aka fastaFromBed)
+Version: v2.29.2
+Summary: Extract DNA sequences from a fasta file based on feature coordinates.
+
+Usage:   bedtools getfasta [OPTIONS] -fi <fasta> -bed <bed/gff/vcf>
+
+Options: 
+	-fi		Input FASTA file
+	-fo		Output file (opt., default is STDOUT
+	-bed		BED/GFF/VCF file of ranges to extract from -fi
+	-name		Use the name field and coordinates for the FASTA header
+	-name+		(deprecated) Use the name field and coordinates for the FASTA header
+	-nameOnly	Use the name field for the FASTA header
+	-split		Given BED12 fmt., extract and concatenate the sequences
+			from the BED "blocks" (e.g., exons)
+	-tab		Write output in TAB delimited format.
+			- Default is FASTA format.
+	-s		Force strandedness. If the feature occupies the antisense,
+			strand, the sequence will be reverse complemented.
+			- By default, strand information is ignored.
+	-fullHeader	Use full fasta header.
+			- By default, only the word before the first space or tab 
+			is used.
+
+RepeatMasker::setspecies: Could not find user specified library ../../results/coordinate_analysis/repeat/references/birds-families.fa.
+RepeatMasker::setspecies: Could not find user specified library ../../results/coordinate_analysis/repeat/references/birds-families.fa.
+RepeatMasker::setspecies: Could not find user specified library ../../results/coordinate_analysis/repeat/references/birds-families.fa.

@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 #SBATCH --job-name=localize  # Job name
-#SBATCH --mail-type=NONE     # Mail events (NONE, BEGIN, END, FAIL, ALL)
-#SBATCH --mail-user=youremailaddress@yourinstitute # Where to send mail
 #SBATCH --mem=50gb          # Job memory request, down from 200 and closer to the 64gb I think you're using per instance
 #SBATCH --nodes=1           # ensure cores are on one node
 #SBATCH --ntasks=1          # run a single task
@@ -18,11 +16,11 @@ import os
 threshold_short = 1000000
 threshold_ends = 0.1
 
-output_file = "../../results/coordinate_analysis/position_within_chromosome_1021.csv"
-output_file1 = "../../results/coordinate_analysis/position_within_chromosome_all_genes_1021.csv"
+output_file = "../../results/coordinate_analysis/position_within_chromosome.csv"
+output_file1 = "../../results/coordinate_analysis/position_within_chromosome_all_genes.csv"
 
 # Read the list of accessions from all_accessions.txt
-with open('../../results/all_accessions_used.txt', 'r') as accession_file:
+with open('../../results/accessions_mini_run.txt', 'r') as accession_file:
     accessions = accession_file.read().splitlines()
 
 # Iterate through each accession
@@ -31,7 +29,7 @@ for accession in accessions:
     os.chdir(new_directory)
 
     # Read chromsizes.csv into a pandas dataframe
-    chromsizes = pd.read_csv('chromsizes_1007.csv', sep='\t', header=None, names=['chr', 'length','mini'])
+    chromsizes = pd.read_csv('chromsizes.csv', sep='\t', header=None, names=['chr', 'length','mini'])
     print(chromsizes)
 
     # Find and read all *_from_pipeline.gtf files into a list of dataframes

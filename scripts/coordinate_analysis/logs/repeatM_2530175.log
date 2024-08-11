@@ -1,0 +1,23 @@
+American_flamingo
+
+RepeatMasker version open-4.0.7
+Search Engine: NCBI/RMBLAST [ 2.10.0+ ]
+Master RepeatMasker Database: /usr/local/include/RepeatMasker/Libraries/RepeatMaskerLib.embl ( Complete Database: dc20170127-rb20170127 )
+Custom Repeat Library: ../../results/coordinate_analysis/repeat/references/American_flamingo-families.fa
+
+
+cannot read file ../../results/coordinate_analysis/repeat/mini_run/American_flamingo_singleton.fasta in /lab/wengpj01/amphibian-TAS2R/subdirs/GCA_009819775.1
+RepeatMasker version open-4.0.7
+Search Engine: NCBI/RMBLAST [ 2.10.0+ ]
+Master RepeatMasker Database: /usr/local/include/RepeatMasker/Libraries/RepeatMaskerLib.embl ( Complete Database: dc20170127-rb20170127 )
+Custom Repeat Library: ../../results/coordinate_analysis/repeat/references/American_flamingo-families.fa
+
+
+cannot read file ../../results/coordinate_analysis/repeat/mini_run/American_flamingo_cluster.fasta in /lab/wengpj01/amphibian-TAS2R/subdirs/GCA_009819775.1
+RepeatMasker version open-4.0.7
+Search Engine: NCBI/RMBLAST [ 2.10.0+ ]
+Master RepeatMasker Database: /usr/local/include/RepeatMasker/Libraries/RepeatMaskerLib.embl ( Complete Database: dc20170127-rb20170127 )
+Custom Repeat Library: ../../results/coordinate_analysis/repeat/references/American_flamingo-families.fa
+
+
+cannot read file ../../results/coordinate_analysis/repeat/mini_run/American_flamingo_random.fasta in /lab/wengpj01/amphibian-TAS2R/subdirs/GCA_009819775.1

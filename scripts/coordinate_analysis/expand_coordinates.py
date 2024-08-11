@@ -3,7 +3,7 @@ import pandas as pd
 import os
 
 # Read the list of accessions from accessions_to_keep.txt
-accession_file = '../../results/all_accessions_used.txt'
+accession_file = '../../results/accessions_mini_run.txt'
 with open(accession_file, 'r') as file:
     accessions = [line.strip() for line in file]
 
@@ -34,7 +34,8 @@ for accession in accessions:
             'start': max(0, line['start'] - 100000),
             'stop': line['start']
         }
-        expanded_df = expanded_df.append(new_entry1, ignore_index=True)
+        new_entry1_df = pd.DataFrame([new_entry1])
+        expanded_df = pd.concat([expanded_df, new_entry1_df], ignore_index=True)
 
         # Create a new row with start = line["start"] and stop = line["stop"] + 100000
         new_entry2 = {
@@ -42,7 +43,8 @@ for accession in accessions:
             'start': line['stop'],
             'stop': line['stop'] + 100000
         }
-        expanded_df = expanded_df.append(new_entry2, ignore_index=True)
+        new_entry2_df = pd.DataFrame([new_entry2])
+        expanded_df = pd.concat([expanded_df, new_entry2_df], ignore_index=True)
 
     # Define the output BED file path
     output_file = f'../../subdirs/{accession}/singletons_margins.bed'
@@ -70,7 +72,7 @@ for accession in accessions:
             'start': max(0, line['start'] - 100000),
             'stop': line['start']
         }
-        expanded_df = expanded_df.append(new_entry1, ignore_index=True)
+        expanded_df = pd.concat([expanded_df, new_entry1_df], ignore_index=True)
 
         # Create a new row with start = line["start"] and stop = line["stop"] + 100000
         new_entry2 = {
@@ -78,7 +80,8 @@ for accession in accessions:
             'start': line['stop'],
             'stop': line['stop'] + 100000
         }
-        expanded_df = expanded_df.append(new_entry2, ignore_index=True)
+        expanded_df = pd.concat([expanded_df, new_entry2_df], ignore_index=True)
+
 
     # Define the output BED file path
     output_file = f'../../subdirs/{accession}/clusters_margins.bed'

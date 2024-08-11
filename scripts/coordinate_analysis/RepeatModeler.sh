@@ -9,8 +9,8 @@
 #SBATCH --error=logs/RM_%j.err
 
 ##For small demo
-# BuildDatabase -name ../../results/coordinate_analysis/repeat/references/flamingo ../../genomes/GCA_009819775.1_bPhoRub2.pri_genomic.fna
-BuildDatabase -name ../../results/coordinate_analysis/repeat/references/saltmarsh ../../genomes/GCA_027887145.1_bAmmCau1.pri_genomic.fna
+# BuildDatabase -name ../../results/coordinate_analysis/repeat/references/American_flamingo ../../genomes/GCA_009819775.1_bPhoRub2.pri_genomic.fna
+BuildDatabase -name ../../results/coordinate_analysis/repeat/references/birds ../../genomes/GCA_027887145.1_bAmmCau1.pri_genomic.fna
 
 ##For five amphibian genomes
 # BuildDatabase -name references/axolotl /lab/wengpj01/axolotl/axolotl_mygenome.fasta
