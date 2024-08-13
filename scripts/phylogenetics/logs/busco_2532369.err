@@ -1,0 +1,6 @@
+2024-08-11 16:15:01 ERROR:	bbtools tool cannot be found. Please check the 'path' and 'command' parameters provided in the config file or make sure the tool is available in your working environment.
+2024-08-11 16:15:01 ERROR:	BUSCO analysis failed!
+2024-08-11 16:15:01 ERROR:	Check the logs, read the user guide (https://busco.ezlab.org/busco_userguide.html), and check the BUSCO issue board on https://gitlab.com/ezlab/busco/issues
+
+sed: can't read ../../results/busco/list_attempted.txt: No such file or directory
+/var/spool/slurm/d/job2532369/slurm_script: line 42: ../../results/busco/list_complete.txt: No such file or directory

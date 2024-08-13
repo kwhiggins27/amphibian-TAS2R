@@ -3,14 +3,14 @@ import pandas as pd
 import os
 
 # Read accession numbers from the file
-accession_file = '../../results/all_accessions_used.txt'
+accession_file = '../../results/accessions_mini_run.txt'
 with open(accession_file, 'r') as f:
     accession_list = [line.strip() for line in f.readlines()]
 # Initialize bed0 DataFrame
 bed3 = pd.DataFrame(columns=['chromosome', 'start', 'stop', 'accession'])
 
 for accession in accession_list:
-    bed1_file = f'../../subdirs/{accession}/clusters_margins_1M_v3.bed'
+    bed1_file = f'../../subdirs/{accession}/clusters_margins_1M.bed'
 
     # Check if the bed1 file exists
     if not os.path.exists(bed1_file):
@@ -27,7 +27,7 @@ for accession in accession_list:
             print(f"Number of rows in bed1 for accession {accession} is not even. Exiting...")
     except:
         bed1=pd.DataFrame(columns=['chromosome', 'start', 'stop'])
-    bed0_file = f'../../subdirs/{accession}/singletons_margins_1M_v3.bed'
+    bed0_file = f'../../subdirs/{accession}/singletons_margins_1M.bed'
 
     # # Check if the bed1 file exists
     # if not os.path.exists(bed0_file):
@@ -66,9 +66,10 @@ for accession in accession_list:
                 'stop': bed01.iloc[i + 1, 1] + 1000000,
                 'accession': accession
             }
-            bed2 = bed2.append(new_row, ignore_index=True)
+            new_row_df = pd.DataFrame([new_row])
+            bed2 = pd.concat([bed2,new_row_df], ignore_index=True)
         # Append bed2 to bed0
-        bed3 = bed3.append(bed2, ignore_index=True)
+        bed3 = pd.concat([bed3,bed2], ignore_index=True)
     else:
         print("Neither singletons nor clusters found")
 bed4 = bed3[(bed3['chromosome'] != 0) & (bed3['start'].notnull()) & (bed3['stop'].notnull())].copy()

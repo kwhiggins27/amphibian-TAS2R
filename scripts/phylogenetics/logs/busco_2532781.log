@@ -1,0 +1,6 @@
+2024-08-11 16:28:00 INFO:	***** Start a BUSCO v5.5.0 analysis, current time: 08/11/2024 16:28:00 *****
+2024-08-11 16:28:00 INFO:	Configuring BUSCO with local environment
+2024-08-11 16:28:00 INFO:	Mode is genome
+2024-08-11 16:28:00 INFO:	'Force' option selected; overwriting previous results directory
+2024-08-11 16:28:00 INFO:	Downloading information on latest versions of BUSCO data...
+2024-08-11 16:28:05 INFO:	Input file is /lab/wengpj01/amphibian-TAS2R/genomes/GCA_009819775.1_bPhoRub2.pri_genomic.fna

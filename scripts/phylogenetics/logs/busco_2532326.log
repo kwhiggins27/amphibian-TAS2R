@@ -1,0 +1,4 @@
+2024-08-11 16:12:43 INFO:	***** Start a BUSCO v5.5.0 analysis, current time: 08/11/2024 16:12:43 *****
+2024-08-11 16:12:43 INFO:	Configuring BUSCO with local environment
+2024-08-11 16:12:43 INFO:	Mode is genome
+2024-08-11 16:12:43 INFO:	'Force' option selected; overwriting previous results directory

@@ -5,55 +5,58 @@ A set of scripts to perform basic phylogenetic analyses, use BUSCO scores to ide
 
 ## How to install and run  
 Download all scripts into a single directory.  Run in unix, python, or R as appropriate.  
+Be sure to activate conda environment specified in requirements.txt
 
-
-## How to use  
-For all batched files:  
-  Update email address (line 4) and desired notification settings (line 3)  
-  Update location of output and error files (lines 10-11).  
-  Don't change job name (line 2) without careful thought.  Many jobs reference each other using this identifier.  
+## How to use
+Create and activate conda environment specified in requirements.txt
 
 ### Basic phylogenetics tools
 #### mafft_skeleton.sh  
-  Header changes as above  
   Several different variations have been included to show how mafft was used at different stages in this project  
   Lines 22-25 used for creating skeleton tree using just genes in reference list (a few hundred)  
   Lines 15-19 used for adding to this skeleton   
-   
+
 #### iqtree.sh  
-  Header changes as above  
   The ouput of mafft has to be modified slightly to be compatible with iqtree.  Specifically, header rows cannot contain punctuation.
   After -s: change path to fasta  
-  After -m: this was determined to be the optimal model using the MFP flag  
+  After -m: this was determined to be the optimal model using the MFP flag
+
+### Run busco for each genome, if not already complete
+#### Update config.ini with your local locations of key programs
+#### automatched_add_busco.sh runs add_busco.sh which runs busco.sh
+  In "automated", set threshold for minimum number of running jobs (line 12) and username on cluster (line 20)
 
 ### Using BUSCO scores to identify syntanic regions  
 A novel method of using BUSCO genes as markers to define syntanic regions between rapidly evolving regions of DNA.  
-Run scripts in this order:  
-0) Run BUSCO on genomes.  Expected output has file structure busco/$accession/busco_output/run_vertebrata_odb10/full_table.tsv  
-1) Edit and run get_accepted_ranges.py  
-  Line 6: update to point to a list of accession numbers to include  
+Run scripts in this order:   
+
+#### 0) Edit and run expand_coordinates.py
+  Identical to file of same name in scripts/coordinate_analysis, but this creates 1M margins around each singleton or cluster.  Can modify if different margins desired (lines 34, 44, 72, 81).
+  
+#### 1) Edit and run get_accepted_ranges.py  
+  Line 6: update to point to a list of accession numbers  
   Lines 13 and 30: update to point to a bed file containing the coordinates of all clusters or singletons (respectively) with 1MB margins  
   Line 77: update with desired location of output file  
-2) Edit and run getmnqk.py  
+#### 2) Edit and run getmnqk.py  
   Header changes as above  
   Line 14: link to output of step (2)  
   Lines 35 and 6: update to point to generic busco output for any two accessions  
   Lines 138-141: update with desired location of four output files  
-3) Edit and run hypergeometic_extraq.py  
+#### 3) Edit and run hypergeometic_extraq.py  
   Header changes as above  
   Lines 21, 25, 29, 32: update with output from step (2)  
   Line 38: update with output of step (1)  
   Line 96: update with desired location of output file  
-4) Edit and run networks.py  
+#### 4) Edit and run networks.py  
   Header changes as above  
   Line 18: update with output of step (2)  
   Lines 93 and 112: update with desired location of output files  
   Lines 26-46: attempt to run Benjamini-hotchberg correction, which never finished.  Went back to Bonferroni which appears in line 52.  
-5) Edit and run convert_names.py to display results with order (or some other property)  
+#### 5) Edit and run convert_names.py to display results with order (or some other property)  
   Line 10: update to point to output of step (4)  
   Line 39: update to point to a file which contains accessions, orders, etc.  This will be the basis of conversion.  
   Line 64: update with desired location of output file  
-6) Edit and run cluster_age.R to calculate the minimum possible age of each cluster (Fig. 3C)  
+#### 6) Edit and run cluster_age.R to calculate the minimum possible age of each cluster (Fig. 3C)  
   Line 6: update to point to working directory containing output from step (5) and where the output from this analysis will be placed  
   Line 9: update with path to output from step (5)  
   Line 37: converter file containing accessions, latin names, orders, etc  

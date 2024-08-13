@@ -1,0 +1,8 @@
+2024-08-11 16:13:58 INFO:	***** Start a BUSCO v5.5.0 analysis, current time: 08/11/2024 16:13:58 *****
+2024-08-11 16:13:58 INFO:	Configuring BUSCO with local environment
+2024-08-11 16:13:58 INFO:	Mode is genome
+2024-08-11 16:13:58 INFO:	'Force' option selected; overwriting previous results directory
+2024-08-11 16:13:58 INFO:	Downloading information on latest versions of BUSCO data...
+2024-08-11 16:14:03 INFO:	Input file is /lab/wengpj01/amphibian-TAS2R/genomes/GCA_009819775.1_bPhoRub2.pri_genomic.fna
+2024-08-11 16:14:03 INFO:	Downloading file 'https://busco-data.ezlab.org/v5/data/lineages/vertebrata_odb10.2024-01-08.tar.gz'
+2024-08-11 16:14:15 INFO:	Decompressing file '/lab/wengpj01/amphibian-TAS2R/results/busco/busco_results/GCA_009819775.1/busco_downloads/lineages/vertebrata_odb10.tar.gz'

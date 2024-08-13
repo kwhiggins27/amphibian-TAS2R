@@ -1,0 +1,6 @@
+2024-08-11 16:12:42 ERROR:	Input /lab/wengpj01/amphibian-TAS2R/results/genomes/GCA_027887145.1*.fna does not exist
+2024-08-11 16:12:42 ERROR:	BUSCO analysis failed!
+2024-08-11 16:12:42 ERROR:	Check the logs, read the user guide (https://busco.ezlab.org/busco_userguide.html), and check the BUSCO issue board on https://gitlab.com/ezlab/busco/issues
+
+sed: can't read ../../results/busco/list_attempted.txt: No such file or directory
+/var/spool/slurm/d/job2532325/slurm_script: line 42: ../../results/busco/list_complete.txt: No such file or directory

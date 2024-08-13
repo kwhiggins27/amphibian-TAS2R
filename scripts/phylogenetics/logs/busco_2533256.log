@@ -1,0 +1,371 @@
+2024-08-11 17:06:31 INFO:	***** Start a BUSCO v5.5.0 analysis, current time: 08/11/2024 17:06:31 *****
+2024-08-11 17:06:31 INFO:	Configuring BUSCO with ../../../../scripts/phylogenetics/config.ini
+2024-08-11 17:06:31 INFO:	Mode is genome
+2024-08-11 17:06:31 INFO:	'Force' option selected; overwriting previous results directory
+2024-08-11 17:06:31 INFO:	Downloading information on latest versions of BUSCO data...
+2024-08-11 17:06:34 INFO:	Input file is /lab/wengpj01/amphibian-TAS2R/genomes/GCA_027887145.1_bAmmCau1.pri_genomic.fna
+2024-08-11 17:06:42 INFO:	Running BUSCO using lineage dataset vertebrata_odb10 (eukaryota, 2024-01-08)
+2024-08-11 17:06:42 INFO:	Running 1 job(s) on bbtools, starting at 08/11/2024 17:06:42
+2024-08-11 17:06:42 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 17:06:42 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 17:06:42 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 17:06:42 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 17:06:42 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 17:06:42 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 17:06:42 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 17:06:42 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 17:06:42 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 17:06:42 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 17:06:42 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 17:06:42 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 17:06:42 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 17:06:42 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 17:06:43 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 17:06:43 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 17:06:43 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 17:06:43 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 17:06:43 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 17:06:43 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 17:06:49 INFO:	[bbtools]	1 of 1 task(s) completed
+2024-08-11 17:06:49 INFO:	Running 1 job(s) on makeblastdb, starting at 08/11/2024 17:06:49
+2024-08-11 17:06:49 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 17:06:49 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 17:06:49 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 17:06:49 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 17:06:49 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 17:06:49 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 17:06:49 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 17:06:49 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 17:06:49 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 17:06:49 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 17:06:49 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 17:06:49 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 17:06:49 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 17:06:49 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 17:06:49 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 17:06:49 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 17:06:49 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 17:06:49 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 17:06:49 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 17:06:49 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 17:06:50 INFO:	Creating BLAST database with input file
+2024-08-11 17:07:06 INFO:	[makeblastdb]	1 of 1 task(s) completed
+2024-08-11 17:07:06 INFO:	Running a BLAST search for BUSCOs against created database
+2024-08-11 17:07:06 INFO:	Running 1 job(s) on tblastn, starting at 08/11/2024 17:07:06
+2024-08-11 17:07:07 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 17:07:07 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 17:07:07 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 17:07:07 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 17:07:07 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 17:07:07 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 17:07:07 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 17:07:07 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 17:07:07 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 17:07:07 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 17:07:07 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 17:07:07 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 17:07:07 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 17:07:07 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 17:07:07 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 17:07:07 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 17:07:07 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 17:07:07 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 17:07:07 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 17:07:07 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 21:00:56 INFO:	[tblastn]	1 of 1 task(s) completed
+2024-08-11 21:01:18 INFO:	Running Augustus gene predictor on BLAST search results.
+2024-08-11 21:01:18 INFO:	Running Augustus prediction using human as species:
+2024-08-11 21:01:18 INFO:	Running 3977 job(s) on augustus, starting at 08/11/2024 21:01:18
+2024-08-11 21:01:19 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 21:01:19 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 21:01:19 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 21:01:19 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 21:01:19 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 21:01:19 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 21:01:19 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 21:01:19 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 21:01:19 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 21:01:19 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 21:01:19 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 21:01:19 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 21:01:19 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 21:01:19 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 21:01:19 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 21:01:19 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 21:01:19 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 21:01:19 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 21:01:19 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 21:01:19 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 21:47:12 INFO:	[augustus]	398 of 3977 task(s) completed
+2024-08-11 22:07:56 INFO:	[augustus]	796 of 3977 task(s) completed
+2024-08-11 22:22:21 INFO:	[augustus]	1194 of 3977 task(s) completed
+2024-08-11 22:33:19 INFO:	[augustus]	1591 of 3977 task(s) completed
+2024-08-11 22:42:33 INFO:	[augustus]	1989 of 3977 task(s) completed
+2024-08-11 22:50:33 INFO:	[augustus]	2387 of 3977 task(s) completed
+2024-08-11 22:57:56 INFO:	[augustus]	2784 of 3977 task(s) completed
+2024-08-11 23:04:31 INFO:	[augustus]	3182 of 3977 task(s) completed
+2024-08-11 23:11:05 INFO:	[augustus]	3580 of 3977 task(s) completed
+2024-08-11 23:17:44 INFO:	[augustus]	3977 of 3977 task(s) completed
+2024-08-11 23:17:44 INFO:	Extracting predicted proteins...
+2024-08-11 23:18:01 INFO:	***** Run HMMER on gene sequences *****
+2024-08-11 23:18:08 INFO:	Running 3967 job(s) on hmmsearch, starting at 08/11/2024 23:18:08
+2024-08-11 23:18:08 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 23:18:08 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 23:18:08 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 23:18:08 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 23:18:08 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 23:18:08 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 23:18:08 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 23:18:08 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 23:18:08 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 23:18:08 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 23:18:08 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 23:18:08 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 23:18:08 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 23:18:08 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 23:18:08 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 23:18:08 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 23:18:08 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 23:18:08 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 23:18:08 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 23:18:08 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 23:18:17 INFO:	[hmmsearch]	397 of 3967 task(s) completed
+2024-08-11 23:18:20 INFO:	[hmmsearch]	794 of 3967 task(s) completed
+2024-08-11 23:18:23 INFO:	[hmmsearch]	1191 of 3967 task(s) completed
+2024-08-11 23:18:25 INFO:	[hmmsearch]	1587 of 3967 task(s) completed
+2024-08-11 23:18:27 INFO:	[hmmsearch]	1984 of 3967 task(s) completed
+2024-08-11 23:18:28 INFO:	[hmmsearch]	2381 of 3967 task(s) completed
+2024-08-11 23:18:30 INFO:	[hmmsearch]	2777 of 3967 task(s) completed
+2024-08-11 23:18:30 INFO:	[hmmsearch]	2777 of 3967 task(s) completed
+2024-08-11 23:18:32 INFO:	[hmmsearch]	3174 of 3967 task(s) completed
+2024-08-11 23:18:34 INFO:	[hmmsearch]	3571 of 3967 task(s) completed
+2024-08-11 23:18:40 INFO:	[hmmsearch]	3967 of 3967 task(s) completed
+2024-08-11 23:18:41 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 23:18:41 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 23:18:41 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 23:18:41 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 23:18:41 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 23:18:41 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 23:18:41 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 23:18:41 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 23:18:41 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 23:18:41 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 23:18:41 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 23:18:41 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 23:18:41 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 23:18:41 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 23:18:41 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 23:18:41 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 23:18:41 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 23:18:41 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 23:18:41 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 23:18:41 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 23:18:44 INFO:	Starting second step of analysis. The gene predictor Augustus is retrained using the results from the initial run to yield more accurate results.
+2024-08-11 23:18:54 INFO:	Extracting missing and fragmented buscos from the file ancestral_variants...
+2024-08-11 23:18:55 INFO:	Running a BLAST search for BUSCOs against created database
+2024-08-11 23:18:55 INFO:	Running 1 job(s) on tblastn, starting at 08/11/2024 23:18:55
+2024-08-11 23:18:56 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 23:18:56 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 23:18:56 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 23:18:56 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 23:18:56 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 23:18:56 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 23:18:56 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 23:18:56 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 23:18:56 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 23:18:56 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 23:18:56 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 23:18:56 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 23:18:56 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 23:18:56 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 23:18:56 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 23:18:56 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 23:18:56 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 23:18:56 INFO:	NumExpr defaulting to 8 threads.
+2024-08-11 23:18:56 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-11 23:18:56 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 02:06:35 INFO:	[tblastn]	1 of 1 task(s) completed
+2024-08-12 02:06:57 INFO:	Converting predicted genes to short genbank files
+2024-08-12 02:06:57 INFO:	Running 3055 job(s) on gff2gbSmallDNA.pl, starting at 08/12/2024 02:06:57
+2024-08-12 02:06:57 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 02:06:57 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 02:06:57 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 02:06:57 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 02:06:57 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 02:06:57 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 02:06:57 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 02:06:57 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 02:06:57 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 02:06:57 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 02:06:57 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 02:06:57 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 02:06:57 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 02:06:57 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 02:06:57 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 02:06:57 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 02:06:57 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 02:06:57 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 02:06:57 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 02:06:57 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 02:10:59 INFO:	[gff2gbSmallDNA.pl]	306 of 3055 task(s) completed
+2024-08-12 02:14:58 INFO:	[gff2gbSmallDNA.pl]	611 of 3055 task(s) completed
+2024-08-12 02:18:51 INFO:	[gff2gbSmallDNA.pl]	917 of 3055 task(s) completed
+2024-08-12 02:22:49 INFO:	[gff2gbSmallDNA.pl]	1222 of 3055 task(s) completed
+2024-08-12 02:26:45 INFO:	[gff2gbSmallDNA.pl]	1528 of 3055 task(s) completed
+2024-08-12 02:30:42 INFO:	[gff2gbSmallDNA.pl]	1833 of 3055 task(s) completed
+2024-08-12 02:34:39 INFO:	[gff2gbSmallDNA.pl]	2139 of 3055 task(s) completed
+2024-08-12 02:38:35 INFO:	[gff2gbSmallDNA.pl]	2444 of 3055 task(s) completed
+2024-08-12 02:42:34 INFO:	[gff2gbSmallDNA.pl]	2750 of 3055 task(s) completed
+2024-08-12 02:46:38 INFO:	[gff2gbSmallDNA.pl]	3055 of 3055 task(s) completed
+2024-08-12 02:46:38 INFO:	All files converted to short genbank files, now training Augustus using Single-Copy Complete BUSCOs
+2024-08-12 02:46:38 INFO:	Running 1 job(s) on new_species.pl, starting at 08/12/2024 02:46:38
+2024-08-12 02:46:39 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 02:46:39 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 02:46:39 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 02:46:39 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 02:46:39 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 02:46:39 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 02:46:39 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 02:46:39 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 02:46:39 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 02:46:39 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 02:46:39 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 02:46:39 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 02:46:39 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 02:46:39 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 02:46:39 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 02:46:39 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 02:46:39 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 02:46:39 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 02:46:39 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 02:46:39 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 02:46:39 INFO:	[new_species.pl]	1 of 1 task(s) completed
+2024-08-12 02:46:41 INFO:	Running 1 job(s) on etraining, starting at 08/12/2024 02:46:41
+2024-08-12 02:46:41 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 02:46:41 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 02:46:41 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 02:46:41 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 02:46:41 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 02:46:41 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 02:46:41 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 02:46:41 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 02:46:41 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 02:46:41 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 02:46:41 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 02:46:41 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 02:46:41 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 02:46:41 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 02:46:41 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 02:46:41 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 02:46:41 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 02:46:41 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 02:46:41 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 02:46:41 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 02:46:46 INFO:	[etraining]	1 of 1 task(s) completed
+2024-08-12 02:46:46 INFO:	Re-running Augustus with the new metaparameters, number of target BUSCOs: 281
+2024-08-12 02:46:46 INFO:	Running Augustus gene predictor on BLAST search results.
+2024-08-12 02:46:46 INFO:	Running Augustus prediction using BUSCO_busco_output as species:
+2024-08-12 02:46:46 INFO:	Running 382 job(s) on augustus, starting at 08/12/2024 02:46:46
+2024-08-12 02:46:47 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 02:46:47 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 02:46:47 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 02:46:47 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 02:46:47 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 02:46:47 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 02:46:47 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 02:46:47 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 02:46:47 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 02:46:47 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 02:46:47 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 02:46:47 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 02:46:47 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 02:46:47 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 02:46:47 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 02:46:47 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 02:46:47 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 02:46:47 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 02:46:47 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 02:46:47 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 02:50:30 INFO:	[augustus]	39 of 382 task(s) completed
+2024-08-12 02:53:18 INFO:	[augustus]	77 of 382 task(s) completed
+2024-08-12 02:55:30 INFO:	[augustus]	115 of 382 task(s) completed
+2024-08-12 02:57:11 INFO:	[augustus]	153 of 382 task(s) completed
+2024-08-12 02:58:41 INFO:	[augustus]	192 of 382 task(s) completed
+2024-08-12 03:00:02 INFO:	[augustus]	230 of 382 task(s) completed
+2024-08-12 03:01:20 INFO:	[augustus]	268 of 382 task(s) completed
+2024-08-12 03:02:28 INFO:	[augustus]	306 of 382 task(s) completed
+2024-08-12 03:03:36 INFO:	[augustus]	344 of 382 task(s) completed
+2024-08-12 03:13:28 INFO:	[augustus]	382 of 382 task(s) completed
+2024-08-12 03:13:28 INFO:	Extracting predicted proteins...
+2024-08-12 03:13:29 INFO:	***** Run HMMER on gene sequences *****
+2024-08-12 03:13:30 INFO:	Running 381 job(s) on hmmsearch, starting at 08/12/2024 03:13:30
+2024-08-12 03:13:31 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 03:13:31 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 03:13:31 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 03:13:31 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 03:13:31 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 03:13:31 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 03:13:31 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 03:13:31 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 03:13:31 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 03:13:31 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 03:13:31 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 03:13:31 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 03:13:31 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 03:13:31 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 03:13:31 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 03:13:31 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 03:13:31 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 03:13:31 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 03:13:31 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 03:13:31 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 03:13:32 INFO:	[hmmsearch]	39 of 381 task(s) completed
+2024-08-12 03:13:32 INFO:	[hmmsearch]	77 of 381 task(s) completed
+2024-08-12 03:13:32 INFO:	[hmmsearch]	115 of 381 task(s) completed
+2024-08-12 03:13:32 INFO:	[hmmsearch]	153 of 381 task(s) completed
+2024-08-12 03:13:33 INFO:	[hmmsearch]	191 of 381 task(s) completed
+2024-08-12 03:13:33 INFO:	[hmmsearch]	229 of 381 task(s) completed
+2024-08-12 03:13:33 INFO:	[hmmsearch]	267 of 381 task(s) completed
+2024-08-12 03:13:33 INFO:	[hmmsearch]	305 of 381 task(s) completed
+2024-08-12 03:13:34 INFO:	[hmmsearch]	343 of 381 task(s) completed
+2024-08-12 03:13:35 INFO:	[hmmsearch]	381 of 381 task(s) completed
+2024-08-12 03:13:35 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 03:13:35 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 03:13:35 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 03:13:35 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 03:13:35 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 03:13:35 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 03:13:35 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 03:13:35 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 03:13:35 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 03:13:35 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 03:13:35 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 03:13:35 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 03:13:35 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 03:13:35 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 03:13:36 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 03:13:36 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 03:13:36 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 03:13:36 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 03:13:36 INFO:	Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2024-08-12 03:13:36 INFO:	NumExpr defaulting to 8 threads.
+2024-08-12 03:13:37 INFO:	Results:	C:96.9%[S:96.3%,D:0.6%],F:1.0%,M:2.1%,n:3354	   
+
+2024-08-12 03:13:53 INFO:	
+
+	---------------------------------------------------
+	|Results from dataset vertebrata_odb10             |
+	---------------------------------------------------
+	|C:96.9%[S:96.3%,D:0.6%],F:1.0%,M:2.1%,n:3354      |
+	|3250	Complete BUSCOs (C)                        |
+	|3231	Complete and single-copy BUSCOs (S)        |
+	|19	Complete and duplicated BUSCOs (D)         |
+	|34	Fragmented BUSCOs (F)                      |
+	|70	Missing BUSCOs (M)                         |
+	|3354	Total BUSCO groups searched                |
+	---------------------------------------------------
+2024-08-12 03:13:53 INFO:	BUSCO analysis done. Total running time: 36439 seconds
+2024-08-12 03:13:53 INFO:	Results written in /lab/wengpj01/amphibian-TAS2R/results/busco/busco_results/GCA_027887145.1/busco_output
+2024-08-12 03:13:53 INFO:	For assistance with interpreting the results, please consult the userguide: https://busco.ezlab.org/busco_userguide.html
+
+2024-08-12 03:13:53 INFO:	Visit this page https://gitlab.com/ezlab/busco#how-to-cite-busco to see how to cite BUSCO
