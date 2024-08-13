@@ -39,3 +39,4 @@ Genome
 
 # Exclude certain directories
 **/results/coordinate_analysis/repeat/mini_run/
+**/results/busco/busco_results/
