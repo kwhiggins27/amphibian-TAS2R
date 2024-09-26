@@ -54,6 +54,8 @@ merged_main <- merged_main %>%
 
 merged_main_no_duplicates <- merged_main[!duplicated(merged_main), ]
 
+
+
 ##Position on chromosome code (from is_gene_near_end.R)
 
 get_taxonomic_info <- function(latin_name) {
@@ -91,7 +93,7 @@ if (nrow(merged_main_no_duplicates) == nrow(transposed_tax_info)) {
 }
 
 
-merged_with_taxa$genes_per_cluster <- merged_with_taxa$genes / merged_with_taxa$clusters
+merged_with_taxa$genes_per_cluster <- (merged_with_taxa$genes / merged_with_taxa$clusters) * merged_with_taxa$'Fraction Clustered'
 
 merged_with_taxa$class <- ifelse(
   is.na(merged_with_taxa$class) & (merged_with_taxa$order == "Testudines" | merged_with_taxa$order == "Crocodylia"),
