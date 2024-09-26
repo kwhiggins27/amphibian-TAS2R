@@ -9,7 +9,7 @@ library(ggplot2)
 setwd("/Volumes/wengpj01/vertebrate_pipeline/20240905")
 
 ##Key input files -- update with absolute path of each.  Examples included.
-genes_accessions_input <- "/Volumes/wengpj01/amphibian-TAS2R/results/coordinate_analysis/plot_generation/20231006_basics.csv"
+genes_accessions_input <- "/Volumes/wengpj01/amphibian-TAS2R/results/coordinate_analysis/plot_generation/20231006_basics_addedplottingclade.csv"
 clusters_accessions_input <- "/Volumes/wengpj01/amphibian-TAS2R/results/coordinate_analysis/plot_generation/summary_clusters_withnearest_1000000.csv"
 genome_info_input <- "/Volumes/wengpj01/amphibian-TAS2R/results/coordinate_analysis/plot_generation/accessions_pt1_assembly_combo.csv"
 position_coordinates_input <- "/Volumes/wengpj01/amphibian-TAS2R/results/coordinate_analysis/plot_generation/position_within_chromosome_1005.csv"
@@ -92,8 +92,12 @@ if (nrow(merged_main_no_duplicates) == nrow(transposed_tax_info)) {
   print("The number of rows is not the same after transposition.")
 }
 
+merged_with_taxa$genes <- as.numeric(as.character(merged_with_taxa$genes))
+merged_with_taxa$clusters <- as.numeric(as.character(merged_with_taxa$clusters))
+merged_with_taxa$FractionClustered <- as.numeric(as.character(merged_with_taxa$FractionClustered))
 
-merged_with_taxa$genes_per_cluster <- (merged_with_taxa$genes / merged_with_taxa$clusters) * merged_with_taxa$'Fraction Clustered'
+
+merged_with_taxa$genes_per_cluster <- (merged_with_taxa$genes / merged_with_taxa$clusters) * merged_with_taxa$FractionClustered
 
 merged_with_taxa$class <- ifelse(
   is.na(merged_with_taxa$class) & (merged_with_taxa$order == "Testudines" | merged_with_taxa$order == "Crocodylia"),
@@ -114,6 +118,23 @@ output_file <- "match_accession_class2.csv"
 # Export the subset DataFrame to a CSV file
 write.csv(subset_df1, file = output_file, row.names = FALSE)
 
+clade_colors_df <- data.frame(
+  PlottingClade = c(
+    "Mammalia", "Aves", "Squamata", "Testudines", "Crocodylia", "Anura","Caudata", 
+    "Gymnophiona", "Actinopteri", "Chondrichthyes",
+    "Hyperoartia", "Ceratodontoidei", "Cladistia"
+  ),
+  HexCode = c(
+    "#D55E00", "#5B066B", "#AC71F3",
+    "#9245E3", "#EC7EEF",  "#166A53", "#AEF2B5", "#36AB59","#063781", "#56B4E9", "#0072B2", "#ACF1FF",
+    "#9EBADC"
+  )
+)
+
+# Merge the color mapping dataframe with your data
+merged_with_taxa <- merge(merged_with_taxa, clade_colors_df, by = "PlottingClade", all.x = TRUE)
+
+
 amphibia_subset <- merged_with_taxa[merged_with_taxa$class == "Amphibia", ]
 amphibia_subset <- amphibia_subset[complete.cases(amphibia_subset), ]
 reptile_high_family <- c("Cordylidae", "Dactyloidae", "Eublepharidae", "Lacertidae", "Phrynosomatidae", "Rhineuridae", "Sphaerodactylidae")
@@ -128,33 +149,79 @@ matrix_data <- matrix(merged_with_taxa$'genes', nrow = nrow(merged_with_taxa), n
 graphics.off()
 
 
+
 # Create a box and whisker plot for genes_by_class
-pdf("genes_by_class_boxplot.pdf")
-ggplot(merged_with_taxa, aes(x = class, y = genes)) +
-  geom_boxplot(fill = "blue", color = "black") +
-  labs(x = "Class", y = "Genes", title = "Genes Boxplot") +
-  theme_minimal()
+pdf("genes_by_class_boxplot6.pdf")
+ggplot(merged_with_taxa, aes(
+  x = factor(PlottingClade, levels = clade_colors_df$PlottingClade), 
+  y = `Number of Genes.x`, 
+  fill = factor(PlottingClade, levels = clade_colors_df$PlottingClade)
+)) +
+  geom_boxplot() +
+  scale_fill_manual(values = clade_colors_df$HexCode) +
+  labs(x = "PlottingClade", y = "Number of Genes", title = "Boxplots by PlottingClade") +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    panel.grid = element_blank(),
+    axis.line = element_line(),  # Show x and y axes lines
+    axis.ticks = element_line()  # Show ticks on the axes
+  ) +
+  theme(legend.position = "none") # Remove the legend
 dev.off()
 
-pdf("clusters_by_class_boxplot.pdf")
-ggplot(has_clusters, aes(x = class, y = clusters)) +
-  geom_boxplot(fill = "blue", color = "black") +
-  labs(x = "Class", y = "Genes", title = "Clusters Boxplot") +
-  theme_minimal()
+
+pdf("clusters_by_class_boxplot6.pdf")
+ggplot(has_clusters, aes(x = factor(PlottingClade, levels = clade_colors_df$PlottingClade), y = `clusters`, fill = factor(PlottingClade, levels = clade_colors_df$PlottingClade))) +
+  geom_boxplot() +
+  scale_fill_manual(values = clade_colors_df$HexCode) +
+  labs(x = "PlottingClade", y = "Number of Clusters", title = "Boxplots by PlottingClade") +
+  theme_minimal()+
+  theme(axis.text.x = element_text(angle = 45, hjust = 1), panel.grid = element_blank()) +  # Remove the grid 
+  theme(legend.position = "none") # Print the plot to the PDF
 dev.off()
 
-pdf("genes_per_cluster_boxplot.pdf")
-ggplot(has_clusters, aes(x = class, y = genes_per_cluster)) +
-  geom_boxplot(fill = "blue", color = "black") +
-  labs(x = "Class", y = "Genes", title = "Genes Per Cluster Boxplot") +
-  theme_minimal()
+pdf("genes_per_cluster6.pdf")
+ggplot(has_clusters, aes(x = factor(PlottingClade, levels = clade_colors_df$PlottingClade), y = `genes_per_cluster`, fill = factor(PlottingClade, levels = clade_colors_df$PlottingClade))) +
+  geom_boxplot() +
+  scale_fill_manual(values = clade_colors_df$HexCode) +
+  labs(x = "PlottingClade", y = "Genes per cluster", title = "Boxplots by PlottingClade") +
+  theme_minimal()+
+  theme(axis.text.x = element_text(angle = 45, hjust = 1), panel.grid = element_blank()) +  # Remove the grid 
+  theme(legend.position = "none") # Print the plot to the PDF
 dev.off()
 
-pdf("nearest_in_cluster_boxplot.pdf")
-ggplot(has_clusters, aes(x = class, y = Nearest_in_cluster)) +
-  geom_boxplot(fill = "blue", color = "black") +
-  labs(x = "Class", y = "Genes", title = "Is Most Similar Gene Part of Same Cluster?") +
-  theme_minimal()
+pdf("nearest6.pdf")
+ggplot(has_clusters, aes(x = factor(PlottingClade, levels = clade_colors_df$PlottingClade), y = `Nearest_in_cluster`, fill = factor(PlottingClade, levels = clade_colors_df$PlottingClade))) +
+  geom_boxplot() +
+  scale_fill_manual(values = clade_colors_df$HexCode) +
+  labs(x = "PlottingClade", y = "Number of Genes", title = "Boxplots by PlottingClade") +
+  theme_minimal()+
+  theme(axis.text.x = element_text(angle = 45, hjust = 1), panel.grid = element_blank()) +  # Remove the grid 
+  theme(legend.position = "none") # Print the plot to the PDF
+dev.off()
+
+merged_with_taxa$FractionClustered <- ifelse(merged_with_taxa$`Number of Genes.x` > 0 & is.na(merged_with_taxa$`Fraction Clustered`), 0, merged_with_taxa$`Fraction Clustered`)
+subset_merged <- merged_with_taxa[merged_with_taxa$`Number of Genes.x` > 0, ]
+
+pdf("fraction_clustered.pdf")
+ggplot(subset_merged, aes(x = factor(PlottingClade, levels = clade_colors_df$PlottingClade), y = `Fraction Clustered`, fill = factor(PlottingClade, levels = clade_colors_df$PlottingClade))) +
+  geom_boxplot() +
+  scale_fill_manual(values = clade_colors_df$HexCode) +
+  labs(x = "PlottingClade", y = "Fraction Clustered", title = "Boxplots by PlottingClade") +
+  theme_minimal()+
+  theme(axis.text.x = element_text(angle = 45, hjust = 1), panel.grid = element_blank()) +  # Remove the grid 
+  theme(legend.position = "none") # Print the plot to the PDF
+dev.off()
+
+pdf("cluster_spacing.pdf")
+ggplot(has_clusters, aes(x = factor(PlottingClade, levels = clade_colors_df$PlottingClade), y = `Total Space (kb/receptor)`, fill = factor(PlottingClade, levels = clade_colors_df$PlottingClade))) +
+  geom_boxplot() +
+  scale_fill_manual(values = clade_colors_df$HexCode) +
+  labs(x = "PlottingClade", y = "Total Space (kb/receptor)", title = "Boxplots by PlottingClade") +
+  theme_minimal()+
+  theme(axis.text.x = element_text(angle = 45, hjust = 1), panel.grid = element_blank()) +  # Remove the grid 
+  theme(legend.position = "none") # Print the plot to the PDF
 dev.off()
 
 
