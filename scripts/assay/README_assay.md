@@ -15,12 +15,12 @@ Download scripts and file tree structure as previously described.  Run scripts i
 ### 2. Create dose response curves for selected compounds  
 Open Lineplot_dose_response.R in an R environment such as RStudio  
   Ensure all necessary packages are available and up to date (tidyverse and scales).  
-  The datasheet format is the same as for the datasheet for heatmap. The essential columns to crate dose-response curves are "gene", "coumpound", "concentration", and "AUC".
+  The datasheet format is the same as for the datasheet for heatmap. The essential columns to create dose-response curves are "gene", "compound", "concentration", and "AUC".
 
 ### 3.  barplots for agonist screenings from raw assay data (in Supplementary materials).
 Open Barplot_agonist_screening.R in an R environment such as RStudio  
   Ensure all necessary packages are available and up to date (tidyverse).   
-  The datasheet format is the same as for the datasheet for heatmap. The essential columns to crate dose-response curves are "gene", "coumpound", and "AUC".
+  The datasheet format is the same as for the datasheet for heatmap. The essential columns to create dose-response curves are "gene", "compound", and "AUC".
 
 
 ## Credits  

@@ -57,20 +57,21 @@ Finds the length of each chromosome in each genome file.  This takes a while to 
   Line 229-238: create plot for amphibian genes (Fig. 2E left)  
   Lines 262-271: create plot for non-amphibian genes (Fig. 2E right)  
 
-#### process_rerun.R
+#### process_rerun_Sept.R
 Creates plots Fig. 1A, 2B, 2C, and 2D  
-  Line 7: set working directory while files will be saved  
-  Line 9: set your own API key.  Only needed for initial analysis  
-  Line 10: point towards spreadsheet summarizing details for each accession, critically number of TAS2Rs identified  
-  Line 11: point towards output of cluster identification pipeline  
-  Line 12: information about genome (optional, not needed to create 3 key figures)  
-  Line 13: point towards spreadsheet showing position of each gene relative to the end of the chromosome  
-  Line 14: point towards spreadsheet showing genome size  
-  Line 100: creates key output file summarizing all data collected so far.  This will be used in future analyses.  
-  Line 133-138: creates Fig. 1A panel  
-  Lines 140-145: creates Fig. 2B  
-  Lines 147-152: creates Fig. 2C  
-  Lines 154-159: creates Fig. 2D  
+  Line 9: set working directory while files will be saved  
+  Line 19: set your own API key.  Only needed for initial analysis  
+  Line 12: point towards spreadsheet summarizing details for each accession, critically number of TAS2Rs identified and desired plotting clade (we used mostly class level, with several subdivided into orders based on level of interest)
+  Line 13: point towards output of cluster identification pipeline  
+  Line 14: information about genome (optional, not needed to create 3 key figures)  
+  Line 15: point towards spreadsheet showing position of each gene relative to the end of the chromosome  
+  Line 16: point towards spreadsheet showing genome size  
+  Line 22: filename of key intermediate file
+  Lines 61-79: uncomment and run these lines of code to gather phylogenetic information about each species from NCBI.  This is slow and prone to crashing, so we recommend running it once, saving the results, and reloading  from the intermediate file in line 22 (at line 80) for future runs.
+  Line 154-171: creates Fig. 1A panel  
+  Lines 175-182: creates Fig. 2B  
+  Lines 184-192: creates Fig. 2C  
+  Lines 194-202: creates Fig. 2D  
 
 #### GenePlot.pl  
   Written by Matthew Hill, shared with permission.  
@@ -79,6 +80,7 @@ Creates plots Fig. 1A, 2B, 2C, and 2D
 
 ### Repeat element analysis
 Assumes you have already run coordinates_of_singleton_cluster.py and expand_coordinates.py, as above.
+
 #### prep_nonamph_genomes.py
 Generates a semi-random list of comparator species as described in paper  
   Line 10: update with location of spreadsheet containing each accession and associated class.    
