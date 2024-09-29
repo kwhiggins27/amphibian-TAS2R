@@ -40,11 +40,18 @@ Genome
 **/scripts/phylogenetics/config/species/
 **/genomes/
 **/references/reference_genomes/
-**scripts/blast_pipeline/tmbed/data
+**/scripts/blast_pipeline/tmbed/data
+**/results/coordinate_analysis/repeat/references/
 
 # Exclude several large files
 **/subdirs/GCA_009819775.1/expanded_file.fasta
 **/subdirs/GCA_027887145.1/expanded_file.fasta
-**/subdirs/GCA_009…/American_flamingo_reciprocal_expanded.fasta
+**/subdirs/GCA_009819775.1/American_flamingo_reciprocal_expanded.fasta
 **/subdirs/GCA_027887145.1/birds_reciprocal_expanded.fasta
+**/subdirs/GCA_027887145.1/birds_bitter_expanded_protein_v1.fasta
+**/subdirs/GCA_009819775.1/American_flamingo_bitter_expanded_protein_v1.fasta
+**/subdirs/GCA_027887145.1/birds_bitter_expanded_nucleotide_v1.fasta
+**/subdirs/GCA_009819775.1/American_flamingo_bitter_expanded_nucleotide_v1.fasta
+**/results/pipeline/all_pro_chromosomal_20231006.fasta
+
 
