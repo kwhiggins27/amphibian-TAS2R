@@ -39,5 +39,12 @@ Genome
 **/results/busco/busco_results/
 **/scripts/phylogenetics/config/species/
 **/genomes/
+**/references/reference_genomes/
+**scripts/blast_pipeline/tmbed/data
 
 # Exclude several large files
+**/subdirs/GCA_009819775.1/expanded_file.fasta
+**/subdirs/GCA_027887145.1/expanded_file.fasta
+**/subdirs/GCA_009…/American_flamingo_reciprocal_expanded.fasta
+**/subdirs/GCA_027887145.1/birds_reciprocal_expanded.fasta
+
