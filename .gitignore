@@ -27,9 +27,6 @@
 *.gz
 *.bam
 *.bam.bai
-*.fa
-*.fna
-*.fasta
 *.nsq
 SA
 SAindex
@@ -41,3 +38,6 @@ Genome
 **/results/coordinate_analysis/repeat/mini_run/
 **/results/busco/busco_results/
 **/scripts/phylogenetics/config/species/
+**/genomes/
+
+# Exclude several large files
