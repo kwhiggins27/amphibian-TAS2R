@@ -16,11 +16,31 @@ genes_accessions_input <- "/Volumes/wengpj01/amphibian-TAS2R/results/coordinate_
 ## File defining the range surrounding each singleton or cluster
 clusters <- read.csv("/Volumes/wengpj01/amphibian-TAS2R/results/coordinate_analysis/plot_generation/maximal_range_all.csv")
 
+## File with BUSCO gene completeness scores about each assembly
+busco_values <- read_csv("/Volumes/wengpj01/amphibian-TAS2R/results/coordinate_analysis/plot_generation/busco_full_data.csv") %>%
+  dplyr::select(1,7) %>%
+  mutate(BUSCO_class = ifelse(used_busco >= 0.9, "BUSCO90+",
+                ifelse(used_busco >= 0.8, "BUSCO80+",
+                       "BUSCO80-")),
+         BUSCO90 = ifelse(used_busco >= 0.9, "TRUE", "FALSE"),
+         BUSCO80 = ifelse(used_busco >= 0.8, "TRUE", "FALSE"))
+
+## Assembly info
+assembly_info <- read_csv("/Volumes/wengpj01/amphibian-TAS2R/results/coordinate_analysis/plot_generation/accessions_pt1_assembly_combo.csv") %>%
+  dplyr::select(1:5) %>%
+  mutate(contigN50_class = ifelse(contig_n50 >= 10000000, ">=10Mb",
+                                  ifelse(contig_n50 >= 1000000, ">=1Mb",
+                                         ifelse(contig_n50 >= 100000, ">=100kb",
+                                                "<100kb")))) %>%
+  rename(Accession = accession)
+
+
 ## No changes necessary beyond this point
 #########
 
-genes_accessions <- read_csv(genes_accessions_input)
-
+genes_accessions <- read_csv(genes_accessions_input) %>%
+  left_join(assembly_info, by = "Accession") %>%
+  left_join(busco_score, by = "Accession")
 
 df_location <- read_csv(csv_file)
 colnames(df_location) <- c("accession", "chromosome","start", "mini", "ends")
@@ -85,7 +105,9 @@ t_test <-t.test(singleton_data$ends, cluster_data$ends)
 nrow(cluster_data)/(nrow(singleton_data) + nrow(cluster_data))
 
 # Create a subset table where i_mini is TRUE
-subset_df <- combo_df[combo_df$mini == TRUE, ]
+subset_df <- combo_df[combo_df$mini == TRUE, ] %>%
+  transform(BUSCO_class = factor(BUSCO_class, levels = c("BUSCO90+", "BUSCO80+", "BUSCO80-"))) %>%
+  transform(contigN50_class = factor(contigN50_class, levels = c(">=10Mb", ">=1Mb", ">=100kb", "<100kb")))
 data <- subset_df
 
 
@@ -113,13 +135,25 @@ salamanders_subset <- subset_df[subset_df$PlottingClade %in% c("Caudata"), ]
 amphibia_subset <- amphibia_subset[complete.cases(amphibia_subset), ]
 not_amphibia_subset <- subset_df[!(subset_df$PlottingClade %in% c("Anura", "Gymnophiona", "Caudata")), ]
 not_amphibia_subset <- not_amphibia_subset[complete.cases(not_amphibia_subset), ]
+amphibia_subset_BUSCO80 <- amphibia_subset[amphibia_subset$BUSCO80 == "TRUE",]
+not_amphibia_subset_BUSCO80 <- not_amphibia_subset[not_amphibia_subset$BUSCO80 == "TRUE",]
 
+# statistic test
 t_test_ends <-t.test(amphibia_subset$ends, not_amphibia_subset$ends,alternative = "less")
+t_test_ends_BUSCO80 <- t.test(amphibia_subset[amphibia_subset$BUSCO80 == "TRUE",]$ends, 
+                              not_amphibia_subset[not_amphibia_subset$BUSCO80 == "TRUE",]$ends,alternative = "less")
+t_test_ends_BUSCO90 <- t.test(amphibia_subset[amphibia_subset$BUSCO90 == "TRUE",]$ends, 
+                              not_amphibia_subset[not_amphibia_subset$BUSCO90 == "TRUE",]$ends,alternative = "less")
+t_test_ends_contigN50_1Mb <-t.test(amphibia_subset[amphibia_subset$contig_n50 >= 1000000,]$ends, 
+                                   not_amphibia_subset[not_amphibia_subset$contig_n50 >= 1000000,]$ends,alternative = "less")
+t_test_ends_BUSCO80_contigN50_1Mb <-t.test(amphibia_subset_BUSCO80[amphibia_subset_BUSCO80$contig_n50 >= 1000000,]$ends, 
+                                   not_amphibia_subset_BUSCO80[not_amphibia_subset_BUSCO80$contig_n50 >= 1000000,]$ends,alternative = "less")
+
 sd(amphibia_subset$ends)
 sd(not_amphibia_subset$ends)
 ks_result <- ks.test(amphibia_subset$ends, not_amphibia_subset$ends)
 
-
+#Create histograms
 pdf("fraction_near_ends_amphibians_1025.pdf")
 ggplot(amphibia_subset, aes(x = ends)) +
   geom_histogram(binwidth = 0.01, fill = "blue", color = "black") +
@@ -127,6 +161,88 @@ ggplot(amphibia_subset, aes(x = ends)) +
        x = "ends",
        y = "Frequency") +
   theme_minimal() +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+dev.off()
+
+pdf("fraction_near_ends_amphibians_1025_busco_colored.pdf")
+ggplot(amphibia_subset, aes(x = ends, fill = BUSCO_class)) +
+  geom_histogram(binwidth = 0.01, color = "black") +
+  labs(title = "Histogram of distance from end for amphibians",
+       x = "ends",
+       y = "Frequency") +
+  scale_fill_manual(values = c("#CF966F", "#699E8D", "#0773B3")) +
+  scale_x_continuous(expand = c(0,0)) +
+  scale_y_continuous(expand = c(0,0)) +
+  theme_classic() +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+dev.off()
+
+pdf("fraction_near_ends_amphibians_1025_busco80.pdf")
+ggplot(amphibia_subset[amphibia_subset$BUSCO80 == "TRUE",], aes(x = ends)) +
+  geom_histogram(binwidth = 0.01, fill = "#116B54", color = "black") +
+  labs(title = "Histogram of distance from end for amphibians",
+       x = "ends",
+       y = "Frequency") +
+  scale_x_continuous(expand = c(0,0)) +
+  scale_y_continuous(expand = c(0,0)) +
+  theme_classic() +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+dev.off()
+
+pdf("fraction_near_ends_amphibians_1025_busco90.pdf")
+ggplot(amphibia_subset[amphibia_subset$BUSCO90 == "TRUE",], aes(x = ends)) +
+  geom_histogram(binwidth = 0.01, fill = "#116B54", color = "black") +
+  labs(title = "Histogram of distance from end for amphibians",
+       x = "ends",
+       y = "Frequency") +
+  scale_x_continuous(expand = c(0,0)) +
+  scale_y_continuous(expand = c(0,0)) +
+  theme_classic() +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+dev.off()
+
+pdf("fraction_near_ends_amphibians_1025_contigN50_colored.pdf")
+ggplot(amphibia_subset, aes(x = ends, fill = contigN50_class)) +
+  geom_histogram(binwidth = 0.01, color = "black") +
+  labs(title = "Histogram of distance from end for amphibians",
+       x = "ends",
+       y = "Frequency") +
+  scale_fill_manual(values = c("#CF966F", "#699E8D", "#0773B3", "#97ADDA")) +
+  scale_x_continuous(expand = c(0,0)) +
+  scale_y_continuous(expand = c(0,0)) +
+  theme_classic() +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+dev.off()
+
+pdf("fraction_near_ends_amphibians_1025_contigN50_1Mb.pdf")
+ggplot(amphibia_subset[amphibia_subset$contig_n50 >= 1000000,], aes(x = ends)) +
+  geom_histogram(binwidth = 0.01, fill = "#116B54", color = "black") +
+  labs(title = "Histogram of distance from end for amphibians",
+       x = "ends",
+       y = "Frequency") +
+  scale_x_continuous(expand = c(0,0)) +
+  scale_y_continuous(expand = c(0,0)) +
+  theme_classic() +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+dev.off()
+
+pdf("fraction_near_ends_amphibians_1025_BUSCO80_contigN50_1Mb.pdf")
+amphibia_subset %>%
+  dplyr::filter(BUSCO80 == "TRUE" & contig_n50 >= 1000000) %>%
+ggplot(aes(x = ends)) +
+  geom_histogram(binwidth = 0.01, fill = "#116B54", color = "black") +
+  labs(title = "Histogram of distance from end for amphibians",
+       x = "ends",
+       y = "Frequency") +
+  scale_x_continuous(expand = c(0,0)) +
+  scale_y_continuous(expand = c(0,0)) +
+  theme_classic() +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())
 dev.off()
@@ -160,6 +276,103 @@ ggplot(not_amphibia_subset, aes(x = ends)) +
        x = "ends",
        y = "Frequency") +
   theme_minimal() +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+dev.off()
+
+pdf("fraction_near_ends_notamphibians_1025_busco_colored.pdf")
+ggplot(not_amphibia_subset, aes(x = ends, fill = BUSCO_class)) +
+  geom_histogram(binwidth = 0.01, color = "black") +
+  labs(title = "Histogram of distance from end for non-amphibians",
+       x = "ends",
+       y = "Frequency") +
+  labs(title = "Histogram of distance from end for amphibians",
+       x = "ends",
+       y = "Frequency") +
+  scale_fill_manual(values = c("#CF966F", "#699E8D", "#0773B3")) +
+  scale_x_continuous(expand = c(0,0)) +
+  scale_y_continuous(expand = c(0,0)) +
+  theme_classic() +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+dev.off()
+
+pdf("fraction_near_ends_notamphibians_1025_busco80.pdf")
+ggplot(not_amphibia_subset[not_amphibia_subset$BUSCO80 == "TRUE",], aes(x = ends)) +
+  geom_histogram(binwidth = 0.01, fill = "grey", color = "black") +
+  labs(title = "Histogram of distance from end for non-amphibians",
+       x = "ends",
+       y = "Frequency") +
+  labs(title = "Histogram of distance from end for amphibians",
+       x = "ends",
+       y = "Frequency") +
+  scale_x_continuous(expand = c(0,0)) +
+  scale_y_continuous(expand = c(0,0)) +
+  theme_classic() +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+dev.off()
+
+pdf("fraction_near_ends_notamphibians_1025_busco90.pdf")
+ggplot(not_amphibia_subset[not_amphibia_subset$BUSCO90 == "TRUE",], aes(x = ends)) +
+  geom_histogram(binwidth = 0.01, fill = "grey", color = "black") +
+  labs(title = "Histogram of distance from end for non-amphibians",
+       x = "ends",
+       y = "Frequency") +
+  labs(title = "Histogram of distance from end for amphibians",
+       x = "ends",
+       y = "Frequency") +
+  scale_x_continuous(expand = c(0,0)) +
+  scale_y_continuous(expand = c(0,0)) +
+  theme_classic() +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+dev.off()
+
+pdf("fraction_near_ends_notamphibians_1025_contigN50_colored.pdf")
+ggplot(not_amphibia_subset, aes(x = ends, fill = contigN50_class)) +
+  geom_histogram(binwidth = 0.01, color = "black") +
+  labs(title = "Histogram of distance from end for amphibians",
+       x = "ends",
+       y = "Frequency") +
+  scale_fill_manual(values = c("#CF966F", "#699E8D", "#0773B3", "#97ADDA")) +
+  scale_x_continuous(expand = c(0,0)) +
+  scale_y_continuous(expand = c(0,0)) +
+  theme_classic() +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+dev.off()
+
+pdf("fraction_near_ends_notamphibians_1025_contigN50_1Mb.pdf")
+ggplot(not_amphibia_subset[not_amphibia_subset$contig_n50 >= 1000000,], aes(x = ends)) +
+  geom_histogram(binwidth = 0.01, fill = "grey", color = "black") +
+  labs(title = "Histogram of distance from end for non-amphibians",
+       x = "ends",
+       y = "Frequency") +
+  labs(title = "Histogram of distance from end for amphibians",
+       x = "ends",
+       y = "Frequency") +
+  scale_x_continuous(expand = c(0,0)) +
+  scale_y_continuous(expand = c(0,0)) +
+  theme_classic() +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+dev.off()
+
+pdf("fraction_near_ends_notamphibians_1025_BUSCO80_contigN50_1Mb.pdf")
+not_amphibia_subset%>%
+  dplyr::filter(BUSCO80 == "TRUE" & contig_n50 >= 1000000) %>%
+ggplot(aes(x = ends)) +
+  geom_histogram(binwidth = 0.01, fill = "grey", color = "black") +
+  labs(title = "Histogram of distance from end for non-amphibians",
+       x = "ends",
+       y = "Frequency") +
+  labs(title = "Histogram of distance from end for amphibians",
+       x = "ends",
+       y = "Frequency") +
+  scale_x_continuous(expand = c(0,0)) +
+  scale_y_continuous(expand = c(0,0)) +
+  theme_classic() +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())
 dev.off()

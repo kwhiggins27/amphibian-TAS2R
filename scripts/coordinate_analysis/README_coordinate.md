@@ -51,11 +51,18 @@ Finds the length of each chromosome in each genome file.  This takes a while to 
 
 #### is_gene_near_end.R creates plots Fig. 2E  
   Line 7: set working directory where files will be saved  
-  Line 10: point towards output of check_where_genes_v4.py  
-  Line 23: point towards output of expand_coordinates.py  
-  Line 50: set output  
-  Line 229-238: create plot for amphibian genes (Fig. 2E left)  
-  Lines 262-271: create plot for non-amphibian genes (Fig. 2E right)  
+  Line 11: point towards output of check_where_genes_v4.py  
+  Line 14: infromation of phylogenetics 
+  Line 17: point towards output of get_accepted_ranges.py
+  Line 21: information about BUSCO gene completeness of each assembly
+  Line 29: information about genome 
+  Line 78: set output  
+  Line 157-249: create plot for amphibian genes (Fig. 2E left and Supplementary Fig. 6)  
+  Lines 284-379: create plot for non-amphibian genes (Fig. 2E right and Supplementary Fig. 6)  
+
+#### gene_position_vs_quality.R creates plots Supplementary Fig. S19-21
+  Line 4: infromation about BUSCO gene completeness for analyzed assemblies
+  Line 5: infromation about gene location
 
 #### process_rerun_Sept.R
 Creates plots Fig. 1A, 2B, 2C, and 2D  
