@@ -56,9 +56,9 @@ Ensure that directories: configs, genomes, logs, progress, references, scripts, 
   If different colors desired (ex: to make color-blind friendly) modify 58-61
   Output saved to ../progress
 
-### comparison_with_prior_literature/gene_count_comparison.R creates Supplemetary Fig. 1
-  This script is to compare the gene counts from the gene identidication pipeline to the previous studies.
+### comparison_with_prior_literature/gene_count_comparison.R creates Supplementary Fig. 1
+  This script is to compare the gene counts from the gene identification pipeline to the previous studies.
   Necessary files (gene counts of this study and a previous study) are included in this folder (comparison_with_prior_literature).
 
 ## Credits  
-Code developed by K. Higgins with programming advice from Allen B. Davis (acknowledged) and experimental advice from A. Itoigawa, J.-K. Weng, R. Márquez, and R. Anderson (authors) as well as Matthew Hill and George Bell (acknowledged).  ChatGPT v3 and 4 used to draft early versions of these scripts.  
+Code developed by K. Higgins and A. Itoigawa (authors) with programming advice from Allen B. Davis (acknowledged) and experimental advice from J.-K. Weng, R. Márquez, and R. Anderson (authors) as well as Matthew Hill and George Bell (acknowledged).  ChatGPT v3 and 4 used to draft early versions of these scripts.  
