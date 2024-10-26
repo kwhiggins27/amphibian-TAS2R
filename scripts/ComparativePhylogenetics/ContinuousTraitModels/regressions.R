@@ -35,10 +35,6 @@ tree=drop.tip(tree, name.check(tree,data)$tree_not_data)
 
 name.check(tree,data_trim)
 
-log_num=log(data_trim$Number.of.Genes+1)
-names(log_num)=rownames(data_trim)
-
-
 summary(lm(log(Number.of.Genes.x+1)~log(genome_size), data=data_trim)) # beta=1.08, t=12.25, p<2e-16
 
 # Phylogenetic gls
