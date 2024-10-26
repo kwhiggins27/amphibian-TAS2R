@@ -1,0 +1,2 @@
+FAMILYDESC	FAMILY	Euleptes-europaea	Eublepharis-macularius	Hemicordylus-capensis	Ahaetulla-prasina	Bungarus-multicinctus	Hydrophis-cyanocinctus	Naja-naja	Thamnophis-elegans	Vipera-ursinii	Vipera-latastei	Crotalus-viridis	Anolis-carolinensis	Phrynosoma-platyrhinos	Sceloporus-undulatus	Sceloporus-tristichus	Podarcis-raffonei	Podarcis-muralis	Lacerta-agilis	Zootoca-vivipara	Rhineura-floridana
+TAS2R	TAS2R	52	22	21	2	2	0	0	0	1	1	1	43	10	23	19	28	37	28	30	11

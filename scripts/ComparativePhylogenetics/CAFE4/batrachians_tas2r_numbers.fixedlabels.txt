@@ -1,0 +1,2 @@
+FAMILYDESC	FAMILY	Ambystoma-mexicanum	Pleurodeles-waltl	Spea-bombifrons	Leptobrachium-leishanense	Leptobrachium-ailaonicum	Bufo-bufo	Bufo-gargarizans	Engystomops-pustulosus	Hyla-sarda	Dendropsophus-ebraccatus	Eleutherodactylus-coqui	Pseudophryne-corroboree	Pyxicephalus-adspersus	Lithobates-sylvaticus	Rana-kukunoris	Rana-temporaria	Rana-muscosa	Gastrophryne-carolinensis	Hymenochirus-boettgeri	Xenopus-borealis	Xenopus-laevis	Xenopus-tropicalis	Bombina-bombina
+TAS2R	TAS2R	70	68	64	135	102	106	131	185	126	246	191	184	98	248	211	202	180	31	45	50	50	50	91
