@@ -6,15 +6,19 @@ library(phylolm)
 library(l1ou)
 library(phytools)
 
-# Read in data and create variables
+# Read in data
 
 tree=read.tree("Timetree_ultrametric.tre")
 data_trim=read.delim("tas2r_Github_data.tsv", stringsAsFactors=F)
 
-tree=drop.tip(tree, name.check(tree,data_trim)$tree_not_data)
+# Rotate nodes for plotting
+tree=rotateNodes(tree,c(664,939,966))
 
+## Name-check
+tree=drop.tip(tree, name.check(tree,data_trim)$tree_not_data)
 name.check(tree,data_trim)
 
+#Create a variable with log-transformed family size
 log_num=log(data_trim$Number.of.Genes+1)
 names(log_num)=rownames(data_trim)
 
@@ -74,6 +78,7 @@ BM_6shift_nb=brownie.lite(sixshift_nb, log_num, maxit=10000)
 
 BM=fitContinuous(tree, log_num, model="BM", control=list(niter=500))
 OU=fitContinuous(tree, log_num, model="OU", control=list(niter=500))
+lambda=fitContinuous(tree, log_num, model="lambda", control=list(niter=500))
 
 ## Make table with AIC scores and weights
 
