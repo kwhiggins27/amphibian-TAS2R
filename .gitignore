@@ -53,5 +53,6 @@ Genome
 **/subdirs/GCA_027887145.1/birds_bitter_expanded_nucleotide_v1.fasta
 **/subdirs/GCA_009819775.1/American_flamingo_bitter_expanded_nucleotide_v1.fasta
 **/results/pipeline/all_pro_chromosomal_20231006.fasta
+**/Expression_analysis_colocalization-checkpoint.ipynb
 
 
