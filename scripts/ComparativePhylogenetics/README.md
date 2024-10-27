@@ -3,6 +3,8 @@ This folder contains the code and input files for comparative phylogenetic analy
 <br>
 The following subfolders are included:<br>
 <br>
+### Credits:
+All scripts in this folder written by Roberto Márquez (author).
 
 
 
