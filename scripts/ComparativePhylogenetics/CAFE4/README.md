@@ -3,7 +3,7 @@
 CAFE4 was run 50 times on each input file using a simple loop, which saved the last line of the output file, containing the model parameters with the highest likelihood for each run, to a text file. Below is an example using the squamate data.
 
 ``
-for i in {1..50}; do ~/software/CAFE/release/cafe lambdamu_squamates.sh; mv squamates.txt squamates_"$i".txt; tail -n 1 squamates_"$i".txt >> squamates_runs.txt; done
+for i in {1..50}; do cafe lambdamu_squamates.sh; mv squamates.txt squamates_"$i".txt; tail -n 1 squamates_"$i".txt >> squamates_runs.txt; done
 ``
 <br>
 <br>
